@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="resto"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/navent/Facultad/concu/resto/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/navent/Facultad/concu/resto/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/navent/Facultad/concu/resto/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="resto">
+				<Option output="/home/navent/Facultad/concu/resto/cmake-build-debug/resto" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/navent/Facultad/concu/resto/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 resto"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="resto/fast">
+				<Option output="/home/navent/Facultad/concu/resto/cmake-build-debug/resto" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/navent/Facultad/concu/resto/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 resto/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/resto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/main/ConcuVoley.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/main/MainProcess.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/main/MainProcess.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Cancha.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Cancha.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/ClaveJugador.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/ClaveJugador.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Comida.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Comida.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/LlamadoAMozo.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/LlamadoAMozo.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Menu.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Menu.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Pareja.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Pareja.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Partido.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Partido.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Pedido.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Pedido.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/PedidoCuenta.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/PedidoCuenta.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Plato.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Plato.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Resultado.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/model/Resultado.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/AdminComensalesProcess.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/AdminComensalesProcess.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/AdminJugadoresProcess.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/AdminJugadoresProcess.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/CocineroProcess.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/CocineroProcess.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/CupidoProcess.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/CupidoProcess.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/GerenteProcess.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/GerenteProcess.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/GrupoComensalesProcess.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/GrupoComensalesProcess.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/JugadorProcess.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/JugadorProcess.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/MozoProcess.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/MozoProcess.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/PartidoProcess.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/PartidoProcess.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/Process.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/Process.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/RecepcionistaProcess.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/RecepcionistaProcess.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/processes/TiemposEspera.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/fifo/Fifo.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/fifo/Fifo.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/fifo/FifoEscritura.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/fifo/FifoEscritura.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/fifo/FifoLectura.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/fifo/FifoLectura.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/lock/LockFile.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/lock/LockFile.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/pipe/Pipe.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/pipe/Pipe.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/semaphore/Semaforo.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/semaphore/Semaforo.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/shared-memory/MemoriaCompartida.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/signal/EventHandler.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/signal/SIGINT_Handler.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/signal/SIGINT_ProcessHandler.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/signal/SIGUSR1_Handler.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/signal/SignalHandler.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/ipc/signal/SignalHandler.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/logger/Logger.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/logger/Logger.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/parser/Parser.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/parser/Parser.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/parser/pugixml/pugiconfig.hpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/parser/pugixml/pugixml.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/parser/pugixml/pugixml.hpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/random/RandomUtil.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/random/RandomUtil.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/serializer/ClaveJugadorSerializer.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/serializer/ClaveJugadorSerializer.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/serializer/LlamadoAMozoSerializer.cpp">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/Restorrente/src/utils/serializer/LlamadoAMozoSerializer.h">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/corteLuz.sh">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/7559-restorrente/verInfo.sh">
+			<Option target="resto"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/resto/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

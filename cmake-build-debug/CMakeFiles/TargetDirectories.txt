@@ -1,0 +1,3 @@
+/home/navent/Facultad/concu/resto/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/navent/Facultad/concu/resto/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/navent/Facultad/concu/resto/cmake-build-debug/CMakeFiles/resto.dir

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="7559_concu_voley"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="7559_concu_voley">
+				<Option output="/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/7559_concu_voley" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 7559_concu_voley"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="7559_concu_voley/fast">
+				<Option output="/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/7559_concu_voley" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 7559_concu_voley/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sem_comensales_en_puerta.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sem_mesas_libres.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sems_cancha_ocupada.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sems_cant_canchas_libres.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sems_cupido.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sems_esperar_recepcionista.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sems_jugadores_predio.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sems_listo_para_jugar.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sems_mesa_pago.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sems_ranking.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sems_termino_de_jugar.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/shm_caja.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/shm_comida_mesas.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/shm_facturas.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/shm_mesas_libres.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/shm_personas_living.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/ConcuVoley.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Cancha.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Cancha.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Comida.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Comida.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/LlamadoAMozo.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/LlamadoAMozo.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Menu.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Menu.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pareja.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pareja.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Partido.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Partido.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pedido.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pedido.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/PedidoCuenta.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/PedidoCuenta.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Plato.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Plato.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/AdminComensalesProcess.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/AdminComensalesProcess.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/CocineroProcess.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/CocineroProcess.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GerenteProcess.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GerenteProcess.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GrupoComensalesProcess.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GrupoComensalesProcess.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/MozoProcess.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/MozoProcess.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_ProcessHandler.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/Parser.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/Parser.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugiconfig.hpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugixml.hpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
