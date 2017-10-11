@@ -19,10 +19,11 @@ private:
 
     Semaforo *semEsperarRecepcionista;
     Semaforo *semCupido;
+    int cantJugadoresMinimo;
 
 public:
 
-    RecepcionistaProcess(Semaforo *semEsperarRecepcionista, Semaforo *semCupido);
+    RecepcionistaProcess(Semaforo *semEsperarRecepcionista, Semaforo *semCupido, int cantJugadoresMinimo);
 
     void run();
 

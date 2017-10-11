@@ -19,7 +19,7 @@
 #include "../model/Cancha.h"
 #include "../model/Resultado.h"
 
-const string partidoLogId = "Partido";
+const string partidoProcessLogId = "Partido";
 
 
 class PartidoProcess : public Process {

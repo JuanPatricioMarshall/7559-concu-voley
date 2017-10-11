@@ -17,7 +17,7 @@
 
 namespace std {
 
-    MainProcess::MainProcess(int cantPartidosJugador, int predioC, int predioF, int cantMJugadores, int cantNJugadores)
+    MainProcess::MainProcess(int cantPartidosJugador, int predioC, int predioF, int cantMJugadores, int cantNJugadores, int cantJugadoresMinimo)
             :
             semJugadoresPredio(SEM_JUGADORES_PREDIO_INIT_FILE, cantMJugadores, 0),
             semEsperarRecepcionista(SEM_ESPERAR_RECEPCIONISTA_INIT_FILE, 0, 0),
@@ -30,6 +30,7 @@ namespace std {
         this->predioF = predioF;
         this->cantMJugadores = cantMJugadores;
         this->cantNJugadores = cantNJugadores;
+        this->cantJugadoresMinimo = cantJugadoresMinimo;
 
         inicializarIPCs();
     }
@@ -313,7 +314,7 @@ void MainProcess::inicializarRecepcionista() {
 
     if (idRecepcionista == 0) {
 
-        RecepcionistaProcess recepcionista(&semEsperarRecepcionista, &semCupido);
+        RecepcionistaProcess recepcionista(&semEsperarRecepcionista, &semCupido, cantJugadoresMinimo);
         recepcionista.run();
         exit(0);
     }
@@ -329,7 +330,7 @@ void MainProcess::inicializarCupido() {
 
         CupidoProcess cupidoProcess(&pipeJugadores, &semCanchasLibres,
                                     &shmCanchasLibres, cantNJugadores, &semCupido, &semsTerminoDeJugar,
-                                    &semCantCanchasLibres, &pipeResultados, &pipeFixture);
+                                    &semCantCanchasLibres, &pipeResultados, &pipeFixture, cantJugadoresMinimo);
         cupidoProcess.run();
         exit(0);
     }

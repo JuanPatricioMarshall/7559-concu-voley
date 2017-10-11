@@ -66,6 +66,7 @@ namespace std {
         int predioF;
         int cantMJugadores;
         int cantNJugadores;
+        int cantJugadoresMinimo;
 
 
         vector<pid_t> idsRecepcionistas;
@@ -157,7 +158,7 @@ namespace std {
 
     public:
 
-        MainProcess(int cantPartidosJugador, int predioC, int predioF, int cantMJugadores, int cantNJugadores);
+        MainProcess(int cantPartidosJugador, int predioC, int predioF, int cantMJugadores, int cantNJugadores, int cantJugadoresMinimo);
 //	MainProcess(int cantRecepcionistas, int cantMozos, int cantMesas, int cantComensales, int perdidas, Menu menu);
 
         /**

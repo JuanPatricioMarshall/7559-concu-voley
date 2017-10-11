@@ -37,7 +37,7 @@ std::string Logger::doubleToString ( double number )
 
 Logger::Logger()
 {
-    log_path = "../restorrente.log";
+    log_path = "../concu-voley.log";
     mode = INFO; //Por default se esta creando en INFO
     mode_symbols[0] = "DEBUG";
     mode_symbols[1] = "ERROR";
@@ -67,7 +67,7 @@ void Logger::log_timestamp(){
     std::string out_final = "/---------------------- " + timestamp + " ----------------------/" + "\n";
 
     //Definido con ../ para salir de la carpeta Debug
-    LockFile log("../restorrente.log");
+    LockFile log("../concu-voley.log");
     log.tomarLock();
     log.escribir(static_cast<const void*>(out_final.c_str()),out_final.length());
     log.liberarLock();
@@ -100,7 +100,7 @@ void Logger::_log(std::string name, std::string comment, LOG_MODE comment_mode){
 								name + "\t" +
                                 comment + "\n";
 
-        LockFile log("../restorrente.log");
+        LockFile log("../concu-voley.log");
         log.tomarLock();
         log.escribir(static_cast<const void*>(out_final.c_str()),out_final.length());
         log.liberarLock();

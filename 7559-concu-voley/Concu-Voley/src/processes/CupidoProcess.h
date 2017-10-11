@@ -42,6 +42,8 @@ private:
 
     int cantNJugadores;
 
+    int cantJugadoresMinimosParaElTorneo;
+
     Pareja *parejaEnEspera;
 
     void inicializarPartido(Pareja *pareja1, Pareja *pareja2, vector<vector<Semaforo>> *semCanchasLibres,
@@ -53,7 +55,7 @@ public:
 
     CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanchasLibres,
                   vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres, int cantNJugadores, Semaforo *semCupido,
-                  vector<Semaforo> *semsTerminoDeJugar, Semaforo *semCantCanchasLibres, Pipe *pipeResultados, Pipe *pipeFixture);
+                  vector<Semaforo> *semsTerminoDeJugar, Semaforo *semCantCanchasLibres, Pipe *pipeResultados, Pipe *pipeFixture, int cantJugadoresMinimosParaElTorneo);
 
     void run();
 

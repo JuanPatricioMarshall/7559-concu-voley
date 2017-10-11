@@ -34,6 +34,10 @@ int main() {
 	int cantMJugadores = 4;
 	int cantNJugadores = 8;
 
+
+    //TODO cambiar por 10
+    int cantJugadoresMinimo = 4;
+
 	LOG_MODE mode;
 	if(nivelDeLog == 0) mode = DEBUG;
 	else if(nivelDeLog == 1) mode = ERROR;
@@ -52,13 +56,15 @@ int main() {
 	Logger::log(mainLogId, "Cantidad de filas del predio: " + Logger::intToString(predioF), INFO);
 	Logger::log(mainLogId, "Cantidad m de jugadores maxima del predio: " + Logger::intToString(cantMJugadores), INFO);
 	Logger::log(mainLogId, "Cantidad n de jugadores a crear: " + Logger::intToString(cantNJugadores), INFO);
-	Logger::log(mainLogId, "nivelDeLog: " + Logger::intToString(nivelDeLog), INFO);
+    Logger::log(mainLogId, "Cantidad minima de jugadores para empezar el torneo: " + Logger::intToString(cantJugadoresMinimo), INFO);
+
+    Logger::log(mainLogId, "nivelDeLog: " + Logger::intToString(nivelDeLog), INFO);
 
 	//TODO
 	int jugadoresPendientes = cantNJugadores;
 	mainProcessReturnData mainProcessReturnData;
 	do {
-		MainProcess mainProcess(cantPartidosJugador, predioC, predioF, cantMJugadores, cantNJugadores);
+		MainProcess mainProcess(cantPartidosJugador, predioC, predioF, cantMJugadores, cantNJugadores, cantJugadoresMinimo);
 		mainProcessReturnData = mainProcess.run();
 
 		jugadoresPendientes -= mainProcessReturnData.cantJugadoresTerminados;

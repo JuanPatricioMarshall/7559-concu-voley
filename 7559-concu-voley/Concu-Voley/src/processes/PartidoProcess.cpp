@@ -34,8 +34,18 @@ PartidoProcess::PartidoProcess(Pareja *pareja1, Pareja *pareja2, vector<vector<S
 
 void PartidoProcess::run() {
 
+
+    Logger::log(partidoProcessLogId, "Las parejas buscan cancha ", DEBUG);
+
     encontrarCancha();
+
+    Logger::log(partidoProcessLogId, "Las parejas encontraron cancha ", DEBUG);
+
     Resultado resultado = simularPartido();
+
+
+    Logger::log(partidoProcessLogId, "El partido termino " + Logger::intToString(resultado.getSetsPareja2()) + " a " + Logger::intToString(resultado.getSetsPareja2()), INFO);
+
 
 
     string resultadoStr = ResultadoSerializer::serializar(&resultado);
@@ -80,19 +90,19 @@ void PartidoProcess::encontrarCancha() {
 
     bool canchaLibre = false;
 
-    Logger::log(partidoLogId, "Partido buscando cancha. ", INFO);
+    Logger::log(partidoProcessLogId, "Partido buscando cancha. ", INFO);
 
     for (unsigned int i = 0; i < semCanchasLibres->size(); i++) {
 
         for (unsigned int j = 0; j < semCanchasLibres[0].size(); j++) {
 
-            Logger::log(partidoLogId,
+            Logger::log(partidoProcessLogId,
                         "Partido esperando semsCanchasLibre: " + Logger::intToString(i) + ", " + Logger::intToString(j),
                         DEBUG);
 
             semCanchasLibres->at(i).at(j).p();
 
-            Logger::log(partidoLogId,
+            Logger::log(partidoProcessLogId,
                         "Partido obtuvo semsCanchasLibre: " + Logger::intToString(i) + ", " + Logger::intToString(j),
                         DEBUG);
 
@@ -106,11 +116,11 @@ void PartidoProcess::encontrarCancha() {
                 canchaF = i;
                 canchaC = j;
 
-                Logger::log(partidoLogId,
+                Logger::log(partidoProcessLogId,
                             "Cancha libre encontrada. En fila: " + Logger::intToString(canchaF) + " y columna: " +
                             Logger::intToString(canchaC), INFO);
 
-                Logger::log(partidoLogId, "Cancha coupada. En fila: " + Logger::intToString(canchaF) + " y columna: " +
+                Logger::log(partidoProcessLogId, "Cancha coupada. En fila: " + Logger::intToString(canchaF) + " y columna: " +
                                           Logger::intToString(canchaC), INFO);
 
 
@@ -122,7 +132,7 @@ void PartidoProcess::encontrarCancha() {
 
             }
 
-            Logger::log(partidoLogId,
+            Logger::log(partidoProcessLogId,
                         "Partido liberando semaforo en En fila: " + Logger::intToString(i) + " y columna: " +
                         Logger::intToString(j), DEBUG);
 
@@ -150,13 +160,13 @@ void PartidoProcess::liberarCancha(){
 
     this->semCanchasLibres->at(fila).at(columna).p();
     this->shmCanchasLibres->at(fila).at(columna).escribir(true);
-    Logger::log(partidoLogId, "Cancha Liberada. En fila: " + Logger::intToString(fila) + " y columna: " +
+    Logger::log(partidoProcessLogId, "Cancha Liberada. En fila: " + Logger::intToString(fila) + " y columna: " +
                               Logger::intToString(columna), INFO);
 
     this->semCanchasLibres->at(fila).at(columna).v();
 
     this->semCantCanchasLibres->v();
-    Logger::log(partidoLogId, "Aumento la cantidad de canchas libres", INFO);
+    Logger::log(partidoProcessLogId, "Aumento la cantidad de canchas libres", INFO);
 
 
 }
