@@ -15,11 +15,9 @@ class TiemposEspera {
 public:
 	static const bool tiempos = true;
 
-	static const int TIEMPO_RANDOM_ENTRE_JUGADORES = 15;
+	static const int TIEMPO_RANDOM_ENTRE_JUGADORES = 5;
 	static const int TIEMPO_ATENDER = 5;
-	static const int TIEMPO_TOMAR_PEDIDO = 2;
-	static const int TIEMPO_COMER = 10;
-	static const int TIEMPO_ELECCION_COMIDA = 2;
+
 	static constexpr double PROBABILIDAD_DEJAR_DE_COMER = 0.50;
 
 	static constexpr double PROBABILIDAD_GANAR_PAREJA_1 = 0.50;

@@ -50,7 +50,9 @@ JugadorProcess::JugadorProcess(int cantidadDePartidosPendientes,
 void JugadorProcess::inicializarMemoriasCompartidas() {
 
     for (unsigned int i = 0; i < shmJugadoresSinPareja->size(); i++){
+        semJugadoresSinPareja->at(i).p();
         shmJugadoresSinPareja->at(i).crear(SHM_JUGADORES_SIN_PAREJA, i);
+        semJugadoresSinPareja->at(i).v();
     }
 
 }
@@ -91,16 +93,34 @@ void JugadorProcess::llegar() {
 
 void JugadorProcess::jugar() {
 
+
+    Logger::log(jugadorLogId, "Jugador esperando que termine el partido: ", DEBUG);
+
     this->semPartidoTerminado->at(indice).p();
+
+    Logger::log(jugadorLogId, "Jugador ve que termino su partido/o que no habia podido conseguir pareja: ", DEBUG);
+
 
     this->semJugadoresSinPareja->at(indice).p();
 
+    Logger::log(jugadorLogId, "Me fijo si habia encontrado pareja: ", DEBUG);
+
+
     bool consiguioPareja = this->shmJugadoresSinPareja->at(indice).leer();
 
-    if (!consiguioPareja) {
+    if(consiguioPareja) {
+        Logger::log(jugadorLogId, "No encontre pareja: " + consiguioPareja, DEBUG);
+    }
+    Logger::log(jugadorLogId, "Encontre pareja: " + consiguioPareja, DEBUG);
+
+
+    this->semJugadoresSinPareja->at(indice).v();
+
+
+    if (consiguioPareja) {
 
         this->semJugadoresPredio->p();
-
+        Logger::log(jugadorLogId, "Jugador se va del predio", DEBUG);
         terminar();
 
     }
@@ -109,6 +129,9 @@ void JugadorProcess::jugar() {
     Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " termino de jugar", DEBUG);
 
     this->cantidadDePartidosPendientes -= 1;
+
+    Logger::log(jugadorLogId, "Tengo " + Logger::intToString(cantidadDePartidosPendientes) + " cantidad de partidos pendientes", DEBUG);
+
 
     decidirQueHacer();
 

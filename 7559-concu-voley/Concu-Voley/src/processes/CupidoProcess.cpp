@@ -13,7 +13,7 @@ CupidoProcess::CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanch
                              Pipe *pipeResultados, Pipe *pipeFixture, int cantJugadoresMinimosParaElTorneo,
                              vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja,
                              MemoriaCompartida<int> *shmNivelDeMarea,
-                             Semaforo *semNivelDeMarea) {
+                             Semaforo *semNivelDeMarea, vector<Semaforo> *semJugadoresSinPareja) {
 
     this->jugadores = jugadores;
     this->cantNJugadores = cantNJugadores;
@@ -32,8 +32,12 @@ CupidoProcess::CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanch
     this->shmCanchasLibres = shmCanchasLibres;
 
     this->shmJugadoresSinPareja = shmJugadoresSinPareja;
+    this->semJugadoresSinPareja = semJugadoresSinPareja;
 
     this->semsTerminoDeJugar = semsTerminoDeJugar;
+
+    this->semCantCanchasLibres = semCantCanchasLibres;
+
 
     for (int i = 0; i < cantJugadoresMinimosParaElTorneo; i++) {
         this->jugadoresSinPareja.push_back(ClaveJugador(-1, -1));
@@ -56,8 +60,12 @@ CupidoProcess::CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanch
 
 void CupidoProcess::inicializarMemoriasCompartidas() {
 
+
     for (unsigned int i = 0; i < shmJugadoresSinPareja->size(); i++) {
+        semJugadoresSinPareja->at(i).p();
         shmJugadoresSinPareja->at(i).crear(SHM_JUGADORES_SIN_PAREJA, i);
+        semJugadoresSinPareja->at(i).v();
+
     }
 
 }
@@ -191,7 +199,11 @@ void CupidoProcess::run() {
             Logger::log(cupidoProcessLogId, "Cupido le avisa al jugador " + Logger::intToString(claveJugador.getPid()) +
                                             " que se vaya del predio porque no encontro pareja", DEBUG);
 
+            semJugadoresSinPareja->at(claveJugador.getIndice()).p();
             shmJugadoresSinPareja->at(claveJugador.getIndice()).escribir(true);
+            semJugadoresSinPareja->at(claveJugador.getIndice()).v();
+
+
             semsTerminoDeJugar->at(claveJugador.getIndice()).v();
 
         }
@@ -209,7 +221,7 @@ void CupidoProcess::limpiarRecursos() {
 void CupidoProcess::liberarMemoriasCompartidas() {
 
     for (unsigned int i = 0; i < shmJugadoresSinPareja->size(); i++) {
-        shmJugadoresSinPareja->at(i).crear(SHM_JUGADORES_SIN_PAREJA, i);
+        shmJugadoresSinPareja->at(i).liberar();
     }
 }
 

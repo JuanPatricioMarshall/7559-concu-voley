@@ -100,6 +100,7 @@ namespace std {
         for (int i = 0; i < cantNJugadores; i++) {
 
             shmJugadoresSinPareja.at(i).crear(SHM_JUGADORES_SIN_PAREJA, i);
+
             shmJugadoresSinPareja.at(i).escribir(false);
             semJugadoresSinPareja.at(i).v();
 
@@ -271,7 +272,7 @@ namespace std {
             CupidoProcess cupidoProcess(&pipeJugadores, &semCanchasLibres,
                                         &shmCanchasLibres, cantNJugadores, &semCupido, &semsTerminoDeJugar,
                                         &semCantCanchasLibres, &pipeResultados, &pipeFixture, cantJugadoresMinimo,
-                                        &shmJugadoresSinPareja, &shmNivelDeMarea, &semNivelDeMarea);
+                                        &shmJugadoresSinPareja, &shmNivelDeMarea, &semNivelDeMarea, &semJugadoresSinPareja);
             cupidoProcess.run();
             exit(0);
         } else {

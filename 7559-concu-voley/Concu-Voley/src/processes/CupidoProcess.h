@@ -39,8 +39,8 @@ private:
     Pipe *pipeResultados;
     Pipe *pipeFixture;
 
-    MemoriaCompartida<int>* shmNivelDeMarea;
-    Semaforo* semNivelDeMarea;
+    MemoriaCompartida<int> *shmNivelDeMarea;
+    Semaforo *semNivelDeMarea;
 
 
     int cantNJugadores;
@@ -50,6 +50,7 @@ private:
     Pareja *parejaEnEspera;
 
     vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja;
+    vector<Semaforo> *semJugadoresSinPareja;
 
     void inicializarPartido(Pareja *pareja1, Pareja *pareja2);
 
@@ -67,7 +68,8 @@ public:
                   vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres, int cantNJugadores, Semaforo *semCupido,
                   vector<Semaforo> *semsTerminoDeJugar, Semaforo *semCantCanchasLibres, Pipe *pipeResultados,
                   Pipe *pipeFixture, int cantJugadoresMinimosParaElTorneo,
-                  vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja, MemoriaCompartida<int> *shmNivelDeMarea, Semaforo *semNivelDeMarea);
+                  vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja, MemoriaCompartida<int> *shmNivelDeMarea,
+                  Semaforo *semNivelDeMarea, vector<Semaforo> *semJugadoresSinPareja);
 
     void run();
 

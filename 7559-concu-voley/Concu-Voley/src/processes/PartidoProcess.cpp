@@ -53,6 +53,8 @@ void PartidoProcess::run() {
 
 
     Logger::log(partidoProcessLogId, "Las parejas buscan cancha ", DEBUG);
+    Logger::log(partidoProcessLogId, "Tamaño" + Logger::intToString(semCanchasLibres->size()), INFO);
+
 
     encontrarCancha();
 
@@ -61,7 +63,7 @@ void PartidoProcess::run() {
     Resultado resultado = simularPartido();
 
 
-    Logger::log(partidoProcessLogId, "El partido termino " + Logger::intToString(resultado.getSetsPareja2()) + " a " +
+    Logger::log(partidoProcessLogId, "El partido termino " + Logger::intToString(resultado.getSetsPareja1()) + " a " +
                                      Logger::intToString(resultado.getSetsPareja2()), INFO);
 
 
@@ -198,11 +200,13 @@ void PartidoProcess::avisarJugadores() {
     ClaveJugador *jugador3 = this->pareja2->getClaveJugador1();
     ClaveJugador *jugador4 = this->pareja2->getClaveJugador2();
 
-    //Acceso entre distintos partidos al vector de semaforos? Lapsus mental
+    Logger::log(partidoProcessLogId, "Empiezo a avisarle a los jugadores que termino su partido", INFO);
     this->semTerminoDeJugar->at(jugador1->getIndice()).v();
     this->semTerminoDeJugar->at(jugador2->getIndice()).v();
     this->semTerminoDeJugar->at(jugador3->getIndice()).v();
     this->semTerminoDeJugar->at(jugador4->getIndice()).v();
+    Logger::log(partidoProcessLogId, "Termino de avisarle a los jugadores", INFO);
+
 
 }
 
@@ -211,6 +215,8 @@ void PartidoProcess::limpiarRecursos() {
 
     Logger::log(partidoProcessLogId, "Limpiando recursos", DEBUG);
     liberarMemoriasCompartidas();
+    Logger::log(partidoProcessLogId, "Termino de limpiar recursos", DEBUG);
+
 
 
 }

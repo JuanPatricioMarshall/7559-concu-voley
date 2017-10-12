@@ -30,14 +30,15 @@ Resultado::Resultado(Pareja* pareja1, Pareja* pareja2, bool nuevo){
         }
 
         if (RandomUtil::randomCeroUno() > TiemposEspera::PROBABILIDAD_GANAR_PAREJA_1) {
-            int aux = sets2;
-
-            sets2 = sets1;
-            sets1 = aux;
+            this->setsPareja1 = sets1;
+            this->setsPareja2 = sets2;
+        }
+        else{
+            this->setsPareja1 = sets2;
+            this->setsPareja2 = sets1;
         }
 
-        this->setsPareja1 = sets1;
-        this->setsPareja2 = sets2;
+
     }
 }
 
