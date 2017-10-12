@@ -14,7 +14,9 @@ namespace std {
                                                  Semaforo *semEsperarRecepcionista, Semaforo *semJugadoresPredio,
                                                  Pipe *pipeJugadores,
                                                  vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja,
-                                                 vector<Semaforo> *semJugadoresSinPareja) {
+                                                 vector<Semaforo> *semJugadoresSinPareja,
+                                                 MemoriaCompartida<int> *shmCantGenteEnElPredio,
+                                                 Semaforo *semCantGenteEnElPredio) {
 
         this->cantJugadores = cantJugadores;
         this->cantPartidosPorJugador = cantPartidosPorJugador;
@@ -24,6 +26,8 @@ namespace std {
         this->pipeJugadores = pipeJugadores;
         this->semJugadoresSinPareja = semJugadoresSinPareja;
         this->shmJugadoresSinPareja = shmJugadoresSinPareja;
+        this->shmCantGenteEnElPredio = shmCantGenteEnElPredio;
+        this->semCantGenteEnElPredio = semCantGenteEnElPredio;
 
         inicializarHandler();
 
@@ -51,8 +55,9 @@ namespace std {
 
                 JugadorProcess jugadorProcess(cantPartidosPorJugador,
                                               semPartidoTerminado, jugadoresCreados,
-                                              semEsperarRecepcionista, semJugadoresPredio, pipeJugadores, shmJugadoresSinPareja,
-                                              semJugadoresSinPareja);
+                                              semEsperarRecepcionista, semJugadoresPredio, pipeJugadores,
+                                              shmJugadoresSinPareja,
+                                              semJugadoresSinPareja, shmCantGenteEnElPredio, semCantGenteEnElPredio);
 
                 jugadorProcess.run();
                 exit(0);
@@ -67,26 +72,9 @@ namespace std {
             if (TiemposEspera::tiempos) {
                 sleep(RandomUtil::randomInt(TiemposEspera::TIEMPO_RANDOM_ENTRE_JUGADORES));
             }
-//            corteLuz = (sigintHandler.getGracefulQuit() == 1);
-//            if (corteLuz) {
-//                Logger::log(adminJugadoresLogId,
-//                            "Corte de luz: abortando creacion de comensales. Comensales creados hasta el momento: " +
-//                            Logger::intToString(comensalesCreados), DEBUG);
-//                Logger::log(adminJugadoresLogId, "Corte de luz: Se van los comensales que estaban en el restaurant",
-//                            INFO);
-//            }
+
 
         }
-//
-//        if (corteLuz) {
-//
-//            Logger::log(adminJugadoresLogId, "Reenviando senial a los comensales", DEBUG);
-//            for (unsigned int i = 0; i < idsComensales.size(); i++) {
-//                kill(idsComensales[i], SIGINT);
-//            }
-//
-//        } else {
-
         Logger::log(adminJugadoresLogId,
                     "Todos los Jugadores fueron inicializados: " + Logger::intToString(jugadoresCreados), DEBUG);
         Logger::log(adminJugadoresLogId, "Esperando finalizacion de jugadores", DEBUG);
@@ -96,24 +84,11 @@ namespace std {
 
         while ((jugadoresTerminados < jugadoresCreados)) {
             pid_t id = wait(NULL);
-//                corteLuz = (sigintHandler.getGracefulQuit() == 1);
-//                if (corteLuz) {
-//                    Logger::log(adminJugadoresLogId, "Corte de luz: abortando comensales. ", DEBUG);
-//                    Logger::log(adminJugadoresLogId,
-//                                "Corte de luz: Se van los comensales que estaban en el restaurant", INFO);
-//                } else {
             Logger::log(adminJugadoresLogId, "Termino el jugador " + Logger::intToString(id), DEBUG);
             jugadoresTerminados++;
-//                }
+
         }
 
-//            if (corteLuz) {
-//                Logger::log(adminJugadoresLogId, "Reenviando senial a los comensales", DEBUG);
-//                for (unsigned int i = 0; i < idsComensales.size(); i++) {
-//                    kill(idsComensales[i], SIGINT);
-//                }
-//            }
-//        }
 
         Logger::log(adminJugadoresLogId,
                     "Devolviendo cantidad de jugadores inicializados: " + Logger::intToString(jugadoresCreados),
@@ -124,7 +99,6 @@ namespace std {
     }
 
     AdminJugadoresProcess::~AdminJugadoresProcess() {
-        // TODO Auto-generated destructor stub
     }
 
 } /* namespace std */

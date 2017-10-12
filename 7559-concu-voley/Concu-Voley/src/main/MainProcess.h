@@ -39,6 +39,10 @@ namespace std {
     const string SHM_NIVEL_MAREA_INIT_FILE = "/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/shm_nivel_marea.txt";
     const string SEM_NIVEL_DE_MAREA_INIT_FILE = "/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sem_nivel_marea.txt";
 
+    const string SEM_GENTE_EN_EL_PREDIO = "/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sem_gente_en_el_predio.txt";
+    const string SHM_GENTE_EN_EL_PREDIO = "/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/shm_gente_en_el_predio.txt";
+
+
 
     const string SEMS_JUGADOR_SIN_PAREJA = "/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sems_jugador_sin_pareja.txt";
 
@@ -74,6 +78,7 @@ namespace std {
         Semaforo semCupido;
         Semaforo semCantCanchasLibres;
         Semaforo semNivelDeMarea;
+        Semaforo semCantGenteEnElPredio;
 
         vector<Semaforo> semsTerminoDeJugar;
         vector<vector<Semaforo>> semCanchasLibres;
@@ -83,6 +88,7 @@ namespace std {
         vector<vector<MemoriaCompartida<bool>>> shmCanchasLibres;
         vector<MemoriaCompartida<bool>> shmJugadoresSinPareja;
         MemoriaCompartida<int> shmNivelDeMarea;
+        MemoriaCompartida<int> shmCantGenteEnElPredio;
 
 
         Pipe pipeJugadores;

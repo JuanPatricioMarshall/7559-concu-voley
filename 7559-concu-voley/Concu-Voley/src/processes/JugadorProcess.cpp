@@ -15,7 +15,8 @@ JugadorProcess::JugadorProcess(int cantidadDePartidosPendientes,
                                vector<Semaforo> *semPartidoTerminado, int indice,
                                Semaforo *semEsperarRecepcionista, Semaforo *semJugadoresPredio, Pipe *pipeJugadores,
                                vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja,
-                               vector<Semaforo> *semJugadoresSinPareja) {
+                               vector<Semaforo> *semJugadoresSinPareja, MemoriaCompartida<int> *shmCantGenteEnElPredio,
+                               Semaforo *semCantGenteEnElPredio) {
 
     this->cantidadDePartidosPendientes = cantidadDePartidosPendientes;
 
@@ -26,6 +27,8 @@ JugadorProcess::JugadorProcess(int cantidadDePartidosPendientes,
     this->pipeJugadores = pipeJugadores;
     this->semJugadoresSinPareja = semJugadoresSinPareja;
     this->shmJugadoresSinPareja = shmJugadoresSinPareja;
+    this->shmCantGenteEnElPredio = shmCantGenteEnElPredio;
+    this->semCantGenteEnElPredio = semCantGenteEnElPredio;
 
     inicializarHandler();
     inicializarMemoriasCompartidas();
@@ -33,12 +36,15 @@ JugadorProcess::JugadorProcess(int cantidadDePartidosPendientes,
 
 void JugadorProcess::inicializarMemoriasCompartidas() {
 
-    for (unsigned int i = 0; i < shmJugadoresSinPareja->size(); i++){
+    for (unsigned int i = 0; i < shmJugadoresSinPareja->size(); i++) {
         semJugadoresSinPareja->at(i).p();
         shmJugadoresSinPareja->at(i).crear(SHM_JUGADORES_SIN_PAREJA, i);
         semJugadoresSinPareja->at(i).v();
     }
 
+    semCantGenteEnElPredio->p();
+    shmCantGenteEnElPredio->crear(SHM_GENTE_EN_EL_PREDIO, 0);
+    semCantGenteEnElPredio->v();
 }
 
 
@@ -56,11 +62,15 @@ void JugadorProcess::llegar() {
     this->semJugadoresPredio->p();
     Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " logro entrar al predio", DEBUG);
 
+    this->semCantGenteEnElPredio->p();
+    int cant = this->shmCantGenteEnElPredio->leer();
+    this->shmCantGenteEnElPredio->escribir(cant++);
+    this->semCantGenteEnElPredio->p();
+
+
     Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " le avisa a la recepcionista", DEBUG);
     this->semEsperarRecepcionista->v();
     Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " le aviso a la recepcionista", DEBUG);
-
-
 
 
 }
@@ -80,7 +90,6 @@ void JugadorProcess::jugar() {
     Logger::log(jugadorLogId, "Jugador escribio en pipeJugadores: " + claveJugadorStr, DEBUG);
 
 
-
     Logger::log(jugadorLogId, "Jugador esperando que termine el partido: ", DEBUG);
 
     this->semPartidoTerminado->at(indice).p();
@@ -98,10 +107,14 @@ void JugadorProcess::jugar() {
     this->semJugadoresSinPareja->at(indice).v();
 
 
-    if(consiguioPareja) {
+    if (consiguioPareja) {
         Logger::log(jugadorLogId, "No habia encontrado pareja " + consiguioPareja, DEBUG);
         this->semJugadoresPredio->v();
         Logger::log(jugadorLogId, "Jugador se va del predio", DEBUG);
+        this->semCantGenteEnElPredio->p();
+        int cant = this->shmCantGenteEnElPredio->leer();
+        this->shmCantGenteEnElPredio->escribir(cant--);
+        this->semCantGenteEnElPredio->p();
         terminar();
         exit(0);
     }
@@ -109,12 +122,13 @@ void JugadorProcess::jugar() {
     Logger::log(jugadorLogId, "Habia encontrado pareja: " + consiguioPareja, DEBUG);
 
 
-
     Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " termino de jugar", DEBUG);
 
     this->cantidadDePartidosPendientes -= 1;
 
-    Logger::log(jugadorLogId, "Tengo " + Logger::intToString(cantidadDePartidosPendientes) + " cantidad de partidos pendientes", DEBUG);
+    Logger::log(jugadorLogId,
+                "Tengo " + Logger::intToString(cantidadDePartidosPendientes) + " cantidad de partidos pendientes",
+                DEBUG);
 
 
     decidirQueHacer();
@@ -132,6 +146,10 @@ void JugadorProcess::decidirQueHacer() {
                     "Jugador " + Logger::intToString(indice) + " se va porque no tiene partidos pendientes", DEBUG);
 
         this->semJugadoresPredio->v();
+        this->semCantGenteEnElPredio->p();
+        int cant = this->shmCantGenteEnElPredio->leer();
+        this->shmCantGenteEnElPredio->escribir(cant--);
+        this->semCantGenteEnElPredio->p();
         terminar();
         exit(0);
 
@@ -144,6 +162,11 @@ void JugadorProcess::decidirQueHacer() {
             Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " decide irse", DEBUG);
 
             this->semJugadoresPredio->v();
+
+            this->semCantGenteEnElPredio->p();
+            int cant = this->shmCantGenteEnElPredio->leer();
+            this->shmCantGenteEnElPredio->escribir(cant--);
+            this->semCantGenteEnElPredio->p();
 
             sleep(TiemposEspera::TIEMPO_AFUERA);
             Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " vuelve a entrar", DEBUG);
@@ -176,6 +199,8 @@ void JugadorProcess::liberarMemoriasCompartidas() {
         shmJugadoresSinPareja->at(i).liberar();
     }
 
+    shmCantGenteEnElPredio->liberar();
+
 }
 
 
@@ -183,7 +208,6 @@ void JugadorProcess::limpiarRecursos() {
     Logger::log(jugadorLogId, "Limpiando recursos", DEBUG);
     liberarMemoriasCompartidas();
 }
-
 
 
 JugadorProcess::~JugadorProcess() {

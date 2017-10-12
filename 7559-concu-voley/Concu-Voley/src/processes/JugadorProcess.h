@@ -31,6 +31,9 @@ namespace std {
         vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja;
         vector<Semaforo> *semJugadoresSinPareja;
 
+        MemoriaCompartida<int> *shmCantGenteEnElPredio;
+        Semaforo *semCantGenteEnElPredio;
+
 
         void llegar();
 
@@ -53,7 +56,8 @@ namespace std {
                        vector<Semaforo> *semPartidoTerminado, int indice,
                        Semaforo *semEsperarRecepcionista, Semaforo *semJugadoresPredio, Pipe *pipeJugadores,
                        vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja,
-                       vector<Semaforo> *semJugadoresSinPareja);
+                       vector<Semaforo> *semJugadoresSinPareja, MemoriaCompartida<int> *shmCantGenteEnElPredio,
+                       Semaforo *semCantGenteEnElPredio);
 
 
         void run();

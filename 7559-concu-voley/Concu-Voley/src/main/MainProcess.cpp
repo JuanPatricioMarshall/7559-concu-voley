@@ -20,7 +20,8 @@ namespace std {
             semRanking(SEM_RANKING_INIT_FILE, 1, 0),
             semCupido(SEM_CUPIDO_INIT_FILE, 0, 0),
             semCantCanchasLibres(SEM_CANT_CANCHAS_LIBRES_FILE, predioC * predioF, 0),
-            semNivelDeMarea(SEM_NIVEL_DE_MAREA_INIT_FILE, 1, 0) {
+            semNivelDeMarea(SEM_NIVEL_DE_MAREA_INIT_FILE, 1, 0),
+            semCantGenteEnElPredio(SEM_GENTE_EN_EL_PREDIO, 1, 0) {
 
         this->cantPartidosJugador = cantPartidosJugador;
         this->predioC = predioC;
@@ -67,6 +68,7 @@ namespace std {
                     DEBUG);
 
         semNivelDeMarea.p();
+        semCantGenteEnElPredio.p();
 
         for (int i = 0; i < cantNJugadores; i++) {
             semJugadoresSinPareja.at(i).p();
@@ -122,6 +124,11 @@ namespace std {
         shmNivelDeMarea.escribir(0);
         semNivelDeMarea.v();
 
+        shmCantGenteEnElPredio.crear(SHM_GENTE_EN_EL_PREDIO, 0);
+        shmCantGenteEnElPredio.escribir(0);
+        semCantGenteEnElPredio.v();
+
+
         Logger::log(mainLogId, "Fin de creacion de memorias compartidas ",
                     DEBUG);
     }
@@ -170,7 +177,8 @@ namespace std {
             AdminJugadoresProcess adminJugadoresProcess(cantNJugadores, cantPartidosJugador,
                                                         &semsTerminoDeJugar,
                                                         &semEsperarRecepcionista, &semJugadoresPredio, &pipeJugadores,
-                                                        &shmJugadoresSinPareja, &semJugadoresSinPareja);
+                                                        &shmJugadoresSinPareja, &semJugadoresSinPareja,
+                                                        &shmCantGenteEnElPredio, &semCantGenteEnElPredio);
 
             int jugadoresTerminados = adminJugadoresProcess.run();
 
