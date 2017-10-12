@@ -744,60 +744,6 @@ Concu-Voley/src/utils/logger/Logger.cpp.s:
 	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.s
 .PHONY : Concu-Voley/src/utils/logger/Logger.cpp.s
 
-Concu-Voley/src/utils/parser/Parser.o: Concu-Voley/src/utils/parser/Parser.cpp.o
-
-.PHONY : Concu-Voley/src/utils/parser/Parser.o
-
-# target to build an object file
-Concu-Voley/src/utils/parser/Parser.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o
-.PHONY : Concu-Voley/src/utils/parser/Parser.cpp.o
-
-Concu-Voley/src/utils/parser/Parser.i: Concu-Voley/src/utils/parser/Parser.cpp.i
-
-.PHONY : Concu-Voley/src/utils/parser/Parser.i
-
-# target to preprocess a source file
-Concu-Voley/src/utils/parser/Parser.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.i
-.PHONY : Concu-Voley/src/utils/parser/Parser.cpp.i
-
-Concu-Voley/src/utils/parser/Parser.s: Concu-Voley/src/utils/parser/Parser.cpp.s
-
-.PHONY : Concu-Voley/src/utils/parser/Parser.s
-
-# target to generate assembly for a file
-Concu-Voley/src/utils/parser/Parser.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.s
-.PHONY : Concu-Voley/src/utils/parser/Parser.cpp.s
-
-Concu-Voley/src/utils/parser/pugixml/pugixml.o: Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o
-
-.PHONY : Concu-Voley/src/utils/parser/pugixml/pugixml.o
-
-# target to build an object file
-Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o
-.PHONY : Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o
-
-Concu-Voley/src/utils/parser/pugixml/pugixml.i: Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.i
-
-.PHONY : Concu-Voley/src/utils/parser/pugixml/pugixml.i
-
-# target to preprocess a source file
-Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.i
-.PHONY : Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.i
-
-Concu-Voley/src/utils/parser/pugixml/pugixml.s: Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.s
-
-.PHONY : Concu-Voley/src/utils/parser/pugixml/pugixml.s
-
-# target to generate assembly for a file
-Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.s
-.PHONY : Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.s
-
 Concu-Voley/src/utils/random/RandomUtil.o: Concu-Voley/src/utils/random/RandomUtil.cpp.o
 
 .PHONY : Concu-Voley/src/utils/random/RandomUtil.o
@@ -957,12 +903,6 @@ help:
 	@echo "... Concu-Voley/src/utils/logger/Logger.o"
 	@echo "... Concu-Voley/src/utils/logger/Logger.i"
 	@echo "... Concu-Voley/src/utils/logger/Logger.s"
-	@echo "... Concu-Voley/src/utils/parser/Parser.o"
-	@echo "... Concu-Voley/src/utils/parser/Parser.i"
-	@echo "... Concu-Voley/src/utils/parser/Parser.s"
-	@echo "... Concu-Voley/src/utils/parser/pugixml/pugixml.o"
-	@echo "... Concu-Voley/src/utils/parser/pugixml/pugixml.i"
-	@echo "... Concu-Voley/src/utils/parser/pugixml/pugixml.s"
 	@echo "... Concu-Voley/src/utils/random/RandomUtil.o"
 	@echo "... Concu-Voley/src/utils/random/RandomUtil.i"
 	@echo "... Concu-Voley/src/utils/random/RandomUtil.s"

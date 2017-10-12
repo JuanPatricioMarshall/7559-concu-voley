@@ -11,9 +11,6 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/parser/Parser.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/parser/pugixml/pugiconfig.hpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/parser/pugixml/pugixml.hpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.h
@@ -202,15 +199,6 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.c
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o: ../Concu-Voley/src/utils/ipc/lock/LockFile.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o: ../Concu-Voley/src/utils/logger/Logger.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o: ../Concu-Voley/src/utils/parser/Parser.cpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o: ../Concu-Voley/src/utils/parser/Parser.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o: ../Concu-Voley/src/utils/parser/pugixml/pugiconfig.hpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o: ../Concu-Voley/src/utils/parser/pugixml/pugixml.hpp
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o: ../Concu-Voley/src/utils/parser/pugixml/pugiconfig.hpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o: ../Concu-Voley/src/utils/parser/pugixml/pugixml.cpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o: ../Concu-Voley/src/utils/parser/pugixml/pugixml.hpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o: ../Concu-Voley/src/utils/random/RandomUtil.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o: ../Concu-Voley/src/utils/random/RandomUtil.h

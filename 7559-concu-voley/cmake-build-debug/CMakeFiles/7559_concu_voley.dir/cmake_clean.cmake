@@ -22,8 +22,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o"
   "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o"
   "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o"
-  "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o"
-  "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o"
   "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o"
   "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o"
   "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o"

@@ -609,57 +609,9 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o.provid
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o.provides.build: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o
 
 
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o: ../Concu-Voley/src/utils/parser/pugixml/pugixml.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.i
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.s
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o.requires:
-
-.PHONY : CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o.requires
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o.provides: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o.requires
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o.provides.build
-.PHONY : CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o.provides
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o.provides.build: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o
-
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o: ../Concu-Voley/src/utils/parser/Parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/Parser.cpp
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/Parser.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.i
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/Parser.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.s
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o.requires:
-
-.PHONY : CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o.requires
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o.provides: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o.requires
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o.provides.build
-.PHONY : CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o.provides
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o.provides.build: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o
-
-
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o: ../Concu-Voley/src/utils/random/RandomUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.i: cmake_force
@@ -683,7 +635,7 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o.pr
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o: ../Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.i: cmake_force
@@ -707,7 +659,7 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSer
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o: ../Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.i: cmake_force
@@ -754,8 +706,6 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerial
 "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o" \
 "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o" \
 "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o" \
-"CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o" \
-"CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o" \
 "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o" \
 "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o" \
 "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o"
@@ -786,14 +736,12 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerial
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o
-7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o
-7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/build.make
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Linking CXX executable 7559_concu_voley"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable 7559_concu_voley"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/7559_concu_voley.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -824,8 +772,6 @@ CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-
 CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o.requires
 CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.requires
 CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o.requires
-CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o.requires
-CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o.requires
 CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o.requires
 CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o.requires
 CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o.requires

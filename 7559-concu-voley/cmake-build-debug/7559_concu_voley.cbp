@@ -282,21 +282,6 @@
 		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h">
 			<Option target="7559_concu_voley"/>
 		</Unit>
-		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/Parser.cpp">
-			<Option target="7559_concu_voley"/>
-		</Unit>
-		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/Parser.h">
-			<Option target="7559_concu_voley"/>
-		</Unit>
-		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugiconfig.hpp">
-			<Option target="7559_concu_voley"/>
-		</Unit>
-		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp">
-			<Option target="7559_concu_voley"/>
-		</Unit>
-		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugixml.hpp">
-			<Option target="7559_concu_voley"/>
-		</Unit>
 		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.cpp">
 			<Option target="7559_concu_voley"/>
 		</Unit>

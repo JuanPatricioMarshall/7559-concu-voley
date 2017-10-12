@@ -12,9 +12,6 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o
  /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
  /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
  /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
- /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/Parser.h
- /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugiconfig.hpp
- /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugixml.hpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o
  /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.cpp
  /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
@@ -203,15 +200,6 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o
  /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.h
  /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.cpp
  /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o
- /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/Parser.cpp
- /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/Parser.h
- /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugiconfig.hpp
- /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugixml.hpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp.o
- /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugiconfig.hpp
- /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugixml.cpp
- /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/parser/pugixml/pugixml.hpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o
  /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.cpp
  /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h

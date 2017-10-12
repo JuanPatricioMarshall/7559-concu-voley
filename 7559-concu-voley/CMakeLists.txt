@@ -71,11 +71,6 @@ set(SOURCE_FILES
         Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
         Concu-Voley/src/utils/logger/Logger.cpp
         Concu-Voley/src/utils/logger/Logger.h
-        Concu-Voley/src/utils/parser/pugixml/pugiconfig.hpp
-        Concu-Voley/src/utils/parser/pugixml/pugixml.cpp
-        Concu-Voley/src/utils/parser/pugixml/pugixml.hpp
-        Concu-Voley/src/utils/parser/Parser.cpp
-        Concu-Voley/src/utils/parser/Parser.h
         Concu-Voley/src/utils/random/RandomUtil.cpp
         Concu-Voley/src/utils/random/RandomUtil.h
         Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp
