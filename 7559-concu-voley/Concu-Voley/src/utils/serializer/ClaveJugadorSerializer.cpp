@@ -3,13 +3,10 @@
 //
 
 #include "ClaveJugadorSerializer.h"
-#include <stdlib.h>
 
-#include <cstdlib>
 #include <iomanip>
 #include <iostream>
 #include <sstream>
-#include <vector>
 
 
 namespace std {

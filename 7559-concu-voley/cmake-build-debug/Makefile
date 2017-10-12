@@ -258,33 +258,6 @@ Concu-Voley/src/model/Pareja.cpp.s:
 	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.s
 .PHONY : Concu-Voley/src/model/Pareja.cpp.s
 
-Concu-Voley/src/model/Partido.o: Concu-Voley/src/model/Partido.cpp.o
-
-.PHONY : Concu-Voley/src/model/Partido.o
-
-# target to build an object file
-Concu-Voley/src/model/Partido.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Partido.cpp.o
-.PHONY : Concu-Voley/src/model/Partido.cpp.o
-
-Concu-Voley/src/model/Partido.i: Concu-Voley/src/model/Partido.cpp.i
-
-.PHONY : Concu-Voley/src/model/Partido.i
-
-# target to preprocess a source file
-Concu-Voley/src/model/Partido.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Partido.cpp.i
-.PHONY : Concu-Voley/src/model/Partido.cpp.i
-
-Concu-Voley/src/model/Partido.s: Concu-Voley/src/model/Partido.cpp.s
-
-.PHONY : Concu-Voley/src/model/Partido.s
-
-# target to generate assembly for a file
-Concu-Voley/src/model/Partido.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Partido.cpp.s
-.PHONY : Concu-Voley/src/model/Partido.cpp.s
-
 Concu-Voley/src/model/Resultado.o: Concu-Voley/src/model/Resultado.cpp.o
 
 .PHONY : Concu-Voley/src/model/Resultado.o
@@ -366,59 +339,32 @@ Concu-Voley/src/processes/CupidoProcess.cpp.s:
 	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.s
 .PHONY : Concu-Voley/src/processes/CupidoProcess.cpp.s
 
-Concu-Voley/src/processes/GerenteProcess.o: Concu-Voley/src/processes/GerenteProcess.cpp.o
+Concu-Voley/src/processes/FixtureProcess.o: Concu-Voley/src/processes/FixtureProcess.cpp.o
 
-.PHONY : Concu-Voley/src/processes/GerenteProcess.o
-
-# target to build an object file
-Concu-Voley/src/processes/GerenteProcess.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GerenteProcess.cpp.o
-.PHONY : Concu-Voley/src/processes/GerenteProcess.cpp.o
-
-Concu-Voley/src/processes/GerenteProcess.i: Concu-Voley/src/processes/GerenteProcess.cpp.i
-
-.PHONY : Concu-Voley/src/processes/GerenteProcess.i
-
-# target to preprocess a source file
-Concu-Voley/src/processes/GerenteProcess.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GerenteProcess.cpp.i
-.PHONY : Concu-Voley/src/processes/GerenteProcess.cpp.i
-
-Concu-Voley/src/processes/GerenteProcess.s: Concu-Voley/src/processes/GerenteProcess.cpp.s
-
-.PHONY : Concu-Voley/src/processes/GerenteProcess.s
-
-# target to generate assembly for a file
-Concu-Voley/src/processes/GerenteProcess.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GerenteProcess.cpp.s
-.PHONY : Concu-Voley/src/processes/GerenteProcess.cpp.s
-
-Concu-Voley/src/processes/GrupoComensalesProcess.o: Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o
-
-.PHONY : Concu-Voley/src/processes/GrupoComensalesProcess.o
+.PHONY : Concu-Voley/src/processes/FixtureProcess.o
 
 # target to build an object file
-Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o
-.PHONY : Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o
+Concu-Voley/src/processes/FixtureProcess.cpp.o:
+	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.o
+.PHONY : Concu-Voley/src/processes/FixtureProcess.cpp.o
 
-Concu-Voley/src/processes/GrupoComensalesProcess.i: Concu-Voley/src/processes/GrupoComensalesProcess.cpp.i
+Concu-Voley/src/processes/FixtureProcess.i: Concu-Voley/src/processes/FixtureProcess.cpp.i
 
-.PHONY : Concu-Voley/src/processes/GrupoComensalesProcess.i
+.PHONY : Concu-Voley/src/processes/FixtureProcess.i
 
 # target to preprocess a source file
-Concu-Voley/src/processes/GrupoComensalesProcess.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.i
-.PHONY : Concu-Voley/src/processes/GrupoComensalesProcess.cpp.i
+Concu-Voley/src/processes/FixtureProcess.cpp.i:
+	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.i
+.PHONY : Concu-Voley/src/processes/FixtureProcess.cpp.i
 
-Concu-Voley/src/processes/GrupoComensalesProcess.s: Concu-Voley/src/processes/GrupoComensalesProcess.cpp.s
+Concu-Voley/src/processes/FixtureProcess.s: Concu-Voley/src/processes/FixtureProcess.cpp.s
 
-.PHONY : Concu-Voley/src/processes/GrupoComensalesProcess.s
+.PHONY : Concu-Voley/src/processes/FixtureProcess.s
 
 # target to generate assembly for a file
-Concu-Voley/src/processes/GrupoComensalesProcess.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.s
-.PHONY : Concu-Voley/src/processes/GrupoComensalesProcess.cpp.s
+Concu-Voley/src/processes/FixtureProcess.cpp.s:
+	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.s
+.PHONY : Concu-Voley/src/processes/FixtureProcess.cpp.s
 
 Concu-Voley/src/processes/JugadorProcess.o: Concu-Voley/src/processes/JugadorProcess.cpp.o
 
@@ -849,9 +795,6 @@ help:
 	@echo "... Concu-Voley/src/model/Pareja.o"
 	@echo "... Concu-Voley/src/model/Pareja.i"
 	@echo "... Concu-Voley/src/model/Pareja.s"
-	@echo "... Concu-Voley/src/model/Partido.o"
-	@echo "... Concu-Voley/src/model/Partido.i"
-	@echo "... Concu-Voley/src/model/Partido.s"
 	@echo "... Concu-Voley/src/model/Resultado.o"
 	@echo "... Concu-Voley/src/model/Resultado.i"
 	@echo "... Concu-Voley/src/model/Resultado.s"
@@ -861,12 +804,9 @@ help:
 	@echo "... Concu-Voley/src/processes/CupidoProcess.o"
 	@echo "... Concu-Voley/src/processes/CupidoProcess.i"
 	@echo "... Concu-Voley/src/processes/CupidoProcess.s"
-	@echo "... Concu-Voley/src/processes/GerenteProcess.o"
-	@echo "... Concu-Voley/src/processes/GerenteProcess.i"
-	@echo "... Concu-Voley/src/processes/GerenteProcess.s"
-	@echo "... Concu-Voley/src/processes/GrupoComensalesProcess.o"
-	@echo "... Concu-Voley/src/processes/GrupoComensalesProcess.i"
-	@echo "... Concu-Voley/src/processes/GrupoComensalesProcess.s"
+	@echo "... Concu-Voley/src/processes/FixtureProcess.o"
+	@echo "... Concu-Voley/src/processes/FixtureProcess.i"
+	@echo "... Concu-Voley/src/processes/FixtureProcess.s"
 	@echo "... Concu-Voley/src/processes/JugadorProcess.o"
 	@echo "... Concu-Voley/src/processes/JugadorProcess.i"
 	@echo "... Concu-Voley/src/processes/JugadorProcess.s"

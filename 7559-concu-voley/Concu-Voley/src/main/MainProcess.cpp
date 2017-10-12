@@ -2,16 +2,13 @@
 #include "MainProcess.h"
 
 #include <sys/wait.h>
-#include <unistd.h>
-#include <csignal>
-#include <cstdlib>
 
 
-#include "../processes/GerenteProcess.h"
 #include "../utils/ipc/signal/SignalHandler.h"
 #include "../processes/RecepcionistaProcess.h"
 #include "../processes/CupidoProcess.h"
 #include "../processes/AdminJugadoresProcess.h"
+#include "../processes/FixtureProcess.h"
 
 namespace std {
 
@@ -154,6 +151,13 @@ namespace std {
         waitpid(idCupido, NULL, 0);
 
 
+        Logger::log(mainLogId,
+                    "Finalizando Fixture "
+                    + Logger::intToString(idFixture), DEBUG);
+        kill(idFixture, SIGINT);
+        waitpid(idFixture, NULL, 0);
+
+
     }
 
 
@@ -209,26 +213,30 @@ namespace std {
 
     }
 
+    void MainProcess::handleBajaOla() {
+        Logger::log(mainLogId, "BAJA 1 NIVEL LA OLA", INFO);
+
+        semNivelDeMarea.p();
+
+        int nivelMarea = shmNivelDeMarea.leer();
+
+        if (nivelMarea != 0) {
+            nivelMarea--;
+        }
+        Logger::log(mainLogId, "Nivel actual de marea: " + Logger::intToString(nivelMarea), INFO);
+
+        shmNivelDeMarea.escribir(nivelMarea);
+        semNivelDeMarea.v();
+
+        avisarAPartidos();
+
+    }
+
     void MainProcess::avisarAPartidos() {
 
 
     }
 
-
-//
-//int MainProcess::handleCorteLuz(){
-//	Logger::log(mainLogId, "CORTE DE LUZ", INFO);
-//	acumularPerdidas();
-//	int comensalesFinalizados = finalizarJugadores();
-//	finalizarProcesosPredio();
-//	eliminarIPCs();
-//
-//	Logger::log(mainLogId, "ESPERANDO QUE VUELVA LA LUZ", INFO);
-//	if(TiemposEspera::tiempos){
-//		sleep(TiemposEspera::TIEMPO_CORTE_LUZ);
-//	}
-//	return comensalesFinalizados;
-//}
 
     void MainProcess::iniciarSimulacion() {
 
@@ -236,7 +244,7 @@ namespace std {
 
         inicializarCupido();
 
-//    inicializarProcesoFixture();
+        inicializarProcesoFixture();
 //   inicializarProcesoResultado();
 
         inicializarProcesosJugadores();
@@ -262,6 +270,22 @@ namespace std {
 
     }
 
+    void MainProcess::inicializarProcesoFixture() {
+
+        pid_t idFixture = fork();
+
+        if (idFixture == 0) {
+
+            FixtureProcess fixtureProcess(&pipeFixture);
+            fixtureProcess.run();
+            exit(0);
+        } else {
+
+            this->idFixture = idFixture;
+        }
+
+    }
+
 
     void MainProcess::inicializarCupido() {
 
@@ -272,7 +296,8 @@ namespace std {
             CupidoProcess cupidoProcess(&pipeJugadores, &semCanchasLibres,
                                         &shmCanchasLibres, cantNJugadores, &semCupido, &semsTerminoDeJugar,
                                         &semCantCanchasLibres, &pipeResultados, &pipeFixture, cantJugadoresMinimo,
-                                        &shmJugadoresSinPareja, &shmNivelDeMarea, &semNivelDeMarea, &semJugadoresSinPareja);
+                                        &shmJugadoresSinPareja, &shmNivelDeMarea, &semNivelDeMarea,
+                                        &semJugadoresSinPareja);
             cupidoProcess.run();
             exit(0);
         } else {
@@ -291,12 +316,6 @@ namespace std {
         int jugadoresTerminados = 0;
         bool salir = false;
 
-//    for (int i = 0; i < 10; i++) {
-//        Logger::log(mainLogId,
-//                    "Cantidad de Jugadores finalizados: "
-//                    + Logger::intToString(jugadoresTerminados),
-//                    DEBUG);
-//    }
 
         while (!salir) {
             int response;
@@ -304,16 +323,12 @@ namespace std {
             bool marea = (sigintHandler.getGracefulQuit() == 1);
 
             bool terminoTorneoDePronto = (sigusr1Handler.getGracefulQuit() == 1);
-            if (marea) {
-//			comensalesFinalizados = handleCorteLuz();
-            } else if (terminoTorneoDePronto) {
+            if (terminoTorneoDePronto) {
                 sigusr1Handler.setGracefulQuit(0);
-//			iniciarProcesoGerente();
                 //Iniciar proceso que diga resultado final?
-//            waitpid(idGerente, NULL, 0);
+
             } else {
 
-                //Leyendo respuesta del AdminComensales
                 if (WIFEXITED(response)) {
                     jugadoresTerminados = WEXITSTATUS(response);
                 }

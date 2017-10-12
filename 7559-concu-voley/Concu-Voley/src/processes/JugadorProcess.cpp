@@ -5,25 +5,9 @@
 #include "JugadorProcess.h"
 
 
-/*
- * GrupoComensalesProcess.cpp
- *
- *  Created on: Oct 15, 2016
- *      Author: gaston
- */
-
-#include "GrupoComensalesProcess.h"
-
-#include <unistd.h>
-#include <iostream>
-#include <string>
-#include <vector>
-
-
 #include "../utils/random/RandomUtil.h"
 
 #include "../utils/serializer/ClaveJugadorSerializer.h"
-#include <unistd.h>
 
 using namespace std;
 
@@ -77,6 +61,13 @@ void JugadorProcess::llegar() {
     Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " le aviso a la recepcionista", DEBUG);
 
 
+
+
+}
+
+void JugadorProcess::jugar() {
+
+
     ClaveJugador claveJugador(getpid(), indice);
 
     string claveJugadorStr = ClaveJugadorSerializer::serializar(&claveJugador);
@@ -89,10 +80,6 @@ void JugadorProcess::llegar() {
     Logger::log(jugadorLogId, "Jugador escribio en pipeJugadores: " + claveJugadorStr, DEBUG);
 
 
-}
-
-void JugadorProcess::jugar() {
-
 
     Logger::log(jugadorLogId, "Jugador esperando que termine el partido: ", DEBUG);
 
@@ -103,27 +90,24 @@ void JugadorProcess::jugar() {
 
     this->semJugadoresSinPareja->at(indice).p();
 
-    Logger::log(jugadorLogId, "Me fijo si habia encontrado pareja: ", DEBUG);
+    Logger::log(jugadorLogId, "Me fijo si habia encontrado pareja ", DEBUG);
 
 
     bool consiguioPareja = this->shmJugadoresSinPareja->at(indice).leer();
 
-    if(consiguioPareja) {
-        Logger::log(jugadorLogId, "No encontre pareja: " + consiguioPareja, DEBUG);
-    }
-    Logger::log(jugadorLogId, "Encontre pareja: " + consiguioPareja, DEBUG);
-
-
     this->semJugadoresSinPareja->at(indice).v();
 
 
-    if (consiguioPareja) {
-
-        this->semJugadoresPredio->p();
+    if(consiguioPareja) {
+        Logger::log(jugadorLogId, "No habia encontrado pareja " + consiguioPareja, DEBUG);
+        this->semJugadoresPredio->v();
         Logger::log(jugadorLogId, "Jugador se va del predio", DEBUG);
         terminar();
-
+        exit(0);
     }
+
+    Logger::log(jugadorLogId, "Habia encontrado pareja: " + consiguioPareja, DEBUG);
+
 
 
     Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " termino de jugar", DEBUG);
@@ -147,8 +131,9 @@ void JugadorProcess::decidirQueHacer() {
         Logger::log(jugadorLogId,
                     "Jugador " + Logger::intToString(indice) + " se va porque no tiene partidos pendientes", DEBUG);
 
-        terminar();
         this->semJugadoresPredio->v();
+        terminar();
+        exit(0);
 
     } else {
         if (RandomUtil::randomCeroUno() < TiemposEspera::PROBABILIDAD_IRSE) {
@@ -162,7 +147,6 @@ void JugadorProcess::decidirQueHacer() {
 
             sleep(TiemposEspera::TIEMPO_AFUERA);
             Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " vuelve a entrar", DEBUG);
-
 
             reentrar();
         }
@@ -201,17 +185,9 @@ void JugadorProcess::limpiarRecursos() {
 }
 
 
-//    void GrupoComensalesProcess::liberarMemoriasCompartidas(){
-//        this->shmPersonasLiving->liberar();
-//
-//        for (unsigned int i = 0; i < shmMesasLibres->size(); i++){
-//            shmMesasLibres->at(i).liberar();
-//        }
-//
-//    }
 
 JugadorProcess::~JugadorProcess() {
-//        liberarMemoriasCompartidas();
+
 }
 
 /* namespace std */

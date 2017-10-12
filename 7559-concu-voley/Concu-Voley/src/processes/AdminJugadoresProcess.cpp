@@ -3,10 +3,6 @@
 #include "AdminJugadoresProcess.h"
 
 #include <sys/wait.h>
-#include <unistd.h>
-#include <csignal>
-#include <cstdlib>
-#include <string>
 
 #include "../utils/ipc/signal/SignalHandler.h"
 #include "JugadorProcess.h"

@@ -9,10 +9,6 @@
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/ConcuVoley.cpp
 iostream
 -
-string
--
-vector
--
 MainProcess.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
 
@@ -21,14 +17,6 @@ MainProcess.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
 sys/wait.h
 -
-unistd.h
--
-csignal
--
-cstdlib
--
-../processes/GerenteProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GerenteProcess.h
 ../utils/ipc/signal/SignalHandler.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
 ../processes/RecepcionistaProcess.h
@@ -37,6 +25,8 @@ cstdlib
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.h
 ../processes/AdminJugadoresProcess.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.h
+../processes/FixtureProcess.h
+/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.h
 
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
 sched.h
@@ -80,8 +70,6 @@ Pareja.h
 ClaveJugador.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Partido.cpp
-
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.cpp
 Resultado.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.h
@@ -98,14 +86,6 @@ Pareja.h
 AdminJugadoresProcess.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.h
 sys/wait.h
--
-unistd.h
--
-csignal
--
-cstdlib
--
-string
 -
 ../utils/ipc/signal/SignalHandler.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
@@ -129,8 +109,6 @@ vector
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
 ../utils/logger/Logger.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
-GrupoComensalesProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GrupoComensalesProcess.h
 TiemposEspera.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
 
@@ -160,73 +138,29 @@ Process.h
 ../utils/ipc/semaphore/Semaforo.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GerenteProcess.cpp
-GerenteProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GerenteProcess.h
-iostream
--
-../main/MainProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
-../utils/logger/Logger.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
+/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.cpp
+FixtureProcess.h
+/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.h
+../utils/serializer/ResultadoSerializer.h
+/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GerenteProcess.h
-string
--
-../utils/ipc/shared-memory/MemoriaCompartida.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
-Process.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.h
-../utils/ipc/semaphore/Semaforo.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
-
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GrupoComensalesProcess.cpp
-GrupoComensalesProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GrupoComensalesProcess.h
-unistd.h
--
-iostream
--
-string
--
+/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.h
 vector
 -
-../utils/random/RandomUtil.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
-
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GrupoComensalesProcess.h
-../utils/ipc/shared-memory/MemoriaCompartida.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
-../utils/ipc/semaphore/Semaforo.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
-../utils/ipc/pipe/Pipe.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
-../main/MainProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
 Process.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.h
-TiemposEspera.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
+../utils/ipc/pipe/Pipe.h
+/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
+../model/Resultado.h
+/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.h
 
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.cpp
 JugadorProcess.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.h
-GrupoComensalesProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GrupoComensalesProcess.h
-unistd.h
--
-iostream
--
-string
--
-vector
--
 ../utils/random/RandomUtil.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
 ../utils/serializer/ClaveJugadorSerializer.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
-unistd.h
--
 
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.h
 termio.h
@@ -241,8 +175,6 @@ vector
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.cpp
 PartidoProcess.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.h
-../model/Cancha.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Cancha.h
 TiemposEspera.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
 ../utils/serializer/ResultadoSerializer.h
@@ -293,14 +225,6 @@ string
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.cpp
 RecepcionistaProcess.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.h
-unistd.h
--
-iostream
--
-string
--
-../main/MainProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
 
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.h
 ../main/MainProcess.h
@@ -469,8 +393,6 @@ ctime
 -
 sys/time.h
 -
-errno.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/errno.h
 string.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/string.h
 ../ipc/lock/LockFile.h
@@ -489,8 +411,6 @@ RandomUtil.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
 cstdlib
 -
-ctime
--
 iostream
 -
 
@@ -499,17 +419,11 @@ iostream
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp
 ClaveJugadorSerializer.h
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
-stdlib.h
--
-cstdlib
--
 iomanip
 -
 iostream
 -
 sstream
--
-vector
 -
 
 /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h

@@ -5,14 +5,6 @@
 #include "RecepcionistaProcess.h"
 
 
-
-#include <unistd.h>
-#include <iostream>
-#include <string>
-
-#include "../main/MainProcess.h"
-
-
 using namespace std;
 
 RecepcionistaProcess::RecepcionistaProcess(Semaforo *semEsperarRecepcionista, Semaforo *semCupido, int cantJugadoresMinimo) {

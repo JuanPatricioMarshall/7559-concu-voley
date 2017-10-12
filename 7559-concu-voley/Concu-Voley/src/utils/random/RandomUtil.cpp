@@ -1,14 +1,8 @@
-/*
- * RandomUtil.cpp
- *
- *  Created on: Oct 16, 2016
- *      Author: gaston
- */
+
 
 #include "RandomUtil.h"
 
 #include <cstdlib>
-#include <ctime>
 #include <iostream>
 
 namespace std {

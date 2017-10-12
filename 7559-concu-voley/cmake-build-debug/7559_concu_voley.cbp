@@ -84,12 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sem_comensales_en_puerta.txt">
-			<Option target="7559_concu_voley"/>
-		</Unit>
-		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sem_mesas_libres.txt">
-			<Option target="7559_concu_voley"/>
-		</Unit>
 		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sem_nivel_marea.txt">
 			<Option target="7559_concu_voley"/>
 		</Unit>
@@ -156,12 +150,6 @@
 		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pareja.h">
 			<Option target="7559_concu_voley"/>
 		</Unit>
-		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Partido.cpp">
-			<Option target="7559_concu_voley"/>
-		</Unit>
-		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Partido.h">
-			<Option target="7559_concu_voley"/>
-		</Unit>
 		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.cpp">
 			<Option target="7559_concu_voley"/>
 		</Unit>
@@ -180,16 +168,10 @@
 		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.h">
 			<Option target="7559_concu_voley"/>
 		</Unit>
-		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GerenteProcess.cpp">
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.cpp">
 			<Option target="7559_concu_voley"/>
 		</Unit>
-		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GerenteProcess.h">
-			<Option target="7559_concu_voley"/>
-		</Unit>
-		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GrupoComensalesProcess.cpp">
-			<Option target="7559_concu_voley"/>
-		</Unit>
-		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/GrupoComensalesProcess.h">
+		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.h">
 			<Option target="7559_concu_voley"/>
 		</Unit>
 		<Unit filename="/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.cpp">

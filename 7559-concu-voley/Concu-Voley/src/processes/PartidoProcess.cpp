@@ -3,7 +3,6 @@
 //
 
 #include "PartidoProcess.h"
-#include "../model/Cancha.h"
 
 #include "TiemposEspera.h"
 #include "../utils/serializer/ResultadoSerializer.h"
@@ -141,7 +140,7 @@ void PartidoProcess::encontrarCancha() {
                             Logger::intToString(canchaC), INFO);
 
                 Logger::log(partidoProcessLogId,
-                            "Cancha coupada. En fila: " + Logger::intToString(canchaF) + " y columna: " +
+                            "Cancha ocupada. En fila: " + Logger::intToString(canchaF) + " y columna: " +
                             Logger::intToString(canchaC), INFO);
 
 

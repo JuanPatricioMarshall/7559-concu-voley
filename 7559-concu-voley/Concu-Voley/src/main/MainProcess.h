@@ -65,6 +65,7 @@ namespace std {
         pid_t idAdminJugadores;
         pid_t idRecepcionista;
         pid_t idCupido;
+        pid_t idFixture;
 
 
         Semaforo semJugadoresPredio;
@@ -99,7 +100,7 @@ namespace std {
 
         void crearMemoriasCompartidas();
 
-        void inicializarPipesFifos();
+        void inicializarProcesoFixture();
 
         void inicializarSigintHandler();
 
@@ -131,6 +132,7 @@ namespace std {
         void eliminarPipesFifos();
 
         void handleCrecimientoOla();
+        void handleBajaOla();
 
         void avisarAPartidos();
 

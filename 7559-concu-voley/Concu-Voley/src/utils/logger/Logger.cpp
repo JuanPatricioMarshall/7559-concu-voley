@@ -1,15 +1,9 @@
-/*
- * Logger.cpp
- *
- *  Created on: Oct 16, 2016
- *      Author: juampa_94
- */
+
 #include "Logger.h"
 
 #include <fstream>
 #include <ctime>
 #include <sys/time.h>
-#include "errno.h"
 #include "string.h"
 #include "../ipc/lock/LockFile.h"
 #include <iostream>

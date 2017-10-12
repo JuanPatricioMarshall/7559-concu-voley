@@ -4,8 +4,6 @@ project(7559_concu_voley)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-        Concu-Voley/ipc-init-files/sem_comensales_en_puerta.txt
-        Concu-Voley/ipc-init-files/sem_mesas_libres.txt
         Concu-Voley/ipc-init-files/sems_cancha_ocupada.txt
         Concu-Voley/ipc-init-files/sems_cant_canchas_libres.txt
         Concu-Voley/ipc-init-files/sems_cupido.txt
@@ -29,18 +27,12 @@ set(SOURCE_FILES
         Concu-Voley/src/model/ClaveJugador.h
         Concu-Voley/src/model/Pareja.cpp
         Concu-Voley/src/model/Pareja.h
-        Concu-Voley/src/model/Partido.cpp
-        Concu-Voley/src/model/Partido.h
         Concu-Voley/src/model/Resultado.cpp
         Concu-Voley/src/model/Resultado.h
         Concu-Voley/src/processes/AdminJugadoresProcess.cpp
         Concu-Voley/src/processes/AdminJugadoresProcess.h
         Concu-Voley/src/processes/CupidoProcess.cpp
         Concu-Voley/src/processes/CupidoProcess.h
-        Concu-Voley/src/processes/GerenteProcess.cpp
-        Concu-Voley/src/processes/GerenteProcess.h
-        Concu-Voley/src/processes/GrupoComensalesProcess.cpp
-        Concu-Voley/src/processes/GrupoComensalesProcess.h
         Concu-Voley/src/processes/JugadorProcess.cpp
         Concu-Voley/src/processes/JugadorProcess.h
         Concu-Voley/src/processes/PartidoProcess.cpp
@@ -75,6 +67,6 @@ set(SOURCE_FILES
         Concu-Voley/src/utils/random/RandomUtil.h
         Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp
         Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
-        Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp Concu-Voley/src/utils/serializer/ResultadoSerializer.h)
+        Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp Concu-Voley/src/utils/serializer/ResultadoSerializer.h Concu-Voley/src/processes/FixtureProcess.cpp Concu-Voley/src/processes/FixtureProcess.h)
 
 add_executable(7559_concu_voley ${SOURCE_FILES})
