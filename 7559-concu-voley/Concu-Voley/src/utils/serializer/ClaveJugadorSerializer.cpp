@@ -27,6 +27,13 @@ namespace std {
 
     }
 
+    string std::ClaveJugadorSerializer::intToString(int i) {
+        stringstream stream;
+        stream <<  i;
+        return stream.str();
+    }
+
+
     ClaveJugador ClaveJugadorSerializer::deserializarClaveJugador(string claveJugadorStr) {
         istringstream ss(claveJugadorStr);
         string n;
@@ -42,13 +49,6 @@ namespace std {
 
         return clave;
 
-    }
-
-
-    string std::ClaveJugadorSerializer::intToString(int i) {
-        stringstream stream;
-        stream <<  i;
-        return stream.str();
     }
 
 

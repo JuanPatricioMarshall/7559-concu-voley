@@ -79,6 +79,9 @@ void FixtureProcess::run() {
 void FixtureProcess::imprimirFixture() {
 
 
+    Logger::log(fixtureProcessId, "Detalles de partidos hasta ahora: cantidad: " + Logger::intToString(resultados.size()), DEBUG);
+
+
     string resultadoTotal = "";
     for (int i = 0; i < resultados.size(); i++) {
         Resultado resultado = resultados.at(i);

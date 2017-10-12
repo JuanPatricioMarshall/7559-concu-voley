@@ -65,7 +65,7 @@ void JugadorProcess::llegar() {
     this->semCantGenteEnElPredio->p();
     int cant = this->shmCantGenteEnElPredio->leer();
     this->shmCantGenteEnElPredio->escribir(cant++);
-    this->semCantGenteEnElPredio->p();
+    this->semCantGenteEnElPredio->v();
 
 
     Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " le avisa a la recepcionista", DEBUG);
@@ -114,7 +114,7 @@ void JugadorProcess::jugar() {
         this->semCantGenteEnElPredio->p();
         int cant = this->shmCantGenteEnElPredio->leer();
         this->shmCantGenteEnElPredio->escribir(cant--);
-        this->semCantGenteEnElPredio->p();
+        this->semCantGenteEnElPredio->v();
         terminar();
         exit(0);
     }
@@ -146,10 +146,11 @@ void JugadorProcess::decidirQueHacer() {
                     "Jugador " + Logger::intToString(indice) + " se va porque no tiene partidos pendientes", DEBUG);
 
         this->semJugadoresPredio->v();
+
         this->semCantGenteEnElPredio->p();
         int cant = this->shmCantGenteEnElPredio->leer();
         this->shmCantGenteEnElPredio->escribir(cant--);
-        this->semCantGenteEnElPredio->p();
+        this->semCantGenteEnElPredio->v();
         terminar();
         exit(0);
 
@@ -166,7 +167,7 @@ void JugadorProcess::decidirQueHacer() {
             this->semCantGenteEnElPredio->p();
             int cant = this->shmCantGenteEnElPredio->leer();
             this->shmCantGenteEnElPredio->escribir(cant--);
-            this->semCantGenteEnElPredio->p();
+            this->semCantGenteEnElPredio->v();
 
             sleep(TiemposEspera::TIEMPO_AFUERA);
             Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " vuelve a entrar", DEBUG);

@@ -68,7 +68,10 @@ void PartidoProcess::run() {
 
     string resultadoStr = ResultadoSerializer::serializar(&resultado);
 
-    this->pipeResultados->escribir(static_cast<const void *>(resultadoStr.c_str()), resultadoStr.size());
+    Logger::log(partidoProcessLogId, "Voy a pushearle a fixture " + resultadoStr, DEBUG);
+
+
+//    this->pipeResultados->escribir(static_cast<const void *>(resultadoStr.c_str()), resultadoStr.size());
     this->pipeFixture->escribir(static_cast<const void *>(resultadoStr.c_str()), resultadoStr.size());
 
 

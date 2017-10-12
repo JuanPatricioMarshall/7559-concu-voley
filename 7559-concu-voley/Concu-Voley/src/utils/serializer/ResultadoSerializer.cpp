@@ -11,6 +11,8 @@
 
 string ResultadoSerializer::serializar(Resultado *resultado) {
 
+
+
     string strClave1 = ClaveJugadorSerializer::serializar(resultado->getPareja1()->getClaveJugador1());
     string strClave2 = ClaveJugadorSerializer::serializar(resultado->getPareja1()->getClaveJugador2());
     string strClave3 = ClaveJugadorSerializer::serializar(resultado->getPareja2()->getClaveJugador1());
@@ -21,6 +23,11 @@ string ResultadoSerializer::serializar(Resultado *resultado) {
             ResultadoSerializer::intToString(resultado->getSetsPareja1()) + SEPARADOR +
             ResultadoSerializer::intToString(resultado->getSetsPareja2());
 
+    int lenght = strResultado.length();
+
+    strResultado  = intToString(lenght) + SEPARADOR + strResultado;
+
+
     return strResultado;
 }
 
@@ -28,19 +35,43 @@ Resultado ResultadoSerializer::deserializar(string resultadoStr) {
 
     istringstream ss(resultadoStr);
 
-    string clave1Str;
-    string clave2Str;
-    string clave3Str;
-    string clave4Str;
+    string clave1IndiceStr;
+    string clave1PIDStr;
+
+    string clave2IndiceStr;
+    string clave2PIDStr;
+
+    string clave3IndiceStr;
+    string clave3PIDStr;
+
+    string clave4IndiceStr;
+    string clave4PIDStr;
+
+
 
     string setsPareja1;
     string setsPareja2;
 
 
-    getline(ss, clave1Str, SEPARADOR);
-    getline(ss, clave2Str, SEPARADOR);
-    getline(ss, clave3Str, SEPARADOR);
-    getline(ss, clave4Str, SEPARADOR);
+    getline(ss, clave1IndiceStr, SEPARADOR);
+    getline(ss, clave1PIDStr, SEPARADOR);
+
+
+    getline(ss, clave2IndiceStr, SEPARADOR);
+    getline(ss, clave2PIDStr, SEPARADOR);
+
+    getline(ss, clave3IndiceStr, SEPARADOR);
+    getline(ss, clave3PIDStr, SEPARADOR);
+
+    getline(ss, clave4IndiceStr, SEPARADOR);
+    getline(ss, clave4PIDStr, SEPARADOR);
+
+
+    string clave1Str = clave1PIDStr + ClaveJugadorSerializer::SEPARADOR + clave1IndiceStr;
+    string clave2Str = clave2PIDStr + ClaveJugadorSerializer::SEPARADOR + clave2IndiceStr;
+    string clave3Str = clave3PIDStr + ClaveJugadorSerializer::SEPARADOR + clave3IndiceStr;
+    string clave4Str = clave4PIDStr + ClaveJugadorSerializer::SEPARADOR + clave4IndiceStr;
+
 
     ClaveJugador claveJugador1 = ClaveJugadorSerializer::deserializarClaveJugador(clave1Str);
     ClaveJugador claveJugador2 = ClaveJugadorSerializer::deserializarClaveJugador(clave2Str);
