@@ -114,20 +114,9 @@ namespace std {
         void inicializarProcesosJugadores();
 
 
-        void inicializarProcesosPredio();
-
-        void iniciarProcesosMozo();
-
-        void iniciarProcesoLobby();
-
-        void iniciarProcesoCocinero();
-
-        void iniciarProcesoGerente();
-
-
         void iniciarSimulacion();
 
-        void inicializarProcesosComensales();
+
 
         void finalizarProcesosPredio();
 

@@ -325,18 +325,12 @@ namespace std {
                 finalizarProcesosPredio();
                 eliminarIPCs();
 
-            }
-//        salir = !llegoGerente;
-            //TODO
-            salir = false;
+            }//TODO
+            salir = true;
         }
         mainProcessReturnData returnData;
         // TODO
-        returnData.cantJugadoresTerminados = 0;
-        returnData.ganadores = *new vector<string>();
-        returnData.ganadores.push_back("Fazzito");
-//	returnData.cantComensalesFinalizados = comensalesFinalizados;
-//	returnData.perdidas = perdidas;
+        returnData.cantJugadoresTerminados = jugadoresTerminados;
 
         return returnData;
 

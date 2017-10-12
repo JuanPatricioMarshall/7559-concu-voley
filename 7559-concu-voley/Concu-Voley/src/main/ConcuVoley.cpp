@@ -4,30 +4,25 @@
 #include <string>
 #include <vector>
 
-#include "../utils/parser/Parser.h"
 #include "MainProcess.h"
 
 
 
 using namespace std;
 
-int main() {
+int main(int argc, char *argv[]) {
 
-	Parser p = Parser();
-	p.parsearDocumento("SetUp.xml");
 
-//	int nivelDeLog = p.getNivelDeLog();
-//	int cantPartidosJugador = p.getCantPartidosJugador();
-//	int predioF = p.getPredioF();
-//	int predioC = p.getPredioC();
-//	int cantMJugadores = p.gentCantMJugadores();
 
-	int nivelDeLog = 0;
-	int cantPartidosJugador = 1;
-	int predioF = 1;
-	int predioC = 1;
-	int cantMJugadores = 4;
-	int cantNJugadores = 8;
+
+	int nivelDeLog = atoi(argv[1]);
+	int cantPartidosJugador = atoi(argv[2]);
+	int predioF = atoi(argv[3]);
+	int predioC = atoi(argv[4]);
+	int cantMJugadores = atoi(argv[5]);
+	int cantNJugadores = atoi(argv[6]);
+
+    cout << cantNJugadores;
 
 
     //TODO cambiar por 10
@@ -64,16 +59,6 @@ int main() {
 
 		jugadoresPendientes -= mainProcessReturnData.cantJugadoresTerminados;
 	} while(jugadoresPendientes > 0);
-
-	if ( mainProcessReturnData.ganadores.size() > 1){
-		Logger::log(mainLogId, "Ganadores del torneo: ", INFO);
-		for( int i = 0; i < mainProcessReturnData.ganadores.size(); i ++) {
-			Logger::log(mainLogId, "Ganador del torneo: " + mainProcessReturnData.ganadores[i], INFO);
-		}
-	}
-	else{
-		Logger::log(mainLogId, "Ganador del torneo: " + mainProcessReturnData.ganadores[0], INFO);
-	}
 
 
 	Logger::log(mainLogId, "Simulacion finalizada", INFO);
