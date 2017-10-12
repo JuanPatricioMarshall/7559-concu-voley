@@ -20,6 +20,19 @@ ClaveJugador* Pareja::getClaveJugador2(){
     return this->claveJugador2;
 }
 
+
+void Pareja::setClaveJugador1(ClaveJugador* clave){
+
+    this->claveJugador1 = new ClaveJugador(clave->getPid(), clave->getIndice());
+
+}
+
+void Pareja::setClaveJugador2(ClaveJugador* clave){
+    this->claveJugador2 = new ClaveJugador(clave->getPid(), clave->getIndice());
+
+}
+
+
 Pareja::~Pareja(){
 
 }

@@ -11,7 +11,6 @@
 #include <sstream>
 #include <vector>
 
-#include "../../model/Plato.h"
 
 namespace std {
 
@@ -22,6 +21,10 @@ namespace std {
     string ClaveJugadorSerializer::serializar(ClaveJugador* claveJugador){
 
         string claveJugadorStr = intToString(claveJugador->getPid()) + SEPARADOR + intToString(claveJugador->getIndice());
+
+        int lenght = claveJugadorStr.length();
+
+        claveJugadorStr  = intToString(lenght) + SEPARADOR + claveJugadorStr;
 
         return claveJugadorStr;
 

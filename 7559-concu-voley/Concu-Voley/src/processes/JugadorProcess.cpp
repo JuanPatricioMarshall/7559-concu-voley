@@ -19,11 +19,9 @@
 #include <string>
 #include <vector>
 
-#include "../model/Comida.h"
-#include "../model/Pedido.h"
-#include "../model/Plato.h"
+
 #include "../utils/random/RandomUtil.h"
-#include "../utils/serializer/LlamadoAMozoSerializer.h"
+
 #include "../utils/serializer/ClaveJugadorSerializer.h"
 #include <unistd.h>
 
@@ -31,7 +29,9 @@ using namespace std;
 
 JugadorProcess::JugadorProcess(int cantidadDePartidosPendientes,
                                vector<Semaforo> *semPartidoTerminado, int indice,
-                               Semaforo *semEsperarRecepcionista, Semaforo *semJugadoresPredio, Pipe *pipeJugadores) {
+                               Semaforo *semEsperarRecepcionista, Semaforo *semJugadoresPredio, Pipe *pipeJugadores,
+                               vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja,
+                               vector<Semaforo> *semJugadoresSinPareja) {
 
     this->cantidadDePartidosPendientes = cantidadDePartidosPendientes;
 
@@ -40,8 +40,19 @@ JugadorProcess::JugadorProcess(int cantidadDePartidosPendientes,
     this->semEsperarRecepcionista = semEsperarRecepcionista;
     this->semJugadoresPredio = semJugadoresPredio;
     this->pipeJugadores = pipeJugadores;
+    this->semJugadoresSinPareja = semJugadoresSinPareja;
+    this->shmJugadoresSinPareja = shmJugadoresSinPareja;
 
     inicializarHandler();
+    inicializarMemoriasCompartidas();
+}
+
+void JugadorProcess::inicializarMemoriasCompartidas() {
+
+    for (unsigned int i = 0; i < shmJugadoresSinPareja->size(); i++){
+        shmJugadoresSinPareja->at(i).crear(SHM_JUGADORES_SIN_PAREJA, i);
+    }
+
 }
 
 
@@ -71,7 +82,7 @@ void JugadorProcess::llegar() {
 
     Logger::log(jugadorLogId, "Jugador escribiendo en pipeJugadores: " + claveJugadorStr, DEBUG);
 
-    this->pipeJugadores->escribir(static_cast<const void*>(claveJugadorStr.c_str()), claveJugadorStr.size());
+    this->pipeJugadores->escribir(static_cast<const void *>(claveJugadorStr.c_str()), claveJugadorStr.size());
 
     Logger::log(jugadorLogId, "Jugador escribio en pipeJugadores: " + claveJugadorStr, DEBUG);
 
@@ -81,6 +92,19 @@ void JugadorProcess::llegar() {
 void JugadorProcess::jugar() {
 
     this->semPartidoTerminado->at(indice).p();
+
+    this->semJugadoresSinPareja->at(indice).p();
+
+    bool consiguioPareja = this->shmJugadoresSinPareja->at(indice).leer();
+
+    if (!consiguioPareja) {
+
+        this->semJugadoresPredio->p();
+
+        terminar();
+
+    }
+
 
     Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " termino de jugar", DEBUG);
 
@@ -96,20 +120,19 @@ void JugadorProcess::decidirQueHacer() {
     Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " decide que hacer", DEBUG);
 
 
-    if(cantidadDePartidosPendientes == 0){
-        Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " se va porque no tiene partidos pendientes", DEBUG);
+    if (cantidadDePartidosPendientes == 0) {
+        Logger::log(jugadorLogId,
+                    "Jugador " + Logger::intToString(indice) + " se va porque no tiene partidos pendientes", DEBUG);
 
         terminar();
         this->semJugadoresPredio->v();
 
-    }
-    else{
-        if(RandomUtil::randomCeroUno() < TiemposEspera::PROBABILIDAD_IRSE){
+    } else {
+        if (RandomUtil::randomCeroUno() < TiemposEspera::PROBABILIDAD_IRSE) {
             Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " decide volver a jugar", DEBUG);
 
             jugar();
-        }
-        else{
+        } else {
             Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " decide irse", DEBUG);
 
             this->semJugadoresPredio->v();
@@ -124,7 +147,7 @@ void JugadorProcess::decidirQueHacer() {
 
 }
 
-void JugadorProcess::reentrar(){
+void JugadorProcess::reentrar() {
 
     llegar();
     jugar();
@@ -132,17 +155,26 @@ void JugadorProcess::reentrar(){
 }
 
 
-void JugadorProcess::terminar(){
+void JugadorProcess::terminar() {
 
 
     limpiarRecursos();
 
 }
 
+void JugadorProcess::liberarMemoriasCompartidas() {
+
+
+    for (unsigned int i = 0; i < shmJugadoresSinPareja->size(); i++) {
+        shmJugadoresSinPareja->at(i).liberar();
+    }
+
+}
+
 
 void JugadorProcess::limpiarRecursos() {
     Logger::log(jugadorLogId, "Limpiando recursos", DEBUG);
-//        liberarMemoriasCompartidas();
+    liberarMemoriasCompartidas();
 }
 
 

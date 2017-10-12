@@ -11,8 +11,7 @@
 #include "../utils/ipc/shared-memory/MemoriaCompartida.h"
 #include "../utils/ipc/semaphore/Semaforo.h"
 #include "../utils/ipc/pipe/Pipe.h"
-#include "../model/Menu.h"
-#include "../model/Pedido.h"
+
 #include "../main/MainProcess.h"
 #include "Process.h"
 #include "TiemposEspera.h"
@@ -44,7 +43,7 @@ private:
 	vector<Semaforo>* semsMesasLibres;
 	vector<MemoriaCompartida<bool>>* shmMesasLibres;
 
-	Menu menu;
+//	Menu menu;
 
 	void llegar();
 	void comer();
@@ -53,7 +52,7 @@ private:
 
 	int obtenerNumeroMesa();
 
-	Pedido generarPedido();
+//	Pedido generarPedido();
 
 	void inicializarMemoriasCompartidas();
 
@@ -64,7 +63,7 @@ public:
 	GrupoComensalesProcess(int cantPersonas, Semaforo* semRecepcionistasLibres, Semaforo* semComensalesEnPuerta,
 			Semaforo* semPersonasLivingB, MemoriaCompartida<int>* shmPersonasLiving, Semaforo* semMesasLibres,
 			vector<Semaforo>* semsMesasLibres, vector<MemoriaCompartida<bool>>* shmMesasLibres,
-			Pipe* pipeLlamadosAMozos, vector<Semaforo>* semsLlegoComida, vector<Semaforo>* semsMesaPago, Menu menu);
+			Pipe* pipeLlamadosAMozos, vector<Semaforo>* semsLlegoComida, vector<Semaforo>* semsMesaPago);
 
 	void run();
 	void limpiarRecursos();

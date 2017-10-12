@@ -31,8 +31,7 @@ GerenteProcess::GerenteProcess(Semaforo* semCajaB, MemoriaCompartida<double>* sh
 void GerenteProcess::inicializarMemoriasCompartidas(){
 
 	Logger::log(gerenteLogId, "Inicializo las memorias comaprtidas", DEBUG);
-	this->shmCaja->crear(SHM_CAJA, 0);
-	this->shmPersonasLiving->crear(SHM_PERSONAS_LIVING,0);
+//	this->shmCaja->crear(SHM_CAJA, 0);
 }
 
 
@@ -80,6 +79,8 @@ void GerenteProcess::liberarMemoriasCompartidas(){
 	this->shmCaja->liberar();
 	Logger::log(gerenteLogId, "Liberando shmPersonasLiving", DEBUG);
 	this->shmPersonasLiving->liberar();
+
+
 }
 
 void GerenteProcess::limpiarRecursos(){

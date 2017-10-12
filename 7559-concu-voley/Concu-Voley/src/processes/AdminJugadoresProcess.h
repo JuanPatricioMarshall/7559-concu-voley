@@ -5,7 +5,6 @@
 #include <sched.h>
 #include <vector>
 
-#include "../model/Menu.h"
 #include "../utils/ipc/semaphore/Semaforo.h"
 #include "../utils/ipc/shared-memory/MemoriaCompartida.h"
 #include "../utils/ipc/signal/SIGINT_Handler.h"
@@ -31,9 +30,12 @@ namespace std {
         Semaforo *semJugadoresPredio;
         Pipe *pipeJugadores;
 
+        vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja;
+        vector<Semaforo> *semJugadoresSinPareja;
 
 
-        SIGINT_Handler sigintHandler;
+        SIGINT_Handler
+                sigintHandler;
 
         void inicializarHandler();
 
@@ -41,7 +43,9 @@ namespace std {
     public:
         AdminJugadoresProcess(int cantJugadores, int cantPartidosPorJugador,
                               vector<Semaforo> *semPartidoTerminado,
-                              Semaforo *semEsperarRecepcionista, Semaforo *semJugadoresPredio, Pipe *pipeJugadores);
+                              Semaforo *semEsperarRecepcionista, Semaforo *semJugadoresPredio, Pipe *pipeJugadores,
+                              vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja,
+                              vector<Semaforo> *semJugadoresSinPareja);
 
         int run();
 

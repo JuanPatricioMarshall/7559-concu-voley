@@ -231,87 +231,6 @@ Concu-Voley/src/model/ClaveJugador.cpp.s:
 	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.s
 .PHONY : Concu-Voley/src/model/ClaveJugador.cpp.s
 
-Concu-Voley/src/model/Comida.o: Concu-Voley/src/model/Comida.cpp.o
-
-.PHONY : Concu-Voley/src/model/Comida.o
-
-# target to build an object file
-Concu-Voley/src/model/Comida.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Comida.cpp.o
-.PHONY : Concu-Voley/src/model/Comida.cpp.o
-
-Concu-Voley/src/model/Comida.i: Concu-Voley/src/model/Comida.cpp.i
-
-.PHONY : Concu-Voley/src/model/Comida.i
-
-# target to preprocess a source file
-Concu-Voley/src/model/Comida.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Comida.cpp.i
-.PHONY : Concu-Voley/src/model/Comida.cpp.i
-
-Concu-Voley/src/model/Comida.s: Concu-Voley/src/model/Comida.cpp.s
-
-.PHONY : Concu-Voley/src/model/Comida.s
-
-# target to generate assembly for a file
-Concu-Voley/src/model/Comida.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Comida.cpp.s
-.PHONY : Concu-Voley/src/model/Comida.cpp.s
-
-Concu-Voley/src/model/LlamadoAMozo.o: Concu-Voley/src/model/LlamadoAMozo.cpp.o
-
-.PHONY : Concu-Voley/src/model/LlamadoAMozo.o
-
-# target to build an object file
-Concu-Voley/src/model/LlamadoAMozo.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/LlamadoAMozo.cpp.o
-.PHONY : Concu-Voley/src/model/LlamadoAMozo.cpp.o
-
-Concu-Voley/src/model/LlamadoAMozo.i: Concu-Voley/src/model/LlamadoAMozo.cpp.i
-
-.PHONY : Concu-Voley/src/model/LlamadoAMozo.i
-
-# target to preprocess a source file
-Concu-Voley/src/model/LlamadoAMozo.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/LlamadoAMozo.cpp.i
-.PHONY : Concu-Voley/src/model/LlamadoAMozo.cpp.i
-
-Concu-Voley/src/model/LlamadoAMozo.s: Concu-Voley/src/model/LlamadoAMozo.cpp.s
-
-.PHONY : Concu-Voley/src/model/LlamadoAMozo.s
-
-# target to generate assembly for a file
-Concu-Voley/src/model/LlamadoAMozo.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/LlamadoAMozo.cpp.s
-.PHONY : Concu-Voley/src/model/LlamadoAMozo.cpp.s
-
-Concu-Voley/src/model/Menu.o: Concu-Voley/src/model/Menu.cpp.o
-
-.PHONY : Concu-Voley/src/model/Menu.o
-
-# target to build an object file
-Concu-Voley/src/model/Menu.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Menu.cpp.o
-.PHONY : Concu-Voley/src/model/Menu.cpp.o
-
-Concu-Voley/src/model/Menu.i: Concu-Voley/src/model/Menu.cpp.i
-
-.PHONY : Concu-Voley/src/model/Menu.i
-
-# target to preprocess a source file
-Concu-Voley/src/model/Menu.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Menu.cpp.i
-.PHONY : Concu-Voley/src/model/Menu.cpp.i
-
-Concu-Voley/src/model/Menu.s: Concu-Voley/src/model/Menu.cpp.s
-
-.PHONY : Concu-Voley/src/model/Menu.s
-
-# target to generate assembly for a file
-Concu-Voley/src/model/Menu.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Menu.cpp.s
-.PHONY : Concu-Voley/src/model/Menu.cpp.s
-
 Concu-Voley/src/model/Pareja.o: Concu-Voley/src/model/Pareja.cpp.o
 
 .PHONY : Concu-Voley/src/model/Pareja.o
@@ -366,87 +285,6 @@ Concu-Voley/src/model/Partido.cpp.s:
 	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Partido.cpp.s
 .PHONY : Concu-Voley/src/model/Partido.cpp.s
 
-Concu-Voley/src/model/Pedido.o: Concu-Voley/src/model/Pedido.cpp.o
-
-.PHONY : Concu-Voley/src/model/Pedido.o
-
-# target to build an object file
-Concu-Voley/src/model/Pedido.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pedido.cpp.o
-.PHONY : Concu-Voley/src/model/Pedido.cpp.o
-
-Concu-Voley/src/model/Pedido.i: Concu-Voley/src/model/Pedido.cpp.i
-
-.PHONY : Concu-Voley/src/model/Pedido.i
-
-# target to preprocess a source file
-Concu-Voley/src/model/Pedido.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pedido.cpp.i
-.PHONY : Concu-Voley/src/model/Pedido.cpp.i
-
-Concu-Voley/src/model/Pedido.s: Concu-Voley/src/model/Pedido.cpp.s
-
-.PHONY : Concu-Voley/src/model/Pedido.s
-
-# target to generate assembly for a file
-Concu-Voley/src/model/Pedido.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pedido.cpp.s
-.PHONY : Concu-Voley/src/model/Pedido.cpp.s
-
-Concu-Voley/src/model/PedidoCuenta.o: Concu-Voley/src/model/PedidoCuenta.cpp.o
-
-.PHONY : Concu-Voley/src/model/PedidoCuenta.o
-
-# target to build an object file
-Concu-Voley/src/model/PedidoCuenta.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/PedidoCuenta.cpp.o
-.PHONY : Concu-Voley/src/model/PedidoCuenta.cpp.o
-
-Concu-Voley/src/model/PedidoCuenta.i: Concu-Voley/src/model/PedidoCuenta.cpp.i
-
-.PHONY : Concu-Voley/src/model/PedidoCuenta.i
-
-# target to preprocess a source file
-Concu-Voley/src/model/PedidoCuenta.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/PedidoCuenta.cpp.i
-.PHONY : Concu-Voley/src/model/PedidoCuenta.cpp.i
-
-Concu-Voley/src/model/PedidoCuenta.s: Concu-Voley/src/model/PedidoCuenta.cpp.s
-
-.PHONY : Concu-Voley/src/model/PedidoCuenta.s
-
-# target to generate assembly for a file
-Concu-Voley/src/model/PedidoCuenta.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/PedidoCuenta.cpp.s
-.PHONY : Concu-Voley/src/model/PedidoCuenta.cpp.s
-
-Concu-Voley/src/model/Plato.o: Concu-Voley/src/model/Plato.cpp.o
-
-.PHONY : Concu-Voley/src/model/Plato.o
-
-# target to build an object file
-Concu-Voley/src/model/Plato.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Plato.cpp.o
-.PHONY : Concu-Voley/src/model/Plato.cpp.o
-
-Concu-Voley/src/model/Plato.i: Concu-Voley/src/model/Plato.cpp.i
-
-.PHONY : Concu-Voley/src/model/Plato.i
-
-# target to preprocess a source file
-Concu-Voley/src/model/Plato.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Plato.cpp.i
-.PHONY : Concu-Voley/src/model/Plato.cpp.i
-
-Concu-Voley/src/model/Plato.s: Concu-Voley/src/model/Plato.cpp.s
-
-.PHONY : Concu-Voley/src/model/Plato.s
-
-# target to generate assembly for a file
-Concu-Voley/src/model/Plato.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Plato.cpp.s
-.PHONY : Concu-Voley/src/model/Plato.cpp.s
-
 Concu-Voley/src/model/Resultado.o: Concu-Voley/src/model/Resultado.cpp.o
 
 .PHONY : Concu-Voley/src/model/Resultado.o
@@ -474,33 +312,6 @@ Concu-Voley/src/model/Resultado.cpp.s:
 	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.s
 .PHONY : Concu-Voley/src/model/Resultado.cpp.s
 
-Concu-Voley/src/processes/AdminComensalesProcess.o: Concu-Voley/src/processes/AdminComensalesProcess.cpp.o
-
-.PHONY : Concu-Voley/src/processes/AdminComensalesProcess.o
-
-# target to build an object file
-Concu-Voley/src/processes/AdminComensalesProcess.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o
-.PHONY : Concu-Voley/src/processes/AdminComensalesProcess.cpp.o
-
-Concu-Voley/src/processes/AdminComensalesProcess.i: Concu-Voley/src/processes/AdminComensalesProcess.cpp.i
-
-.PHONY : Concu-Voley/src/processes/AdminComensalesProcess.i
-
-# target to preprocess a source file
-Concu-Voley/src/processes/AdminComensalesProcess.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.i
-.PHONY : Concu-Voley/src/processes/AdminComensalesProcess.cpp.i
-
-Concu-Voley/src/processes/AdminComensalesProcess.s: Concu-Voley/src/processes/AdminComensalesProcess.cpp.s
-
-.PHONY : Concu-Voley/src/processes/AdminComensalesProcess.s
-
-# target to generate assembly for a file
-Concu-Voley/src/processes/AdminComensalesProcess.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.s
-.PHONY : Concu-Voley/src/processes/AdminComensalesProcess.cpp.s
-
 Concu-Voley/src/processes/AdminJugadoresProcess.o: Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o
 
 .PHONY : Concu-Voley/src/processes/AdminJugadoresProcess.o
@@ -527,33 +338,6 @@ Concu-Voley/src/processes/AdminJugadoresProcess.s: Concu-Voley/src/processes/Adm
 Concu-Voley/src/processes/AdminJugadoresProcess.cpp.s:
 	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.s
 .PHONY : Concu-Voley/src/processes/AdminJugadoresProcess.cpp.s
-
-Concu-Voley/src/processes/CocineroProcess.o: Concu-Voley/src/processes/CocineroProcess.cpp.o
-
-.PHONY : Concu-Voley/src/processes/CocineroProcess.o
-
-# target to build an object file
-Concu-Voley/src/processes/CocineroProcess.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o
-.PHONY : Concu-Voley/src/processes/CocineroProcess.cpp.o
-
-Concu-Voley/src/processes/CocineroProcess.i: Concu-Voley/src/processes/CocineroProcess.cpp.i
-
-.PHONY : Concu-Voley/src/processes/CocineroProcess.i
-
-# target to preprocess a source file
-Concu-Voley/src/processes/CocineroProcess.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.i
-.PHONY : Concu-Voley/src/processes/CocineroProcess.cpp.i
-
-Concu-Voley/src/processes/CocineroProcess.s: Concu-Voley/src/processes/CocineroProcess.cpp.s
-
-.PHONY : Concu-Voley/src/processes/CocineroProcess.s
-
-# target to generate assembly for a file
-Concu-Voley/src/processes/CocineroProcess.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.s
-.PHONY : Concu-Voley/src/processes/CocineroProcess.cpp.s
 
 Concu-Voley/src/processes/CupidoProcess.o: Concu-Voley/src/processes/CupidoProcess.cpp.o
 
@@ -662,33 +446,6 @@ Concu-Voley/src/processes/JugadorProcess.s: Concu-Voley/src/processes/JugadorPro
 Concu-Voley/src/processes/JugadorProcess.cpp.s:
 	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.s
 .PHONY : Concu-Voley/src/processes/JugadorProcess.cpp.s
-
-Concu-Voley/src/processes/MozoProcess.o: Concu-Voley/src/processes/MozoProcess.cpp.o
-
-.PHONY : Concu-Voley/src/processes/MozoProcess.o
-
-# target to build an object file
-Concu-Voley/src/processes/MozoProcess.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o
-.PHONY : Concu-Voley/src/processes/MozoProcess.cpp.o
-
-Concu-Voley/src/processes/MozoProcess.i: Concu-Voley/src/processes/MozoProcess.cpp.i
-
-.PHONY : Concu-Voley/src/processes/MozoProcess.i
-
-# target to preprocess a source file
-Concu-Voley/src/processes/MozoProcess.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.i
-.PHONY : Concu-Voley/src/processes/MozoProcess.cpp.i
-
-Concu-Voley/src/processes/MozoProcess.s: Concu-Voley/src/processes/MozoProcess.cpp.s
-
-.PHONY : Concu-Voley/src/processes/MozoProcess.s
-
-# target to generate assembly for a file
-Concu-Voley/src/processes/MozoProcess.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.s
-.PHONY : Concu-Voley/src/processes/MozoProcess.cpp.s
 
 Concu-Voley/src/processes/PartidoProcess.o: Concu-Voley/src/processes/PartidoProcess.cpp.o
 
@@ -1095,33 +852,6 @@ Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.s:
 	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.s
 .PHONY : Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.s
 
-Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.o: Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.o
-
-.PHONY : Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.o
-
-# target to build an object file
-Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.o:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.o
-.PHONY : Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.o
-
-Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.i: Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.i
-
-.PHONY : Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.i
-
-# target to preprocess a source file
-Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.i:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.i
-.PHONY : Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.i
-
-Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.s: Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.s
-
-.PHONY : Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.s
-
-# target to generate assembly for a file
-Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.s:
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.s
-.PHONY : Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.s
-
 Concu-Voley/src/utils/serializer/ResultadoSerializer.o: Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o
 
 .PHONY : Concu-Voley/src/utils/serializer/ResultadoSerializer.o
@@ -1170,42 +900,18 @@ help:
 	@echo "... Concu-Voley/src/model/ClaveJugador.o"
 	@echo "... Concu-Voley/src/model/ClaveJugador.i"
 	@echo "... Concu-Voley/src/model/ClaveJugador.s"
-	@echo "... Concu-Voley/src/model/Comida.o"
-	@echo "... Concu-Voley/src/model/Comida.i"
-	@echo "... Concu-Voley/src/model/Comida.s"
-	@echo "... Concu-Voley/src/model/LlamadoAMozo.o"
-	@echo "... Concu-Voley/src/model/LlamadoAMozo.i"
-	@echo "... Concu-Voley/src/model/LlamadoAMozo.s"
-	@echo "... Concu-Voley/src/model/Menu.o"
-	@echo "... Concu-Voley/src/model/Menu.i"
-	@echo "... Concu-Voley/src/model/Menu.s"
 	@echo "... Concu-Voley/src/model/Pareja.o"
 	@echo "... Concu-Voley/src/model/Pareja.i"
 	@echo "... Concu-Voley/src/model/Pareja.s"
 	@echo "... Concu-Voley/src/model/Partido.o"
 	@echo "... Concu-Voley/src/model/Partido.i"
 	@echo "... Concu-Voley/src/model/Partido.s"
-	@echo "... Concu-Voley/src/model/Pedido.o"
-	@echo "... Concu-Voley/src/model/Pedido.i"
-	@echo "... Concu-Voley/src/model/Pedido.s"
-	@echo "... Concu-Voley/src/model/PedidoCuenta.o"
-	@echo "... Concu-Voley/src/model/PedidoCuenta.i"
-	@echo "... Concu-Voley/src/model/PedidoCuenta.s"
-	@echo "... Concu-Voley/src/model/Plato.o"
-	@echo "... Concu-Voley/src/model/Plato.i"
-	@echo "... Concu-Voley/src/model/Plato.s"
 	@echo "... Concu-Voley/src/model/Resultado.o"
 	@echo "... Concu-Voley/src/model/Resultado.i"
 	@echo "... Concu-Voley/src/model/Resultado.s"
-	@echo "... Concu-Voley/src/processes/AdminComensalesProcess.o"
-	@echo "... Concu-Voley/src/processes/AdminComensalesProcess.i"
-	@echo "... Concu-Voley/src/processes/AdminComensalesProcess.s"
 	@echo "... Concu-Voley/src/processes/AdminJugadoresProcess.o"
 	@echo "... Concu-Voley/src/processes/AdminJugadoresProcess.i"
 	@echo "... Concu-Voley/src/processes/AdminJugadoresProcess.s"
-	@echo "... Concu-Voley/src/processes/CocineroProcess.o"
-	@echo "... Concu-Voley/src/processes/CocineroProcess.i"
-	@echo "... Concu-Voley/src/processes/CocineroProcess.s"
 	@echo "... Concu-Voley/src/processes/CupidoProcess.o"
 	@echo "... Concu-Voley/src/processes/CupidoProcess.i"
 	@echo "... Concu-Voley/src/processes/CupidoProcess.s"
@@ -1218,9 +924,6 @@ help:
 	@echo "... Concu-Voley/src/processes/JugadorProcess.o"
 	@echo "... Concu-Voley/src/processes/JugadorProcess.i"
 	@echo "... Concu-Voley/src/processes/JugadorProcess.s"
-	@echo "... Concu-Voley/src/processes/MozoProcess.o"
-	@echo "... Concu-Voley/src/processes/MozoProcess.i"
-	@echo "... Concu-Voley/src/processes/MozoProcess.s"
 	@echo "... Concu-Voley/src/processes/PartidoProcess.o"
 	@echo "... Concu-Voley/src/processes/PartidoProcess.i"
 	@echo "... Concu-Voley/src/processes/PartidoProcess.s"
@@ -1266,9 +969,6 @@ help:
 	@echo "... Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.o"
 	@echo "... Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.i"
 	@echo "... Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.s"
-	@echo "... Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.o"
-	@echo "... Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.i"
-	@echo "... Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.s"
 	@echo "... Concu-Voley/src/utils/serializer/ResultadoSerializer.o"
 	@echo "... Concu-Voley/src/utils/serializer/ResultadoSerializer.i"
 	@echo "... Concu-Voley/src/utils/serializer/ResultadoSerializer.s"

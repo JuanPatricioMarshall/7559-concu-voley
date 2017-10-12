@@ -12,14 +12,14 @@ set(SOURCE_FILES
         Concu-Voley/ipc-init-files/sems_esperar_recepcionista.txt
         Concu-Voley/ipc-init-files/sems_jugadores_predio.txt
         Concu-Voley/ipc-init-files/sems_listo_para_jugar.txt
-        Concu-Voley/ipc-init-files/sems_mesa_pago.txt
+        Concu-Voley/ipc-init-files/shm_canchas_libres.txt
         Concu-Voley/ipc-init-files/sems_ranking.txt
         Concu-Voley/ipc-init-files/sems_termino_de_jugar.txt
-        Concu-Voley/ipc-init-files/shm_caja.txt
-        Concu-Voley/ipc-init-files/shm_comida_mesas.txt
-        Concu-Voley/ipc-init-files/shm_facturas.txt
-        Concu-Voley/ipc-init-files/shm_mesas_libres.txt
-        Concu-Voley/ipc-init-files/shm_personas_living.txt
+        Concu-Voley/ipc-init-files/shm_jugadores_sin_pareja.txt
+        Concu-Voley/ipc-init-files/shm_nivel_marea.txt
+        Concu-Voley/ipc-init-files/sems_jugador_sin_pareja.txt
+        Concu-Voley/ipc-init-files/shm_canchas_libres.txt
+        Concu-Voley/ipc-init-files/sem_nivel_marea.txt
         Concu-Voley/src/main/ConcuVoley.cpp
         Concu-Voley/src/main/MainProcess.cpp
         Concu-Voley/src/main/MainProcess.h
@@ -27,30 +27,14 @@ set(SOURCE_FILES
         Concu-Voley/src/model/Cancha.h
         Concu-Voley/src/model/ClaveJugador.cpp
         Concu-Voley/src/model/ClaveJugador.h
-        Concu-Voley/src/model/Comida.cpp
-        Concu-Voley/src/model/Comida.h
-        Concu-Voley/src/model/LlamadoAMozo.cpp
-        Concu-Voley/src/model/LlamadoAMozo.h
-        Concu-Voley/src/model/Menu.cpp
-        Concu-Voley/src/model/Menu.h
         Concu-Voley/src/model/Pareja.cpp
         Concu-Voley/src/model/Pareja.h
         Concu-Voley/src/model/Partido.cpp
         Concu-Voley/src/model/Partido.h
-        Concu-Voley/src/model/Pedido.cpp
-        Concu-Voley/src/model/Pedido.h
-        Concu-Voley/src/model/PedidoCuenta.cpp
-        Concu-Voley/src/model/PedidoCuenta.h
-        Concu-Voley/src/model/Plato.cpp
-        Concu-Voley/src/model/Plato.h
         Concu-Voley/src/model/Resultado.cpp
         Concu-Voley/src/model/Resultado.h
-        Concu-Voley/src/processes/AdminComensalesProcess.cpp
-        Concu-Voley/src/processes/AdminComensalesProcess.h
         Concu-Voley/src/processes/AdminJugadoresProcess.cpp
         Concu-Voley/src/processes/AdminJugadoresProcess.h
-        Concu-Voley/src/processes/CocineroProcess.cpp
-        Concu-Voley/src/processes/CocineroProcess.h
         Concu-Voley/src/processes/CupidoProcess.cpp
         Concu-Voley/src/processes/CupidoProcess.h
         Concu-Voley/src/processes/GerenteProcess.cpp
@@ -59,8 +43,6 @@ set(SOURCE_FILES
         Concu-Voley/src/processes/GrupoComensalesProcess.h
         Concu-Voley/src/processes/JugadorProcess.cpp
         Concu-Voley/src/processes/JugadorProcess.h
-        Concu-Voley/src/processes/MozoProcess.cpp
-        Concu-Voley/src/processes/MozoProcess.h
         Concu-Voley/src/processes/PartidoProcess.cpp
         Concu-Voley/src/processes/PartidoProcess.h
         Concu-Voley/src/processes/Process.cpp
@@ -98,7 +80,6 @@ set(SOURCE_FILES
         Concu-Voley/src/utils/random/RandomUtil.h
         Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp
         Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
-        Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp
-        Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.h Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp Concu-Voley/src/utils/serializer/ResultadoSerializer.h)
+        Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp Concu-Voley/src/utils/serializer/ResultadoSerializer.h)
 
 add_executable(7559_concu_voley ${SOURCE_FILES})

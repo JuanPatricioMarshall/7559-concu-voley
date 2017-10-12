@@ -7,11 +7,13 @@
 
 #include "TiemposEspera.h"
 #include "../utils/serializer/ResultadoSerializer.h"
+#include "../main/MainProcess.h"
 
 PartidoProcess::PartidoProcess(Pareja *pareja1, Pareja *pareja2, vector<vector<Semaforo>> *semCanchasLibres,
                                vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres,
                                vector<Semaforo> *semTerminoDeJugar, Semaforo *semCantCanchasLibres,
-                               Pipe *pipeResultados, Pipe *pipeFixture) {
+                               Pipe *pipeResultados, Pipe *pipeFixture, MemoriaCompartida<int> *shmNivelDeMarea,
+                               Semaforo *semNivelDeMarea) {
 
 
     this->pareja1 = pareja1;
@@ -22,12 +24,27 @@ PartidoProcess::PartidoProcess(Pareja *pareja1, Pareja *pareja2, vector<vector<S
     this->semCantCanchasLibres = semCantCanchasLibres;
     this->pipeResultados = pipeResultados;
     this->pipeFixture = pipeFixture;
+    this->semNivelDeMarea = semNivelDeMarea;
+    this->shmNivelDeMarea = shmNivelDeMarea;
 
     this->cancha = new Cancha(-1, -1);
 
     inicializarHandler();
     inicializarMemoriasCompartidas();
 
+
+}
+
+void PartidoProcess::inicializarMemoriasCompartidas() {
+
+
+    int cont = 0;
+    for (unsigned int i = 0; i < shmCanchasLibres->size(); i++) {
+        for (unsigned int j = 0; j < shmCanchasLibres->at(0).size(); j++) {
+            shmCanchasLibres->at(i).at(j).crear(SHM_CANCHAS_LIBRES, cont);
+            cont ++;
+        }
+    }
 
 }
 
@@ -44,14 +61,14 @@ void PartidoProcess::run() {
     Resultado resultado = simularPartido();
 
 
-    Logger::log(partidoProcessLogId, "El partido termino " + Logger::intToString(resultado.getSetsPareja2()) + " a " + Logger::intToString(resultado.getSetsPareja2()), INFO);
-
+    Logger::log(partidoProcessLogId, "El partido termino " + Logger::intToString(resultado.getSetsPareja2()) + " a " +
+                                     Logger::intToString(resultado.getSetsPareja2()), INFO);
 
 
     string resultadoStr = ResultadoSerializer::serializar(&resultado);
 
-    this->pipeResultados->escribir(static_cast<const void*>(resultadoStr.c_str()), resultadoStr.size());
-    this->pipeFixture->escribir(static_cast<const void*>(resultadoStr.c_str()), resultadoStr.size());
+    this->pipeResultados->escribir(static_cast<const void *>(resultadoStr.c_str()), resultadoStr.size());
+    this->pipeFixture->escribir(static_cast<const void *>(resultadoStr.c_str()), resultadoStr.size());
 
 
     //Este orden estara bien?
@@ -64,10 +81,6 @@ void PartidoProcess::run() {
     //TODO
     finalizar();
 
-
-}
-
-void PartidoProcess::inicializarMemoriasCompartidas(){
 
 }
 
@@ -89,8 +102,13 @@ void PartidoProcess::encontrarCancha() {
     int canchaF = -1;
 
     bool canchaLibre = false;
+    Logger::log(partidoProcessLogId, "Tamaño" + Logger::intToString(semCanchasLibres->size()), INFO);
+
 
     Logger::log(partidoProcessLogId, "Partido buscando cancha. ", INFO);
+
+
+
 
     for (unsigned int i = 0; i < semCanchasLibres->size(); i++) {
 
@@ -120,8 +138,9 @@ void PartidoProcess::encontrarCancha() {
                             "Cancha libre encontrada. En fila: " + Logger::intToString(canchaF) + " y columna: " +
                             Logger::intToString(canchaC), INFO);
 
-                Logger::log(partidoProcessLogId, "Cancha coupada. En fila: " + Logger::intToString(canchaF) + " y columna: " +
-                                          Logger::intToString(canchaC), INFO);
+                Logger::log(partidoProcessLogId,
+                            "Cancha coupada. En fila: " + Logger::intToString(canchaF) + " y columna: " +
+                            Logger::intToString(canchaC), INFO);
 
 
                 shmCanchasLibres->at(i).at(j).escribir(false);
@@ -153,7 +172,7 @@ void PartidoProcess::encontrarCancha() {
 
 }
 
-void PartidoProcess::liberarCancha(){
+void PartidoProcess::liberarCancha() {
 
     int fila = cancha->getFila();
     int columna = cancha->getColumna();
@@ -161,7 +180,7 @@ void PartidoProcess::liberarCancha(){
     this->semCanchasLibres->at(fila).at(columna).p();
     this->shmCanchasLibres->at(fila).at(columna).escribir(true);
     Logger::log(partidoProcessLogId, "Cancha Liberada. En fila: " + Logger::intToString(fila) + " y columna: " +
-                              Logger::intToString(columna), INFO);
+                                     Logger::intToString(columna), INFO);
 
     this->semCanchasLibres->at(fila).at(columna).v();
 
@@ -171,13 +190,13 @@ void PartidoProcess::liberarCancha(){
 
 }
 
-void PartidoProcess::avisarJugadores(){
+void PartidoProcess::avisarJugadores() {
 
-    ClaveJugador* jugador1 = this->pareja1->getClaveJugador1();
-    ClaveJugador* jugador2 = this->pareja1->getClaveJugador2();
+    ClaveJugador *jugador1 = this->pareja1->getClaveJugador1();
+    ClaveJugador *jugador2 = this->pareja1->getClaveJugador2();
 
-    ClaveJugador* jugador3 = this->pareja2->getClaveJugador1();
-    ClaveJugador* jugador4 = this->pareja2->getClaveJugador2();
+    ClaveJugador *jugador3 = this->pareja2->getClaveJugador1();
+    ClaveJugador *jugador4 = this->pareja2->getClaveJugador2();
 
     //Acceso entre distintos partidos al vector de semaforos? Lapsus mental
     this->semTerminoDeJugar->at(jugador1->getIndice()).v();
@@ -189,6 +208,20 @@ void PartidoProcess::avisarJugadores(){
 
 
 void PartidoProcess::limpiarRecursos() {
+
+    Logger::log(partidoProcessLogId, "Limpiando recursos", DEBUG);
+    liberarMemoriasCompartidas();
+
+
+}
+
+void PartidoProcess::liberarMemoriasCompartidas() {
+
+    for (unsigned int i = 0; i < shmCanchasLibres->size(); i++) {
+        for (unsigned int j = 0; j < shmCanchasLibres->at(0).size(); j++) {
+            shmCanchasLibres->at(i).at(j).liberar();
+        }
+    }
 
 }
 

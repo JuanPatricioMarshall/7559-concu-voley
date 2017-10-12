@@ -5,15 +5,13 @@
 #include "RecepcionistaProcess.h"
 
 
-#include "CocineroProcess.h"
 
 #include <unistd.h>
 #include <iostream>
 #include <string>
 
 #include "../main/MainProcess.h"
-#include "../model/Plato.h"
-#include "../utils/serializer/LlamadoAMozoSerializer.h"
+
 
 using namespace std;
 

@@ -16,7 +16,9 @@ namespace std {
     AdminJugadoresProcess::AdminJugadoresProcess(int cantJugadores, int cantPartidosPorJugador,
                                                  vector<Semaforo> *semPartidoTerminado,
                                                  Semaforo *semEsperarRecepcionista, Semaforo *semJugadoresPredio,
-                                                 Pipe *pipeJugadores) {
+                                                 Pipe *pipeJugadores,
+                                                 vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja,
+                                                 vector<Semaforo> *semJugadoresSinPareja) {
 
         this->cantJugadores = cantJugadores;
         this->cantPartidosPorJugador = cantPartidosPorJugador;
@@ -24,6 +26,8 @@ namespace std {
         this->semJugadoresPredio = semJugadoresPredio;
         this->semEsperarRecepcionista = semEsperarRecepcionista;
         this->pipeJugadores = pipeJugadores;
+        this->semJugadoresSinPareja = semJugadoresSinPareja;
+        this->shmJugadoresSinPareja = shmJugadoresSinPareja;
 
         inicializarHandler();
 
@@ -51,7 +55,8 @@ namespace std {
 
                 JugadorProcess jugadorProcess(cantPartidosPorJugador,
                                               semPartidoTerminado, jugadoresCreados,
-                                              semEsperarRecepcionista, semJugadoresPredio, pipeJugadores);
+                                              semEsperarRecepcionista, semJugadoresPredio, pipeJugadores, shmJugadoresSinPareja,
+                                              semJugadoresSinPareja);
 
                 jugadorProcess.run();
                 exit(0);

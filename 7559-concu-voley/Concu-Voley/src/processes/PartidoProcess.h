@@ -35,25 +35,32 @@ private:
     Pipe *pipeResultados;
     Pipe *pipeFixture;
 
+    MemoriaCompartida<int> *shmNivelDeMarea;
+    Semaforo *semNivelDeMarea;
+
 
     Cancha *cancha;
 
 
     void encontrarCancha();
+
     void liberarCancha();
+
     void avisarJugadores();
 
     Resultado simularPartido();
 
     void inicializarMemoriasCompartidas();
 
+    void liberarMemoriasCompartidas();
 
 public:
 
 
     PartidoProcess(Pareja *pareja1, Pareja *pareja2, vector<vector<Semaforo>> *semCanchasLibres,
                    vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres, vector<Semaforo> *semTerminoDeJugar,
-                   Semaforo *semCantCanchasLibres, Pipe *pipeResultados, Pipe *pipeFixture);
+                   Semaforo *semCantCanchasLibres, Pipe *pipeResultados, Pipe *pipeFixture,
+                   MemoriaCompartida<int> *shmNivelDeMarea, Semaforo *semNivelDeMarea);
 
     void run();
 

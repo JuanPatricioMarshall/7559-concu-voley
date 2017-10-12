@@ -12,18 +12,15 @@
 #include <string>
 #include <vector>
 
-#include "../model/Comida.h"
-#include "../model/Pedido.h"
-#include "../model/Plato.h"
 #include "../utils/random/RandomUtil.h"
-#include "../utils/serializer/LlamadoAMozoSerializer.h"
+
 
 namespace std {
 
 GrupoComensalesProcess::GrupoComensalesProcess(int cantPersonas, Semaforo* semRecepcionistasLibres, Semaforo* semComensalesEnPuerta,
 		Semaforo* semPersonasLivingB, MemoriaCompartida<int>* shmPersonasLiving, Semaforo* semMesasLibres,
 		vector<Semaforo>* semsMesasLibres, vector<MemoriaCompartida<bool>>* shmMesasLibres,
-		Pipe* pipeLlamadosAMozos, vector<Semaforo>* semsLlegoComida, vector<Semaforo>* semsMesaPago, Menu menu) {
+		Pipe* pipeLlamadosAMozos, vector<Semaforo>* semsLlegoComida, vector<Semaforo>* semsMesaPago) {
 
 	this->mesa = -1; //Despues se setea el valor real.
 
@@ -45,17 +42,14 @@ GrupoComensalesProcess::GrupoComensalesProcess(int cantPersonas, Semaforo* semRe
 	this->semsMesasLibres = semsMesasLibres;
 	this->shmMesasLibres = shmMesasLibres;
 
-	this->menu = menu;
-
 	inicializarMemoriasCompartidas();
 	inicializarHandler();
 }
 
 void GrupoComensalesProcess::inicializarMemoriasCompartidas(){
-	this->shmPersonasLiving->crear(SHM_PERSONAS_LIVING, 0);
 
 	for (unsigned int i = 0; i < shmMesasLibres->size(); i++){
-		shmMesasLibres->at(i).crear(SHM_MESAS_LIBRES, i);
+		shmMesasLibres->at(i).crear(SHM_CANCHAS_LIBRES, i);
 	}
 
 }
@@ -104,20 +98,6 @@ int GrupoComensalesProcess::obtenerNumeroMesa(){
 
 }
 
-
-Pedido GrupoComensalesProcess::generarPedido() {
-	Pedido pedido(mesa);
-
-	for (int i = 0; i < cantPersonas; i++){
-		Plato plato = menu.getPlatoRandom();
-		Logger::log(comensalLogId, "Grupo de comensales elige " + plato.getNombre(), INFO);
-
-		pedido.agregarPlato(plato);
-	}
-
-	return pedido;
-
-}
 
 
 void GrupoComensalesProcess::llegar(){
@@ -172,13 +152,8 @@ void GrupoComensalesProcess::comer(){
 	do{
 		Logger::log(comensalLogId, "Grupo de comensales eligiendo comida", INFO);
 
-		Pedido pedido = generarPedido();
-		string pedidoStr = LlamadoAMozoSerializer::serializar(pedido);
 		Logger::log(comensalLogId, "Grupo de comensales pidiendo comida", INFO);
 
-		Logger::log(comensalLogId, "Grupo de comensales escribiendo en pipeLlamadosAMozos: " + pedidoStr, DEBUG);
-
-		pipeLlamadosAMozos->escribir(static_cast<const void*>(pedidoStr.c_str()), pedidoStr.size());
 
 		Logger::log(comensalLogId, "Grupo de comensales esperando comida", INFO);
 		semsLlegoComida->at(mesa).p();
@@ -186,15 +161,6 @@ void GrupoComensalesProcess::comer(){
 
 		Logger::log(comensalLogId, "Grupo de comensales empezando a comer", INFO);
 
-		vector<Plato> platos = pedido.getPlatos();
-
-		for (unsigned int i = 0; i < platos.size(); i++){
-			Logger::log(comensalLogId, "Comiendo " + platos[i].getNombre(), INFO);
-
-		}
-		if (TiemposEspera::tiempos){
-			sleep(TiemposEspera::TIEMPO_COMER);
-		}
 
 		Logger::log(comensalLogId, "Grupo de comensales termino de comer.", INFO);
 
@@ -205,18 +171,7 @@ void GrupoComensalesProcess::comer(){
 
 void GrupoComensalesProcess::pagar(){
 
-	Logger::log(comensalLogId, "Grupo de comensales pidiendo la cuenta.", INFO);
 
-	PedidoCuenta pedidoCuenta(mesa);
-	string pedidoCuentaStr = LlamadoAMozoSerializer::serializar(pedidoCuenta);
-
-	Logger::log(comensalLogId, "Grupo de comensales escribiendo en pipeLlamadosAMozos: " + pedidoCuentaStr, DEBUG);
-
-	pipeLlamadosAMozos->escribir(static_cast<const void*>(pedidoCuentaStr.c_str()), pedidoCuentaStr.size());
-
-	Logger::log(comensalLogId, "Grupo de comensales esperando para pagar.", INFO);
-
-	semsMesaPago->at(mesa).p();
 
 }
 

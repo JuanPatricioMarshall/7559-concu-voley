@@ -25,6 +25,10 @@ public:
 
     ClaveJugador* getClaveJugador2();
 
+    void setClaveJugador1(ClaveJugador* clave);
+
+    void setClaveJugador2(ClaveJugador* clave);
+
     virtual ~Pareja();
 };
 

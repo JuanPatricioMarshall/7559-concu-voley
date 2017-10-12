@@ -5,11 +5,15 @@
 #include "CupidoProcess.h"
 #include "../utils/serializer/ClaveJugadorSerializer.h"
 #include "PartidoProcess.h"
+#include "../main/MainProcess.h"
 
 CupidoProcess::CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanchasLibres,
                              vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres, int cantNJugadores,
                              Semaforo *semCupido, vector<Semaforo> *semsTerminoDeJugar, Semaforo *semCantCanchasLibres,
-                             Pipe *pipeResultados, Pipe *pipeFixture, int cantJugadoresMinimosParaElTorneo) {
+                             Pipe *pipeResultados, Pipe *pipeFixture, int cantJugadoresMinimosParaElTorneo,
+                             vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja,
+                             MemoriaCompartida<int> *shmNivelDeMarea,
+                             Semaforo *semNivelDeMarea) {
 
     this->jugadores = jugadores;
     this->cantNJugadores = cantNJugadores;
@@ -18,11 +22,16 @@ CupidoProcess::CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanch
     this->pipeFixture = pipeFixture;
     this->pipeResultados = pipeResultados;
 
+    this->shmNivelDeMarea = shmNivelDeMarea;
+    this->semNivelDeMarea = semNivelDeMarea;
+
     this->parejaEnEspera = new Pareja(new ClaveJugador(-1, -1), new ClaveJugador(-1, -1));
 
     this->semCanchasLibres = semCanchasLibres;
 
     this->shmCanchasLibres = shmCanchasLibres;
+
+    this->shmJugadoresSinPareja = shmJugadoresSinPareja;
 
     this->semsTerminoDeJugar = semsTerminoDeJugar;
 
@@ -40,6 +49,17 @@ CupidoProcess::CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanch
         this->matrizDeMatcheo.push_back(filaDeMatcheo);
     }
 
+    inicializarHandler();
+    inicializarMemoriasCompartidas();
+
+}
+
+void CupidoProcess::inicializarMemoriasCompartidas() {
+
+    for (unsigned int i = 0; i < shmJugadoresSinPareja->size(); i++) {
+        shmJugadoresSinPareja->at(i).crear(SHM_JUGADORES_SIN_PAREJA, i);
+    }
+
 }
 
 void CupidoProcess::run() {
@@ -48,8 +68,8 @@ void CupidoProcess::run() {
 
 
     this->semCupido->p();
-    Logger::log(cupidoProcessLogId, "Ya entraron " + Logger::intToString(cantJugadoresMinimosParaElTorneo) + " personas, asi que empiezo el torneo", DEBUG);
-
+    Logger::log(cupidoProcessLogId, "Ya entraron " + Logger::intToString(cantJugadoresMinimosParaElTorneo) +
+                                    " personas, asi que empiezo el torneo", DEBUG);
 
 
     bool isAlive = true;
@@ -57,13 +77,19 @@ void CupidoProcess::run() {
 
 
     while (isAlive) {
-        char buffer[sizeof(ClaveJugador)];
+
+
+        int tamanioClaveJugador = leerTamanioClaveJugador();
+
+
+        char buffer[tamanioClaveJugador];
         string claveJugadorStr;
 
 
         Logger::log(cupidoProcessLogId, "Cupido espera leer del pipe de jugadores", DEBUG);
 
-        jugadores->leer(static_cast<void *>(&buffer), sizeof(ClaveJugador));
+
+        jugadores->leer(static_cast<void *>(buffer), tamanioClaveJugador);
 
         claveJugadorStr = buffer;
 
@@ -77,10 +103,12 @@ void CupidoProcess::run() {
                     "Cupido buscando pareja para " + Logger::intToString(claveJugador.getPid()) + " indice: " +
                     Logger::intToString(claveJugador.getIndice()), DEBUG);
 
+        bool seQuedaEnElPredio = false;
 
         for (int i = 0; i < jugadoresSinPareja.size(); i++) {
             if (jugadoresSinPareja[i].getPid() < 0) {
-                Logger::log(cupidoProcessLogId, "Cupido encontro una mesa vacia en posicion " + Logger::intToString(i) + " para el jugador " +
+                Logger::log(cupidoProcessLogId, "Cupido encontro una mesa vacia en posicion " + Logger::intToString(i) +
+                                                " para el jugador " +
                                                 Logger::intToString(claveJugador.getPid()) + " indice: " +
                                                 Logger::intToString(claveJugador.getIndice()), DEBUG);
 
@@ -89,6 +117,7 @@ void CupidoProcess::run() {
                 Logger::log(cupidoProcessLogId, "Cupido sienta en una mesa vacia al jugador " +
                                                 Logger::intToString(claveJugador.getPid()) + " indice: " +
                                                 Logger::intToString(claveJugador.getIndice()), DEBUG);
+                seQuedaEnElPredio = true;
                 break;
             } else {
                 if (!matrizDeMatcheo[jugadoresSinPareja[i].getIndice()][claveJugador.getIndice()]) {
@@ -116,7 +145,8 @@ void CupidoProcess::run() {
 
                     //creo pareja nueva
 
-                    ClaveJugador claveJugadorSinPareja(jugadoresSinPareja[i].getPid(), jugadoresSinPareja[i].getIndice());
+                    ClaveJugador claveJugadorSinPareja(jugadoresSinPareja[i].getPid(),
+                                                       jugadoresSinPareja[i].getIndice());
 
                     Pareja *nuevaPareja = new Pareja(&claveJugador, &claveJugadorSinPareja);
 
@@ -132,22 +162,24 @@ void CupidoProcess::run() {
                     //Tengo pareja en espera? --> Lanzo el partido con las 2 parejas
                     if (!(parejaEnEspera->getClaveJugador1()->getIndice() < 0)) {
 
-                        Logger::log(cupidoProcessLogId, "Ya habia una pareja esperando ", DEBUG);
+                        Logger::log(cupidoProcessLogId, "Ya habia una pareja esperando " + Logger::intToString(
+                                parejaEnEspera->getClaveJugador1()->getIndice()) + " , " + Logger::intToString(parejaEnEspera->getClaveJugador2()->getIndice()), DEBUG);
 
 
-                        inicializarPartido(parejaEnEspera, nuevaPareja, semCanchasLibres, shmCanchasLibres,
-                                           semsTerminoDeJugar, semCantCanchasLibres, pipeResultados, pipeFixture);
+                        inicializarPartido(parejaEnEspera, nuevaPareja);
 
                         parejaEnEspera = new Pareja(new ClaveJugador(-1, -1), new ClaveJugador(-1, -1));
 
                     } else {
                         Logger::log(cupidoProcessLogId, "No habia una pareja esperando ", DEBUG);
 
-                        parejaEnEspera = nuevaPareja;
+                        parejaEnEspera->setClaveJugador1(nuevaPareja->getClaveJugador1());
+                        parejaEnEspera->setClaveJugador2(nuevaPareja->getClaveJugador2());
 
                         Logger::log(cupidoProcessLogId, "Guarde la nueva pareja a esperar ", DEBUG);
 
                     }
+                    seQuedaEnElPredio = true;
                     break;
 
                 } else {
@@ -155,12 +187,30 @@ void CupidoProcess::run() {
                 }
             }
         }
+        if (!seQuedaEnElPredio) {
+            Logger::log(cupidoProcessLogId, "Cupido le avisa al jugador " + Logger::intToString(claveJugador.getPid()) +
+                                            " que se vaya del predio porque no encontro pareja", DEBUG);
+
+            shmJugadoresSinPareja->at(claveJugador.getIndice()).escribir(true);
+            semsTerminoDeJugar->at(claveJugador.getIndice()).v();
+
+        }
     }
 
 }
 
 void CupidoProcess::limpiarRecursos() {
 
+    liberarMemoriasCompartidas();
+
+
+}
+
+void CupidoProcess::liberarMemoriasCompartidas() {
+
+    for (unsigned int i = 0; i < shmJugadoresSinPareja->size(); i++) {
+        shmJugadoresSinPareja->at(i).crear(SHM_JUGADORES_SIN_PAREJA, i);
+    }
 }
 
 CupidoProcess::~CupidoProcess() {
@@ -168,10 +218,31 @@ CupidoProcess::~CupidoProcess() {
 
 }
 
-void CupidoProcess::inicializarPartido(Pareja *pareja1, Pareja *pareja2, vector<vector<Semaforo>> *semCanchasLibres,
-                                       vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres,
-                                       vector<Semaforo> *semTerminoDeJugar, Semaforo *semCantCanchasLibres,
-                                       Pipe *pipeResultados, Pipe *pipeFixture) {
+int CupidoProcess::leerTamanioClaveJugador() {
+    char tamanioClaveJugador;
+    string tamanioClaveJugadorStr;
+    bool finLectura = false;
+    Logger::log(cupidoProcessLogId, "Cupido esperando para leer tamanio de clave Jugador", DEBUG);
+    do {
+        Logger::log(cupidoProcessLogId, "Cupido esperando para leer pipeJugadores", DEBUG);
+
+        jugadores->leer(static_cast<void *>(&tamanioClaveJugador), sizeof(char));
+
+        Logger::log(cupidoProcessLogId,
+                    "Cupido leyo " + Logger::intToString(tamanioClaveJugador) + " de tamaño desde pipeJugadores",
+                    DEBUG);
+
+        finLectura = (tamanioClaveJugador == ClaveJugadorSerializer::SEPARADOR);
+        if (!finLectura) {
+            tamanioClaveJugadorStr += tamanioClaveJugador;
+        }
+
+    } while (!finLectura);
+
+    return stoi(tamanioClaveJugadorStr);
+}
+
+void CupidoProcess::inicializarPartido(Pareja *pareja1, Pareja *pareja2) {
 
     Logger::log(cupidoProcessLogId,
                 "Inicio un partido entre " + Logger::intToString(pareja1->getClaveJugador1()->getIndice()) + ", " +
@@ -184,8 +255,9 @@ void CupidoProcess::inicializarPartido(Pareja *pareja1, Pareja *pareja2, vector<
 
     if (idPartido == 0) {
 
-        PartidoProcess partidoProcess(pareja1, pareja2, semCanchasLibres, shmCanchasLibres, semTerminoDeJugar,
-                                      semCantCanchasLibres, pipeResultados, pipeFixture);
+        PartidoProcess partidoProcess(pareja1, pareja2, semCanchasLibres, shmCanchasLibres, semsTerminoDeJugar,
+                                      semCantCanchasLibres, pipeResultados, pipeFixture, shmNivelDeMarea,
+                                      semNivelDeMarea);
 
 
         partidoProcess.run();

@@ -3,12 +3,6 @@
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/main/ConcuVoley.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/main/MainProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/model/Comida.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/model/Menu.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/model/Pedido.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/model/PedidoCuenta.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/model/Plato.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/processes/TiemposEspera.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/ipc/pipe/Pipe.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
@@ -20,25 +14,15 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/parser/Parser.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/parser/pugixml/pugiconfig.hpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/parser/pugixml/pugixml.hpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.h
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/model/ClaveJugador.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/model/Comida.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/model/Menu.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/model/Pareja.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/model/Pedido.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/model/PedidoCuenta.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/model/Plato.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/processes/AdminComensalesProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/processes/AdminJugadoresProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/processes/CocineroProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/processes/CupidoProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/processes/GerenteProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/processes/GrupoComensalesProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/processes/MozoProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/processes/Process.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/processes/RecepcionistaProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/processes/TiemposEspera.h
@@ -58,35 +42,11 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.o: ../Concu-Vol
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.o: ../Concu-Voley/src/model/ClaveJugador.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.o: ../Concu-Voley/src/model/ClaveJugador.h
 
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Comida.cpp.o: ../Concu-Voley/src/model/Comida.cpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Comida.cpp.o: ../Concu-Voley/src/model/Comida.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Comida.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Comida.cpp.o: ../Concu-Voley/src/model/Plato.h
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/LlamadoAMozo.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.cpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/LlamadoAMozo.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.h
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Menu.cpp.o: ../Concu-Voley/src/model/Menu.cpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Menu.cpp.o: ../Concu-Voley/src/model/Menu.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Menu.cpp.o: ../Concu-Voley/src/model/Plato.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Menu.cpp.o: ../Concu-Voley/src/utils/random/RandomUtil.h
-
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.o: ../Concu-Voley/src/model/ClaveJugador.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.o: ../Concu-Voley/src/model/Pareja.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.o: ../Concu-Voley/src/model/Pareja.h
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Partido.cpp.o: ../Concu-Voley/src/model/Partido.cpp
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pedido.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pedido.cpp.o: ../Concu-Voley/src/model/Pedido.cpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pedido.cpp.o: ../Concu-Voley/src/model/Pedido.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pedido.cpp.o: ../Concu-Voley/src/model/Plato.h
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/PedidoCuenta.cpp.o: ../Concu-Voley/src/model/PedidoCuenta.cpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/PedidoCuenta.cpp.o: ../Concu-Voley/src/model/PedidoCuenta.h
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Plato.cpp.o: ../Concu-Voley/src/model/Plato.cpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Plato.cpp.o: ../Concu-Voley/src/model/Plato.h
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.o: ../Concu-Voley/src/model/ClaveJugador.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.o: ../Concu-Voley/src/model/Pareja.h
@@ -95,31 +55,7 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.o: ../Concu-
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.o: ../Concu-Voley/src/processes/TiemposEspera.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.o: ../Concu-Voley/src/utils/random/RandomUtil.h
 
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/model/Menu.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/model/Pedido.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/model/Plato.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/processes/AdminComensalesProcess.cpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/processes/AdminComensalesProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/processes/GrupoComensalesProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/processes/Process.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/processes/TiemposEspera.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/utils/ipc/pipe/Pipe.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/EventHandler.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SignalHandler.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminComensalesProcess.cpp.o: ../Concu-Voley/src/utils/random/RandomUtil.h
-
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o: ../Concu-Voley/src/model/Menu.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o: ../Concu-Voley/src/model/Pedido.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o: ../Concu-Voley/src/model/Plato.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o: ../Concu-Voley/src/processes/AdminJugadoresProcess.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o: ../Concu-Voley/src/processes/AdminJugadoresProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o: ../Concu-Voley/src/processes/GrupoComensalesProcess.h
@@ -136,26 +72,7 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o: ../Concu-Voley/src/utils/random/RandomUtil.h
 
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/model/Comida.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/model/Menu.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/model/Pedido.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/model/PedidoCuenta.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/model/Plato.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/processes/CocineroProcess.cpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/processes/CocineroProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/processes/Process.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/processes/TiemposEspera.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/utils/ipc/pipe/Pipe.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/EventHandler.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CocineroProcess.cpp.o: ../Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.h
-
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/model/Cancha.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/model/ClaveJugador.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/model/Pareja.h
@@ -164,15 +81,17 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: .
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/processes/CupidoProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/processes/PartidoProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/processes/Process.h
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/processes/TiemposEspera.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/pipe/Pipe.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/EventHandler.h
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GerenteProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GerenteProcess.cpp.o: ../Concu-Voley/src/model/Menu.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GerenteProcess.cpp.o: ../Concu-Voley/src/model/Plato.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GerenteProcess.cpp.o: ../Concu-Voley/src/processes/GerenteProcess.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GerenteProcess.cpp.o: ../Concu-Voley/src/processes/GerenteProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GerenteProcess.cpp.o: ../Concu-Voley/src/processes/Process.h
@@ -186,12 +105,6 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GerenteProcess.cpp.o: 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GerenteProcess.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/model/Comida.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/model/Menu.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/model/Pedido.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/model/PedidoCuenta.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/model/Plato.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/processes/GrupoComensalesProcess.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/processes/GrupoComensalesProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/processes/Process.h
@@ -204,16 +117,9 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/utils/random/RandomUtil.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/GrupoComensalesProcess.cpp.o: ../Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.h
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/model/ClaveJugador.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/model/Comida.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/model/Menu.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/model/Pedido.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/model/PedidoCuenta.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/model/Plato.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/processes/GrupoComensalesProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/processes/JugadorProcess.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/processes/JugadorProcess.h
@@ -228,28 +134,8 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/utils/random/RandomUtil.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.h
 
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/model/Comida.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/model/Menu.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/model/Pedido.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/model/PedidoCuenta.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/model/Plato.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/processes/MozoProcess.cpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/processes/MozoProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/processes/Process.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/processes/TiemposEspera.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/pipe/Pipe.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/EventHandler.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/MozoProcess.cpp.o: ../Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.h
-
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/model/Cancha.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/model/ClaveJugador.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/model/Pareja.h
@@ -261,6 +147,9 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/pipe/Pipe.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/EventHandler.h
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/serializer/ResultadoSerializer.h
 
@@ -272,13 +161,6 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.o: ../Conc
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/model/Comida.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/model/Menu.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/model/Pedido.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/model/PedidoCuenta.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/model/Plato.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/processes/CocineroProcess.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/processes/Process.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/processes/RecepcionistaProcess.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/processes/RecepcionistaProcess.h
@@ -290,7 +172,6 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.c
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.h
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.o: ../Concu-Voley/src/utils/ipc/fifo/Fifo.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.o: ../Concu-Voley/src/utils/ipc/fifo/Fifo.h
@@ -322,8 +203,6 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o: ../Co
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o: ../Concu-Voley/src/utils/logger/Logger.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
 
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o: ../Concu-Voley/src/model/Menu.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o: ../Concu-Voley/src/model/Plato.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o: ../Concu-Voley/src/utils/parser/Parser.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o: ../Concu-Voley/src/utils/parser/Parser.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/parser/Parser.cpp.o: ../Concu-Voley/src/utils/parser/pugixml/pugiconfig.hpp
@@ -337,17 +216,8 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o: .
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o: ../Concu-Voley/src/utils/random/RandomUtil.h
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o: ../Concu-Voley/src/model/ClaveJugador.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o: ../Concu-Voley/src/model/Plato.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o: ../Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o: ../Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.o: ../Concu-Voley/src/model/Comida.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.o: ../Concu-Voley/src/model/LlamadoAMozo.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.o: ../Concu-Voley/src/model/Pedido.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.o: ../Concu-Voley/src/model/PedidoCuenta.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.o: ../Concu-Voley/src/model/Plato.h
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.o: ../Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.cpp.o: ../Concu-Voley/src/utils/serializer/LlamadoAMozoSerializer.h
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o: ../Concu-Voley/src/model/ClaveJugador.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o: ../Concu-Voley/src/model/Pareja.h

@@ -28,6 +28,8 @@ namespace std {
         Semaforo *semJugadoresPredio;
         Semaforo *semEsperarRecepcionista;
         Pipe *pipeJugadores;
+        vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja;
+        vector<Semaforo> *semJugadoresSinPareja;
 
 
         void llegar();
@@ -40,12 +42,18 @@ namespace std {
 
         void reentrar();
 
+        void liberarMemoriasCompartidas();
+
+        void inicializarMemoriasCompartidas();
+
 
     public:
 
         JugadorProcess(int cantidadDePartidosPendientes,
                        vector<Semaforo> *semPartidoTerminado, int indice,
-                       Semaforo *semEsperarRecepcionista, Semaforo *semJugadoresPredio, Pipe *pipeJugadores);
+                       Semaforo *semEsperarRecepcionista, Semaforo *semJugadoresPredio, Pipe *pipeJugadores,
+                       vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja,
+                       vector<Semaforo> *semJugadoresSinPareja);
 
 
         void run();
