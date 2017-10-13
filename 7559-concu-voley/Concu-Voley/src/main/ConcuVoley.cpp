@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
 
 
     //TODO cambiar por 10
-    int cantJugadoresMinimo = 4;
+    int cantJugadoresMinimo = 10;
 
 	LOG_MODE mode;
 	if(nivelDeLog == 0) mode = DEBUG;

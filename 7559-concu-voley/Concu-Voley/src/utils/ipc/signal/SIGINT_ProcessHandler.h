@@ -1,9 +1,3 @@
-/*
- * SIGINT_ProcessHandler.h
- *
- *  Created on: Oct 18, 2016
- *      Author: gaston
- */
 
 #ifndef UTILS_IPC_SIGNAL_SIGINT_PROCESSHANDLER_H_
 #define UTILS_IPC_SIGNAL_SIGINT_PROCESSHANDLER_H_

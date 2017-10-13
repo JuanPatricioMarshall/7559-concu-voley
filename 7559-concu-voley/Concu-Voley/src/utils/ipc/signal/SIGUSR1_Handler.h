@@ -1,9 +1,4 @@
-/*
- * SIGUSR1_Handler.h
- *
- *  Created on: Oct 18, 2016
- *      Author: gaston
- */
+
 
 #ifndef UTILS_IPC_SIGNAL_SIGUSR1_HANDLER_H_
 #define UTILS_IPC_SIGNAL_SIGUSR1_HANDLER_H_

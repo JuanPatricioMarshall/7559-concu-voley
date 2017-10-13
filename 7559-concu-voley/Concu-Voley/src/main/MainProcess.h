@@ -1,9 +1,3 @@
-/*
- * MainProcess.h
- *
- *  Created on: Oct 15, 2016
- *      Author: gaston
- */
 
 #ifndef PROCESSES_MAINPROCESS_H_
 #define PROCESSES_MAINPROCESS_H_
@@ -100,6 +94,8 @@ namespace std {
 
         void inicializarIPCs();
 
+        void handleTerminar();
+
         void inicializarSemaforos();
 
         void inicializarMemoriasCompartidas();
@@ -127,7 +123,7 @@ namespace std {
 
         void finalizarProcesosPredio();
 
-        int finalizarJugadores();
+        void finalizarJugadores();
 
         void eliminarIPCs();
 

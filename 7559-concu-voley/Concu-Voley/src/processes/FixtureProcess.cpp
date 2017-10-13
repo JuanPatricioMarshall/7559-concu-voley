@@ -68,6 +68,8 @@ void FixtureProcess::run() {
 
         cont++;
 
+        Logger::log(fixtureProcessId, "Detalles de partidos hasta ahora: cantidad: " + Logger::intToString(resultados.size()), DEBUG);
+
         if (cont == 2) {
             imprimirFixture();
             cont = 0;

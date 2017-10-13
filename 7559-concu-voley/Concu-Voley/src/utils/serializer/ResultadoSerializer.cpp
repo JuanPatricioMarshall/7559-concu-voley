@@ -35,15 +35,20 @@ Resultado ResultadoSerializer::deserializar(string resultadoStr) {
 
     istringstream ss(resultadoStr);
 
+    string largo;
     string clave1IndiceStr;
     string clave1PIDStr;
 
+    string largo2;
     string clave2IndiceStr;
     string clave2PIDStr;
 
+    string largo3;
     string clave3IndiceStr;
     string clave3PIDStr;
 
+
+    string largo4;
     string clave4IndiceStr;
     string clave4PIDStr;
 
@@ -53,16 +58,22 @@ Resultado ResultadoSerializer::deserializar(string resultadoStr) {
     string setsPareja2;
 
 
+    getline(ss, largo, SEPARADOR);
     getline(ss, clave1IndiceStr, SEPARADOR);
     getline(ss, clave1PIDStr, SEPARADOR);
 
 
+    getline(ss, largo2, SEPARADOR);
     getline(ss, clave2IndiceStr, SEPARADOR);
     getline(ss, clave2PIDStr, SEPARADOR);
 
+
+    getline(ss, largo3, SEPARADOR);
     getline(ss, clave3IndiceStr, SEPARADOR);
     getline(ss, clave3PIDStr, SEPARADOR);
 
+
+    getline(ss, largo4, SEPARADOR);
     getline(ss, clave4IndiceStr, SEPARADOR);
     getline(ss, clave4PIDStr, SEPARADOR);
 

@@ -328,13 +328,13 @@ namespace std {
         while (!salir) {
             int response;
             waitpid(idAdminJugadores, &response, 0);
-            bool marea = (sigintHandler.getGracefulQuit() == 1);
+            bool terminoTorneoDePronto = (sigintHandler.getGracefulQuit() == 1);
 
-            bool terminoTorneoDePronto = (sigusr1Handler.getGracefulQuit() == 1);
             if (terminoTorneoDePronto) {
-                sigusr1Handler.setGracefulQuit(0);
-                //Iniciar proceso que diga resultado final?
-
+                Logger::log(mainLogId,
+                            "Termino de pronto ",
+                            DEBUG);
+                handleTerminar();
             } else {
 
                 if (WIFEXITED(response)) {
@@ -348,15 +348,31 @@ namespace std {
                 finalizarProcesosPredio();
                 eliminarIPCs();
 
-            }//TODO
-            salir = true;
+            }
+    //        salir = true;
         }
         mainProcessReturnData returnData;
-        // TODO
+
         returnData.cantJugadoresTerminados = jugadoresTerminados;
 
         return returnData;
 
+    }
+
+    void MainProcess::handleTerminar(){
+
+        Logger::log(mainLogId, "Termino el torneo", INFO);
+        finalizarJugadores();
+        finalizarProcesosPredio();
+        eliminarIPCs();
+
+    }
+
+    void MainProcess::finalizarJugadores() {
+
+
+        kill(idAdminJugadores, SIGINT);
+        waitpid(idAdminJugadores, 0, 0);
     }
 
     void MainProcess::eliminarSemaforos() {
