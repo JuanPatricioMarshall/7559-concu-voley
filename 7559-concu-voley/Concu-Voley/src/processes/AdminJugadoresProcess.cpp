@@ -98,11 +98,6 @@ namespace std {
 
         }
 
-
-        Logger::log(adminJugadoresLogId,
-                    "Devolviendo cantidad de jugadores inicializados: " + Logger::intToString(jugadoresCreados),
-                    DEBUG);
-
         return jugadoresCreados;
 
     }

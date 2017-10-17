@@ -368,6 +368,7 @@ namespace std {
 
                 finalizarProcesosPredio();
                 eliminarIPCs();
+                salir = true;
 
             }
     //        salir = true;
