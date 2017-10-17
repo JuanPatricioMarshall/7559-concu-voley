@@ -9,6 +9,9 @@
 #include "../model/Pareja.h"
 #include "../utils/ipc/pipe/Pipe.h"
 #include "../utils/ipc/semaphore/Semaforo.h"
+#include "../utils/ipc/signal/SIGINT_Handler.h"
+#include "../utils/ipc/signal/SIGUSR1_Handler.h"
+#include "../utils/ipc/signal/SIGUSR2_Handler.h"
 
 #ifndef RESTO_CUPIDO_H
 #define RESTO_CUPIDO_H
@@ -26,6 +29,9 @@ private:
     vector<ClaveJugador> jugadoresSinPareja;
 
     vector<vector<bool>> matrizDeMatcheo;
+
+
+    vector<pid_t > partidos;
 
     vector<vector<Semaforo>> *semCanchasLibres;
 
@@ -52,6 +58,13 @@ private:
     vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja;
     vector<Semaforo> *semJugadoresSinPareja;
 
+
+    SIGINT_Handler sigintHandler;
+    SIGUSR1_Handler sigusr1Handler;
+    SIGUSR2_Handler sigusr2Handler;
+
+
+
     void inicializarPartido(Pareja *pareja1, Pareja *pareja2);
 
 
@@ -60,6 +73,8 @@ private:
     void inicializarMemoriasCompartidas();
 
     void liberarMemoriasCompartidas();
+
+    void inicializarHandler();
 
 
 public:
@@ -77,6 +92,9 @@ public:
 
     virtual ~CupidoProcess();
 
+    void handleSubida();
+
+    void handleBajada();
 };
 
 

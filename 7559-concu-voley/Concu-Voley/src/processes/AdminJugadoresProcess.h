@@ -12,6 +12,9 @@
 #include "../utils/random/RandomUtil.h"
 #include "../utils/logger/Logger.h"
 #include "TiemposEspera.h"
+#include "../utils/ipc/signal/SIGUSR1_Handler.h"
+#include "../utils/ipc/signal/SIGUSR2_Handler.h"
+
 
 namespace std {
 
@@ -38,6 +41,9 @@ namespace std {
 
         SIGINT_Handler
                 sigintHandler;
+
+        SIGUSR1_Handler sigusr1Handler;
+        SIGUSR2_Handler sigusr2Handler;
 
         void inicializarHandler();
 

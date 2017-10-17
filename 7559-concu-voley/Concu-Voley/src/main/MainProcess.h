@@ -13,6 +13,7 @@
 #include "../utils/ipc/signal/SIGINT_Handler.h"
 #include "../utils/ipc/signal/SIGUSR1_Handler.h"
 #include "../processes/TiemposEspera.h"
+#include "../utils/ipc/signal/SIGUSR2_Handler.h"
 
 
 namespace std {
@@ -35,7 +36,6 @@ namespace std {
 
     const string SEM_GENTE_EN_EL_PREDIO = "/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sem_gente_en_el_predio.txt";
     const string SHM_GENTE_EN_EL_PREDIO = "/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/shm_gente_en_el_predio.txt";
-
 
 
     const string SEMS_JUGADOR_SIN_PAREJA = "/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/ipc-init-files/sems_jugador_sin_pareja.txt";
@@ -91,6 +91,7 @@ namespace std {
 
         SIGINT_Handler sigintHandler;
         SIGUSR1_Handler sigusr1Handler;
+        SIGUSR2_Handler sigusr2Handler;
 
         void inicializarIPCs();
 
@@ -106,7 +107,7 @@ namespace std {
 
         void inicializarSigintHandler();
 
-        void inicializarSigusr1Handler();
+        void inicializarSigusrHandler();
 
 
         void inicializarRecepcionista();
@@ -118,7 +119,6 @@ namespace std {
 
 
         void iniciarSimulacion();
-
 
 
         void finalizarProcesosPredio();
@@ -134,9 +134,10 @@ namespace std {
         void eliminarPipesFifos();
 
         void handleCrecimientoOla();
+
         void handleBajaOla();
 
-        void avisarAPartidos();
+        void avisarAPartidos(int sig);
 
 
     public:

@@ -7,6 +7,7 @@
 #include "TiemposEspera.h"
 #include "../utils/serializer/ResultadoSerializer.h"
 #include "../main/MainProcess.h"
+#include "../utils/ipc/signal/SignalHandler.h"
 
 PartidoProcess::PartidoProcess(Pareja *pareja1, Pareja *pareja2, vector<vector<Semaforo>> *semCanchasLibres,
                                vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres,
@@ -32,6 +33,12 @@ PartidoProcess::PartidoProcess(Pareja *pareja1, Pareja *pareja2, vector<vector<S
     inicializarMemoriasCompartidas();
 
 
+}
+
+void PartidoProcess::inicializarHandler() {
+
+    SignalHandler::getInstance()->registrarHandler(SIGINT, &sigintHandler);
+    SignalHandler::getInstance()->registrarHandler(SIGUSR1, &sigusr1Handler);
 }
 
 void PartidoProcess::inicializarMemoriasCompartidas() {
@@ -61,6 +68,9 @@ void PartidoProcess::run() {
 
     Resultado resultado = simularPartido();
 
+    if(sigusr1Handler.getGracefulQuit() == 0){
+        handleSubida();
+    }
 
     Logger::log(partidoProcessLogId, "El partido termino " + Logger::intToString(resultado.getSetsPareja1()) + " a " +
                                      Logger::intToString(resultado.getSetsPareja2()), INFO);
@@ -69,6 +79,9 @@ void PartidoProcess::run() {
     string resultadoStr = ResultadoSerializer::serializar(&resultado);
 
     Logger::log(partidoProcessLogId, "Voy a pushearle a fixture " + resultadoStr, DEBUG);
+
+
+
 
 
 //    this->pipeResultados->escribir(static_cast<const void *>(resultadoStr.c_str()), resultadoStr.size());
@@ -80,7 +93,6 @@ void PartidoProcess::run() {
     avisarJugadores();
 
 
-    //TODO
     limpiarRecursos();
     //TODO
     finalizar();
@@ -117,6 +129,17 @@ void PartidoProcess::encontrarCancha() {
     for (unsigned int i = 0; i < semCanchasLibres->size(); i++) {
 
         for (unsigned int j = 0; j < semCanchasLibres[0].size(); j++) {
+
+            semNivelDeMarea->p();
+
+            int nivelMarea = shmNivelDeMarea->leer();
+
+            semNivelDeMarea->v();
+
+            if(j == nivelMarea){
+                continue;
+            }
+
 
             Logger::log(partidoProcessLogId,
                         "Partido esperando semsCanchasLibre: " + Logger::intToString(i) + ", " + Logger::intToString(j),
@@ -235,8 +258,45 @@ void PartidoProcess::liberarMemoriasCompartidas() {
 
 void PartidoProcess::finalizar() {
 
+    exit(0);
 }
 
 PartidoProcess::~PartidoProcess() {
+
+}
+
+
+//TODO ARMAR UN SET DE SEMAFOROS ASOCIADOS A SHM PARA SABER SI EL PARTIDO TERMINO POR OLA ASI EL JUGADOR NO SE RESTA 1
+//TODO O MANDARLE SEÑAL A JUGADOR? DECIDIR --> TENGO PID EN CLAVE JUGADOR ASI QUE SI PODRIA MANDARLE SEÑAL
+void PartidoProcess::handleSubida() {
+
+
+    semNivelDeMarea->p();
+
+    int nivelMarea = shmNivelDeMarea->leer();
+
+    semNivelDeMarea->v();
+
+    if(cancha->getColumna() <= nivelMarea){
+
+
+
+
+        Logger::log(partidoProcessLogId, "El partido termino repentinamente por subida de marea", INFO);
+
+
+        liberarCancha();
+
+
+        // aviso a jugadores?! Asociado al TODO DE ARRIBA
+        avisarJugadores();
+
+        limpiarRecursos();
+        //TODO
+        finalizar();
+
+    }
+
+
 
 }

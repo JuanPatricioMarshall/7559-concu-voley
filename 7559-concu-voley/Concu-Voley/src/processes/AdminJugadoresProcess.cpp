@@ -35,6 +35,9 @@ namespace std {
 
     void AdminJugadoresProcess::inicializarHandler() {
         SignalHandler::getInstance()->registrarHandler(SIGINT, &sigintHandler);
+        SignalHandler::getInstance()->registrarHandler(SIGUSR1, &sigusr1Handler);
+        SignalHandler::getInstance()->registrarHandler(SIGUSR2, &sigusr2Handler);
+
     }
 
     int AdminJugadoresProcess::run() {
@@ -47,6 +50,9 @@ namespace std {
 
         int jugadoresCreados = 0;
 
+
+        bool subidaMarea = false;
+        bool bajadaMarea = false;
         while (jugadoresCreados < cantJugadores) {
 
             pid_t idJugador = fork();
@@ -72,6 +78,9 @@ namespace std {
             if (TiemposEspera::tiempos) {
                 sleep(RandomUtil::randomInt(TiemposEspera::TIEMPO_RANDOM_ENTRE_JUGADORES));
             }
+
+
+
 
 
         }

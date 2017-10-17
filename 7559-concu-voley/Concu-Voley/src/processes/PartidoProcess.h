@@ -18,6 +18,9 @@
 #include "../utils/ipc/semaphore/Semaforo.h"
 #include "../model/Cancha.h"
 #include "../model/Resultado.h"
+#include "../utils/ipc/signal/SIGINT_Handler.h"
+#include "../utils/ipc/signal/SIGUSR2_Handler.h"
+#include "../utils/ipc/signal/SIGUSR1_Handler.h"
 
 const string partidoProcessLogId = "Partido";
 
@@ -40,6 +43,9 @@ private:
 
 
     Cancha *cancha;
+
+    SIGINT_Handler sigintHandler;
+    SIGUSR1_Handler sigusr1Handler;
 
 
     void encontrarCancha();
@@ -70,6 +76,11 @@ public:
 
     ~PartidoProcess();
 
+    void inicializarHandler();
+
+    void handleSubida();
+
+    void handleBajada();
 };
 
 

@@ -198,8 +198,11 @@ namespace std {
         SignalHandler::getInstance()->registrarHandler(SIGINT, &sigintHandler);
     }
 
-    void MainProcess::inicializarSigusr1Handler() {
+    void MainProcess::inicializarSigusrHandler() {
         SignalHandler::getInstance()->registrarHandler(SIGUSR1, &sigusr1Handler);
+        SignalHandler::getInstance()->registrarHandler(SIGUSR2, &sigusr2Handler);
+
+
     }
 
     void MainProcess::handleCrecimientoOla() {
@@ -217,7 +220,7 @@ namespace std {
         shmNivelDeMarea.escribir(nivelMarea);
         semNivelDeMarea.v();
 
-        avisarAPartidos();
+        avisarAPartidos(SIGUSR1);
 
     }
 
@@ -236,12 +239,13 @@ namespace std {
         shmNivelDeMarea.escribir(nivelMarea);
         semNivelDeMarea.v();
 
-        avisarAPartidos();
+        avisarAPartidos(SIGUSR2);
 
     }
 
-    void MainProcess::avisarAPartidos() {
+    void MainProcess::avisarAPartidos(int sig) {
 
+        kill(idCupido, sig);
 
     }
 
@@ -259,7 +263,7 @@ namespace std {
 
         crearMemoriasCompartidas();
         inicializarSigintHandler();
-        inicializarSigusr1Handler();
+        inicializarSigusrHandler();
     }
 
     void MainProcess::inicializarRecepcionista() {
@@ -323,12 +327,29 @@ namespace std {
 
         int jugadoresTerminados = 0;
         bool salir = false;
+        bool subidaMarea = false;
+        bool bajadaMarea = false;
 
 
         while (!salir) {
             int response;
             waitpid(idAdminJugadores, &response, 0);
             bool terminoTorneoDePronto = (sigintHandler.getGracefulQuit() == 1);
+            subidaMarea = (sigusr1Handler.getGracefulQuit() == 1);
+            bajadaMarea = (sigusr2Handler.getGracefulQuit() == 1);
+
+
+            if (subidaMarea){
+
+                handleBajaOla();
+
+
+            }
+
+            if (bajadaMarea){
+
+                handleCrecimientoOla();
+            }
 
             if (terminoTorneoDePronto) {
                 Logger::log(mainLogId,

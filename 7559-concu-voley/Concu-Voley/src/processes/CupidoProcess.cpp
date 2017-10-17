@@ -6,6 +6,7 @@
 #include "../utils/serializer/ClaveJugadorSerializer.h"
 #include "PartidoProcess.h"
 #include "../main/MainProcess.h"
+#include "../utils/ipc/signal/SignalHandler.h"
 
 CupidoProcess::CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanchasLibres,
                              vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres, int cantNJugadores,
@@ -70,6 +71,14 @@ void CupidoProcess::inicializarMemoriasCompartidas() {
 
 }
 
+void CupidoProcess::inicializarHandler() {
+
+    SignalHandler::getInstance()->registrarHandler(SIGINT, &sigintHandler);
+    SignalHandler::getInstance()->registrarHandler(SIGUSR1, &sigusr1Handler);
+    SignalHandler::getInstance()->registrarHandler(SIGUSR2, &sigusr2Handler);
+
+}
+
 void CupidoProcess::run() {
 
     Logger::log(cupidoProcessLogId, "Iniciando Cupido ", DEBUG);
@@ -82,6 +91,9 @@ void CupidoProcess::run() {
 
     bool isAlive = true;
     Logger::log(cupidoProcessLogId, "Cupido empieza a leer del pipe", DEBUG);
+
+    bool subidaMarea = false;
+    bool bajadaMarea = false;
 
 
     while (isAlive) {
@@ -171,7 +183,8 @@ void CupidoProcess::run() {
                     if (!(parejaEnEspera->getClaveJugador1()->getIndice() < 0)) {
 
                         Logger::log(cupidoProcessLogId, "Ya habia una pareja esperando " + Logger::intToString(
-                                parejaEnEspera->getClaveJugador1()->getIndice()) + " , " + Logger::intToString(parejaEnEspera->getClaveJugador2()->getIndice()), DEBUG);
+                                parejaEnEspera->getClaveJugador1()->getIndice()) + " , " + Logger::intToString(
+                                parejaEnEspera->getClaveJugador2()->getIndice()), DEBUG);
 
 
                         inicializarPartido(parejaEnEspera, nuevaPareja);
@@ -207,6 +220,39 @@ void CupidoProcess::run() {
             semsTerminoDeJugar->at(claveJugador.getIndice()).v();
 
         }
+
+        subidaMarea = (sigusr1Handler.getGracefulQuit() == 1);
+        bajadaMarea = (sigusr2Handler.getGracefulQuit() == 1);
+
+
+        if (subidaMarea) {
+
+
+        }
+
+        if (bajadaMarea) {
+
+        }
+    }
+
+
+}
+
+void CupidoProcess::handleSubida() {
+
+    for(int i = 0; i < partidos.size(); i++){
+
+       kill(partidos.at(i), SIGUSR1);
+    }
+
+
+}
+
+void CupidoProcess::handleBajada() {
+
+    for(int i = 0; i < partidos.size(); i++){
+
+        kill(partidos.at(i), SIGUSR2);
     }
 
 }
@@ -276,6 +322,10 @@ void CupidoProcess::inicializarPartido(Pareja *pareja1, Pareja *pareja2) {
 
 
         exit(0);
+    } else {
+
+        partidos.push_back(idPartido);
+
     }
 
 }
