@@ -59,17 +59,19 @@ void PartidoProcess::run() {
 
 
     Logger::log(partidoProcessLogId, "Las parejas buscan cancha ", DEBUG);
-    Logger::log(partidoProcessLogId, "Tamaño" + Logger::intToString(semCanchasLibres->size()), INFO);
+    Logger::log(partidoProcessLogId, "Tamaño " + Logger::intToString(semCanchasLibres->size()), INFO);
 
 
     encontrarCancha();
-
     Logger::log(partidoProcessLogId, "Las parejas encontraron cancha ", DEBUG);
 
     Resultado resultado = simularPartido();
 
+
     if(sigusr1Handler.getGracefulQuit() == 0){
-        handleSubida();
+
+        Logger::log(partidoProcessLogId, "COMENTE ESTO DE ACA ABAJO PERO TENDRIA Q NUNCA ENTRAR", INFO);
+        //handleSubida();
     }
 
     Logger::log(partidoProcessLogId, "El partido termino " + Logger::intToString(resultado.getSetsPareja1()) + " a " +
@@ -89,6 +91,7 @@ void PartidoProcess::run() {
 
 
     //Este orden estara bien?
+
     liberarCancha();
     avisarJugadores();
 
@@ -109,7 +112,6 @@ Resultado PartidoProcess::simularPartido() {
 }
 
 void PartidoProcess::encontrarCancha() {
-
     //TODO
     //ACORDARSE DE CUANDO TERMINA DE HACE V
     semCantCanchasLibres->p();
@@ -129,9 +131,9 @@ void PartidoProcess::encontrarCancha() {
     for (unsigned int i = 0; i < semCanchasLibres->size(); i++) {
 
         for (unsigned int j = 0; j < semCanchasLibres[0].size(); j++) {
-
+            /*
             semNivelDeMarea->p();
-
+            Logger::log(partidoProcessLogId, "Spam2", INFO);
             int nivelMarea = shmNivelDeMarea->leer();
 
             semNivelDeMarea->v();
@@ -139,7 +141,7 @@ void PartidoProcess::encontrarCancha() {
             if(j == nivelMarea){
                 continue;
             }
-
+            */
 
             Logger::log(partidoProcessLogId,
                         "Partido esperando semsCanchasLibre: " + Logger::intToString(i) + ", " + Logger::intToString(j),
@@ -151,7 +153,6 @@ void PartidoProcess::encontrarCancha() {
                         "Partido obtuvo semsCanchasLibre: " + Logger::intToString(i) + ", " + Logger::intToString(j),
                         DEBUG);
 
-//            Logger::log(comensalLogId, "shmMesasLibre size: " + Logger::intToString(shmMesasLibres->size()), DEBUG);
 
 
             //TODO VER CAPAZ HAY QUE HACER * A *

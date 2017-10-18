@@ -42,9 +42,9 @@ namespace std {
 
     int AdminJugadoresProcess::run() {
 
-        Logger::log(adminJugadoresLogId, "Comenzando inicializacion de jugadores", INFO);
+        Logger::log(adminJugadoresLogId, "Comenzando inicializacion de jugadores", DEBUG);
         Logger::log(adminJugadoresLogId,
-                    "Cantidad de jugadores a inicializar: " + Logger::intToString(cantJugadores), INFO);
+                    "Cantidad de jugadores a inicializar: " + Logger::intToString(cantJugadores), DEBUG);
 
         vector<pid_t> idsJugadores;
 
@@ -70,7 +70,7 @@ namespace std {
             } else {
                 Logger::log(adminJugadoresLogId,
                             "Se inicializo un nuevo jugador con id: " + Logger::intToString(idJugador) +
-                            "con indice: " + Logger::intToString(jugadoresCreados), INFO);
+                            "con indice: " + Logger::intToString(jugadoresCreados), DEBUG);
                 idsJugadores.push_back(idJugador);
                 jugadoresCreados++;
             }

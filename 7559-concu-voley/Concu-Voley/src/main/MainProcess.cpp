@@ -36,14 +36,16 @@ namespace std {
 
     void MainProcess::inicializarSemaforos() {
 
-
+        Logger::log(mainLogId, "Creo vector de semaforos termino de jugar y sin pareja de largo: ", DEBUG);
         for (int i = 0; i < cantNJugadores; i++) {
             semsTerminoDeJugar.push_back(Semaforo(SEMS_TERMINO_DE_JUGAR_INIT_FILE, 0, i));
+            //probar si combiene N,M o 10
             semJugadoresSinPareja.push_back(Semaforo(SEMS_JUGADOR_SIN_PAREJA, 1, i));
         }
 
 
         int cont = 0;
+        Logger::log(mainLogId, "Matriz de canchas libres", DEBUG);
         for (int i = 0; i < predioF; i++) {
 
             vector<Semaforo> semFilaCanchaLibre;
@@ -68,6 +70,7 @@ namespace std {
                     DEBUG);
 
         semNivelDeMarea.p();
+
         semCantGenteEnElPredio.p();
 
         for (int i = 0; i < cantNJugadores; i++) {
@@ -135,7 +138,9 @@ namespace std {
 
 
     void MainProcess::inicializarIPCs() {
+        Logger::log(mainLogId, "InicializoSem", DEBUG);
         inicializarSemaforos();
+        Logger::log(mainLogId, "InicializoSHM", DEBUG);
         inicializarMemoriasCompartidas();
 
     }
@@ -253,17 +258,22 @@ namespace std {
     void MainProcess::iniciarSimulacion() {
 
         inicializarRecepcionista();
+        Logger::log(mainLogId, "inicializarRecepcionista iniciada", DEBUG);
 
         inicializarCupido();
-
+        Logger::log(mainLogId, "inicializarCupido iniciada", DEBUG);
         inicializarProcesoFixture();
+        Logger::log(mainLogId, "inicializarProcesoFixture iniciada", DEBUG);
 //   inicializarProcesoResultado();
 
         inicializarProcesosJugadores();
-
+        Logger::log(mainLogId, "inicializarProcesosJugadores iniciada", DEBUG);
         crearMemoriasCompartidas();
+        Logger::log(mainLogId, "crearMemoriasCompartidas iniciada", DEBUG);
         inicializarSigintHandler();
+        Logger::log(mainLogId, "inicializarSigintHandler iniciada", DEBUG);
         inicializarSigusrHandler();
+        Logger::log(mainLogId, "inicializarSigusrHandler iniciada", DEBUG);
     }
 
     void MainProcess::inicializarRecepcionista() {
@@ -274,6 +284,7 @@ namespace std {
 
             RecepcionistaProcess recepcionista(&semEsperarRecepcionista, &semCupido, cantJugadoresMinimo);
             recepcionista.run();
+            Logger::log(mainLogId, "Recepcionista Termino de Trabajar", DEBUG);
             exit(0);
         } else {
 
@@ -322,57 +333,48 @@ namespace std {
 
 
     mainProcessReturnData MainProcess::run() {
+        Logger::log(mainLogId, "Running...", DEBUG);
         iniciarSimulacion();
         Logger::log(mainLogId, "Simulacion iniciada", DEBUG);
 
         int jugadoresTerminados = 0;
-        bool salir = false;
-        bool subidaMarea = false;
-        bool bajadaMarea = false;
 
+        int response;
+        waitpid(idAdminJugadores, &response, 0);
+        Logger::log(mainLogId, "Termino el AdminJugadores", DEBUG);
+        bool terminoTorneoDePronto = (sigintHandler.getGracefulQuit() == 1);
+        bool subidaMarea = (sigusr1Handler.getGracefulQuit() == 1);
+        bool bajadaMarea = (sigusr2Handler.getGracefulQuit() == 1);
 
-        while (!salir) {
-            int response;
-            waitpid(idAdminJugadores, &response, 0);
-            bool terminoTorneoDePronto = (sigintHandler.getGracefulQuit() == 1);
-            subidaMarea = (sigusr1Handler.getGracefulQuit() == 1);
-            bajadaMarea = (sigusr2Handler.getGracefulQuit() == 1);
+        if (subidaMarea){
 
+            handleBajaOla();
 
-            if (subidaMarea){
-
-                handleBajaOla();
-
-
-            }
-
-            if (bajadaMarea){
-
-                handleCrecimientoOla();
-            }
-
-            if (terminoTorneoDePronto) {
-                Logger::log(mainLogId,
-                            "Termino de pronto ",
-                            DEBUG);
-                handleTerminar();
-            } else {
-
-                if (WIFEXITED(response)) {
-                    jugadoresTerminados = WEXITSTATUS(response);
-                }
-                Logger::log(mainLogId,
-                            "Cantidad de jugadores finalizados: "
-                            + Logger::intToString(jugadoresTerminados),
-                            DEBUG);
-
-                finalizarProcesosPredio();
-                eliminarIPCs();
-                salir = true;
-
-            }
-    //        salir = true;
         }
+
+        if (bajadaMarea){
+
+            handleCrecimientoOla();
+        }
+
+        if (terminoTorneoDePronto) {
+            Logger::log(mainLogId, "Termino de pronto ", DEBUG);
+            handleTerminar();
+        } else {
+
+            if (WIFEXITED(response)) {
+                jugadoresTerminados = WEXITSTATUS(response);
+            }
+            Logger::log(mainLogId,
+                        "Cantidad de jugadores finalizados: "
+                        + Logger::intToString(jugadoresTerminados),
+                        DEBUG);
+
+            finalizarProcesosPredio();
+            eliminarIPCs();
+
+        }
+
         mainProcessReturnData returnData;
 
         returnData.cantJugadoresTerminados = jugadoresTerminados;

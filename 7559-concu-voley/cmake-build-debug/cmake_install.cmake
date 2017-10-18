@@ -1,4 +1,4 @@
-# Install script for directory: /home/navent/Facultad/concu/concu/7559-concu-voley
+# Install script for directory: /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -10,9 +10,6 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
 
-
-
-
 	int nivelDeLog = atoi(argv[1]);
 	int cantPartidosJugador = atoi(argv[2]);
 	int predioF = atoi(argv[3]);
@@ -20,8 +17,7 @@ int main(int argc, char *argv[]) {
 	int cantMJugadores = atoi(argv[5]);
 	int cantNJugadores = atoi(argv[6]);
 
-    cout << cantNJugadores;
-
+    cout << cantNJugadores <<" "<<getpid()<<" "<<getppid()<<endl;
 
     //TODO cambiar por 10
     int cantJugadoresMinimo = 10;
@@ -51,13 +47,10 @@ int main(int argc, char *argv[]) {
 	//TODO
 	int jugadoresPendientes = cantNJugadores;
 	mainProcessReturnData mainProcessReturnData;
-	do {
-		MainProcess mainProcess(cantPartidosJugador, predioC, predioF, cantMJugadores, cantNJugadores, cantJugadoresMinimo);
-		mainProcessReturnData = mainProcess.run();
-
-		jugadoresPendientes -= mainProcessReturnData.cantJugadoresTerminados;
-	} while(jugadoresPendientes > 0);
-
+	Logger::log(mainLogId, "IntentoCrearMainProcess", DEBUG);
+	MainProcess mainProcess(cantPartidosJugador, predioC, predioF, cantMJugadores, cantNJugadores, cantJugadoresMinimo);
+	Logger::log(mainLogId, "MainProcessCreadoCorrecto", DEBUG);
+	mainProcessReturnData = mainProcess.run();
 
 	Logger::log(mainLogId, "Simulacion finalizada", INFO);
 

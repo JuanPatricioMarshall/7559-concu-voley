@@ -6,29 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/ConcuVoley.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/ConcuVoley.cpp
 iostream
 -
 MainProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/MainProcess.cpp
 MainProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
 sys/wait.h
 -
 ../utils/ipc/signal/SignalHandler.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
 ../processes/RecepcionistaProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.h
 ../processes/CupidoProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.h
 ../processes/AdminJugadoresProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.h
 ../processes/FixtureProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
 sched.h
 -
 string
@@ -36,209 +36,231 @@ string
 vector
 -
 ../utils/ipc/pipe/Pipe.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
 ../utils/ipc/semaphore/Semaforo.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
 ../utils/ipc/shared-memory/MemoriaCompartida.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
 ../utils/ipc/signal/SIGINT_Handler.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
 ../utils/ipc/signal/SIGUSR1_Handler.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
 ../processes/TiemposEspera.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
+../utils/ipc/signal/SIGUSR2_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Cancha.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Cancha.cpp
 Cancha.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Cancha.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Cancha.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Cancha.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Cancha.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.cpp
 ClaveJugador.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h
 time.h
 -
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pareja.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Pareja.cpp
 Pareja.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pareja.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Pareja.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pareja.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Pareja.h
 ClaveJugador.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Resultado.cpp
 Resultado.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Resultado.h
 ../utils/random/RandomUtil.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
 ../processes/TiemposEspera.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Resultado.h
 Pareja.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pareja.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Pareja.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.cpp
 AdminJugadoresProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.h
 sys/wait.h
 -
 ../utils/ipc/signal/SignalHandler.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
 JugadorProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.h
 sched.h
 -
 vector
 -
 ../utils/ipc/semaphore/Semaforo.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
 ../utils/ipc/shared-memory/MemoriaCompartida.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
 ../utils/ipc/signal/SIGINT_Handler.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
 ../utils/ipc/pipe/Pipe.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
 ../utils/random/RandomUtil.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
 ../utils/logger/Logger.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
 TiemposEspera.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
+../utils/ipc/signal/SIGUSR1_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
+../utils/ipc/signal/SIGUSR2_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.cpp
 CupidoProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.h
 ../utils/serializer/ClaveJugadorSerializer.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
 PartidoProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.h
 ../main/MainProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
+../utils/ipc/signal/SignalHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.h
 vector
 -
 Process.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.h
 ../model/ClaveJugador.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h
 ../utils/ipc/shared-memory/MemoriaCompartida.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
 ../model/Pareja.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pareja.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Pareja.h
 ../utils/ipc/pipe/Pipe.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
 ../utils/ipc/semaphore/Semaforo.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
+../utils/ipc/signal/SIGINT_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
+../utils/ipc/signal/SIGUSR1_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
+../utils/ipc/signal/SIGUSR2_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.cpp
 FixtureProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.h
 ../utils/serializer/ResultadoSerializer.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.h
 vector
 -
 Process.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.h
 ../utils/ipc/pipe/Pipe.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
 ../model/Resultado.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Resultado.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.cpp
 JugadorProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.h
 ../utils/random/RandomUtil.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
 ../utils/serializer/ClaveJugadorSerializer.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.h
 termio.h
 -
 ../main/MainProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
 Process.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.h
 vector
 -
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.cpp
 PartidoProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.h
 TiemposEspera.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
 ../utils/serializer/ResultadoSerializer.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.h
 ../main/MainProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
+../utils/ipc/signal/SignalHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.h
 ../model/Pareja.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pareja.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Pareja.h
 ../utils/ipc/semaphore/Semaforo.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
 Process.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.h
 vector
 -
 Process.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.h
 ../model/ClaveJugador.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h
 ../utils/ipc/shared-memory/MemoriaCompartida.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
 ../model/Pareja.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pareja.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Pareja.h
 ../utils/ipc/pipe/Pipe.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
 ../utils/ipc/semaphore/Semaforo.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
 ../model/Cancha.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Cancha.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Cancha.h
 ../model/Resultado.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Resultado.h
+../utils/ipc/signal/SIGINT_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
+../utils/ipc/signal/SIGUSR2_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h
+../utils/ipc/signal/SIGUSR1_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.cpp
 Process.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.h
 ../utils/ipc/signal/SignalHandler.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
 ../utils/ipc/signal/SIGINT_ProcessHandler.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_ProcessHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_ProcessHandler.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.h
 string
 -
 ../utils/logger/Logger.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.cpp
 RecepcionistaProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.h
 ../main/MainProcess.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
 Process.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp
 Fifo.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.h
 string
 -
 sys/types.h
@@ -250,27 +272,27 @@ fcntl.h
 unistd.h
 -
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp
 FifoEscritura.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.h
 Fifo.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp
 FifoLectura.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.h
 Fifo.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.cpp
 LockFile.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.h
 unistd.h
 -
 fcntl.h
@@ -278,9 +300,9 @@ fcntl.h
 string
 -
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp
 Pipe.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
 errno.h
 -
 cstring
@@ -288,9 +310,9 @@ cstring
 iostream
 -
 ../../logger/Logger.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
 unistd.h
 -
 fcntl.h
@@ -298,9 +320,9 @@ fcntl.h
 string
 -
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp
 Semaforo.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
 errno.h
 -
 cstdio
@@ -310,9 +332,9 @@ cstring
 iostream
 -
 ../../logger/Logger.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
 sys/ipc.h
 -
 sys/sem.h
@@ -322,7 +344,7 @@ sys/types.h
 string
 -
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
 cstring
 -
 iostream
@@ -338,19 +360,19 @@ string
 errno.h
 -
 ../../logger/Logger.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
 signal.h
 -
 assert.h
 -
 EventHandler.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_ProcessHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_ProcessHandler.h
 assert.h
 -
 csignal
@@ -358,23 +380,31 @@ csignal
 cstdlib
 -
 ../../../processes/Process.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.h
 EventHandler.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
 signal.h
 -
 assert.h
 -
 EventHandler.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h
+signal.h
+-
+assert.h
+-
+EventHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
+
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp
 SignalHandler.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
 signal.h
 -
 stdio.h
@@ -382,11 +412,11 @@ stdio.h
 memory.h
 -
 EventHandler.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.cpp
 Logger.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
 fstream
 -
 ctime
@@ -394,31 +424,31 @@ ctime
 sys/time.h
 -
 string.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/string.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/string.h
 ../ipc/lock/LockFile.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.h
 iostream
 -
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
 string
 -
 sstream
 -
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.cpp
 RandomUtil.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
 cstdlib
 -
 iostream
 -
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp
 ClaveJugadorSerializer.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
 iomanip
 -
 iostream
@@ -426,17 +456,17 @@ iostream
 sstream
 -
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
 string
 -
 ../../model/ClaveJugador.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.h
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp
 ResultadoSerializer.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.h
 ClaveJugadorSerializer.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h
 iomanip
 -
 iostream
@@ -444,9 +474,9 @@ iostream
 sstream
 -
 
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.h
 ../../model/Resultado.h
-/home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Resultado.h
 string
 -
 

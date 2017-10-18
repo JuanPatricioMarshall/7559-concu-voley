@@ -94,43 +94,53 @@ void CupidoProcess::run() {
 
     bool subidaMarea = false;
     bool bajadaMarea = false;
-
-
+    LOG_MODE mode = INFO;
+    int ocupadas = 0;
+    int contPartidos = 0;
+    int ciclos = 0;
     while (isAlive) {
 
-
+        Logger::log(cupidoProcessLogId, "Cantidad De Partidos " + Logger::intToString(contPartidos), mode);
+        Logger::log(cupidoProcessLogId, "Cantidad De Ciclos " + Logger::intToString(ciclos), mode);
+        ciclos++;
+        Logger::log(cupidoProcessLogId, "leo ",INFO);
         int tamanioClaveJugador = leerTamanioClaveJugador();
-
+        Logger::log(cupidoProcessLogId, "leido ",INFO);
 
         char buffer[tamanioClaveJugador];
         string claveJugadorStr;
 
 
-        Logger::log(cupidoProcessLogId, "Cupido espera leer del pipe de jugadores", DEBUG);
+        Logger::log(cupidoProcessLogId, "Cupido espera leer del pipe de jugadores",DEBUG);
+
 
 
         jugadores->leer(static_cast<void *>(buffer), tamanioClaveJugador);
 
+
         claveJugadorStr = buffer;
 
 
-        Logger::log(cupidoProcessLogId, "Cupido leyo del pipe de jugadores: " + claveJugadorStr, DEBUG);
 
 
         ClaveJugador claveJugador = ClaveJugadorSerializer::deserializarClaveJugador(claveJugadorStr);
+        Logger::log(cupidoProcessLogId, "Cupido leyo del pipe de jugadores: " + Logger::intToString(claveJugador.getIndice()), mode);
 
         Logger::log(cupidoProcessLogId,
                     "Cupido buscando pareja para " + Logger::intToString(claveJugador.getPid()) + " indice: " +
-                    Logger::intToString(claveJugador.getIndice()), DEBUG);
+                    Logger::intToString(claveJugador.getIndice()), mode);
 
         bool seQuedaEnElPredio = false;
+
+        Logger::log(cupidoProcessLogId,
+                    "Cupido tiene " + Logger::intToString(jugadoresSinPareja.size())+" mesas con "+Logger::intToString(ocupadas)+ " ocupadas" , mode);
 
         for (int i = 0; i < jugadoresSinPareja.size(); i++) {
             if (jugadoresSinPareja[i].getPid() < 0) {
                 Logger::log(cupidoProcessLogId, "Cupido encontro una mesa vacia en posicion " + Logger::intToString(i) +
                                                 " para el jugador " +
                                                 Logger::intToString(claveJugador.getPid()) + " indice: " +
-                                                Logger::intToString(claveJugador.getIndice()), DEBUG);
+                                                Logger::intToString(claveJugador.getIndice()), mode);
 
                 jugadoresSinPareja[i] = claveJugador;
 
@@ -138,6 +148,7 @@ void CupidoProcess::run() {
                                                 Logger::intToString(claveJugador.getPid()) + " indice: " +
                                                 Logger::intToString(claveJugador.getIndice()), DEBUG);
                 seQuedaEnElPredio = true;
+                ocupadas++;
                 break;
             } else {
                 if (!matrizDeMatcheo[jugadoresSinPareja[i].getIndice()][claveJugador.getIndice()]) {
@@ -174,7 +185,7 @@ void CupidoProcess::run() {
                     //Piso en la lista de jugadores sin pareja por una vacia
                     Logger::log(cupidoProcessLogId, "Vacio la mesa: " + Logger::intToString(i), DEBUG);
                     jugadoresSinPareja[i] = ClaveJugador(-1, -1);
-
+                    ocupadas--;
 
                     Logger::log(cupidoProcessLogId, "Armo la pareja ", DEBUG);
 
@@ -184,11 +195,11 @@ void CupidoProcess::run() {
 
                         Logger::log(cupidoProcessLogId, "Ya habia una pareja esperando " + Logger::intToString(
                                 parejaEnEspera->getClaveJugador1()->getIndice()) + " , " + Logger::intToString(
-                                parejaEnEspera->getClaveJugador2()->getIndice()), DEBUG);
+                                parejaEnEspera->getClaveJugador2()->getIndice()), mode);
 
 
                         inicializarPartido(parejaEnEspera, nuevaPareja);
-
+                        contPartidos++;
                         parejaEnEspera = new Pareja(new ClaveJugador(-1, -1), new ClaveJugador(-1, -1));
 
                     } else {
@@ -197,7 +208,7 @@ void CupidoProcess::run() {
                         parejaEnEspera->setClaveJugador1(nuevaPareja->getClaveJugador1());
                         parejaEnEspera->setClaveJugador2(nuevaPareja->getClaveJugador2());
 
-                        Logger::log(cupidoProcessLogId, "Guarde la nueva pareja a esperar ", DEBUG);
+                        Logger::log(cupidoProcessLogId, "Guarde la nueva pareja a esperar ", mode);
 
                     }
                     seQuedaEnElPredio = true;
@@ -210,7 +221,7 @@ void CupidoProcess::run() {
         }
         if (!seQuedaEnElPredio) {
             Logger::log(cupidoProcessLogId, "Cupido le avisa al jugador " + Logger::intToString(claveJugador.getPid()) +
-                                            " que se vaya del predio porque no encontro pareja", DEBUG);
+                                            " que se vaya del predio porque no encontro pareja", mode);
 
             semJugadoresSinPareja->at(claveJugador.getIndice()).p();
             shmJugadoresSinPareja->at(claveJugador.getIndice()).escribir(true);
@@ -220,7 +231,7 @@ void CupidoProcess::run() {
             semsTerminoDeJugar->at(claveJugador.getIndice()).v();
 
         }
-
+        /*
         subidaMarea = (sigusr1Handler.getGracefulQuit() == 1);
         bajadaMarea = (sigusr2Handler.getGracefulQuit() == 1);
 
@@ -232,7 +243,7 @@ void CupidoProcess::run() {
 
         if (bajadaMarea) {
 
-        }
+        }*/
     }
 
 
@@ -272,7 +283,6 @@ void CupidoProcess::liberarMemoriasCompartidas() {
 }
 
 CupidoProcess::~CupidoProcess() {
-
 
 }
 

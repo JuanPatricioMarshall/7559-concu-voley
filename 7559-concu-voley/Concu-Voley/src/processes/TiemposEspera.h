@@ -10,16 +10,16 @@ class TiemposEspera {
 public:
 	static const bool tiempos = true;
 
-	static const int TIEMPO_RANDOM_ENTRE_JUGADORES = 2;
+	static const int TIEMPO_RANDOM_ENTRE_JUGADORES = 1;
 
 	static constexpr double PROBABILIDAD_GANAR_PAREJA_1 = 0.50;
-	static constexpr double PROBABILIDAD_IRSE = 0.3;
+	static constexpr double PROBABILIDAD_IRSE = 0;
 
 	static constexpr double PROBABILIDAD_3_A_0 = 0.3;
 	static constexpr double PROBABILIDAD_3_A_1 = 0.6;
 
-	static const int TIEMPO_JUGAR = 8;
-	static const int TIEMPO_AFUERA = 8;
+	static const int TIEMPO_JUGAR = 1;
+	static const int TIEMPO_AFUERA = 1;
 
 
 };

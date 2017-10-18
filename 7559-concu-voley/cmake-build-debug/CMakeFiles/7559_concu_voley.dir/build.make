@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/navent/Escritorio/CLION/clion-2017.2.3/bin/cmake/bin/cmake
+CMAKE_COMMAND = /opt/clion-2017.2.3/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/navent/Escritorio/CLION/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
+RM = /opt/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/navent/Facultad/concu/concu/7559-concu-voley
+CMAKE_SOURCE_DIR = /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug
+CMAKE_BINARY_DIR = /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/7559_concu_voley.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/7559_concu_voley.dir/flags.make
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/main/ConcuVoley.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/ConcuVoley.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/ConcuVoley.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/ConcuVoley.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/ConcuVoley.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/ConcuVoley.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/ConcuVoley.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o.provides.b
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o: ../Concu-Voley/src/main/MainProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/MainProcess.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/MainProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/main/MainProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/MainProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/MainProcess.cpp.o.provides.
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.o: ../Concu-Voley/src/model/Cancha.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Cancha.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Cancha.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Cancha.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Cancha.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Cancha.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Cancha.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Cancha.cpp.o.provides.buil
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.o: ../Concu-Voley/src/model/ClaveJugador.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/ClaveJugador.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/ClaveJugador.cpp.o.provide
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.o: ../Concu-Voley/src/model/Pareja.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pareja.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Pareja.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pareja.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Pareja.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Pareja.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Pareja.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Pareja.cpp.o.provides.buil
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.o: ../Concu-Voley/src/model/Resultado.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Resultado.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Resultado.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/model/Resultado.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/model/Resultado.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/model/Resultado.cpp.o.provides.b
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o: ../Concu-Voley/src/processes/AdminJugadoresProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/AdminJugadoresProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.cpp.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/AdminJugadoresProcess.
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/processes/CupidoProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/CupidoProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o.pr
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o: ../Concu-Voley/src/processes/JugadorProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/JugadorProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/JugadorProcess.cpp.o.p
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/processes/PartidoProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/PartidoProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o.requires:
 
@@ -299,16 +299,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o.p
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.o: ../Concu-Voley/src/processes/Process.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/Process.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.o.requires:
 
@@ -323,16 +323,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/Process.cpp.o.provides
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o: ../Concu-Voley/src/processes/RecepcionistaProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/RecepcionistaProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.cpp.o.requires:
 
@@ -347,16 +347,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/RecepcionistaProcess.c
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.o: ../Concu-Voley/src/utils/ipc/fifo/Fifo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.o.requires:
 
@@ -371,16 +371,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp.o.provid
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.o: ../Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp.o.requires:
 
@@ -395,16 +395,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.o: ../Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.o.requires:
 
@@ -419,16 +419,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp.o
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.o: ../Concu-Voley/src/utils/ipc/lock/LockFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/lock/LockFile.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.o.requires:
 
@@ -443,16 +443,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.o.pr
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.o: ../Concu-Voley/src/utils/ipc/pipe/Pipe.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.o.requires:
 
@@ -467,16 +467,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.o.provid
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o: ../Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o.requires:
 
@@ -491,16 +491,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.requires:
 
@@ -515,16 +515,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.c
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o: ../Concu-Voley/src/utils/logger/Logger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o.requires:
 
@@ -539,16 +539,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o.provid
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o: ../Concu-Voley/src/utils/random/RandomUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/random/RandomUtil.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o.requires:
 
@@ -563,16 +563,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o.pr
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o: ../Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o.requires:
 
@@ -587,16 +587,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSer
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o: ../Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o.requires:
 
@@ -611,16 +611,16 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerial
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.o: ../Concu-Voley/src/processes/FixtureProcess.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.o -c /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.i
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/navent/Facultad/concu/concu/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/FixtureProcess.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.s
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.o.requires:
 
@@ -689,7 +689,7 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.o.p
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.o
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/build.make
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable 7559_concu_voley"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable 7559_concu_voley"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/7559_concu_voley.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -729,6 +729,6 @@ CMakeFiles/7559_concu_voley.dir/clean:
 .PHONY : CMakeFiles/7559_concu_voley.dir/clean
 
 CMakeFiles/7559_concu_voley.dir/depend:
-	cd /home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/navent/Facultad/concu/concu/7559-concu-voley /home/navent/Facultad/concu/concu/7559-concu-voley /home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug /home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug /home/navent/Facultad/concu/concu/7559-concu-voley/cmake-build-debug/CMakeFiles/7559_concu_voley.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles/7559_concu_voley.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/7559_concu_voley.dir/depend
 
