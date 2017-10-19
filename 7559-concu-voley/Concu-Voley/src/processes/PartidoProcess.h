@@ -2,8 +2,8 @@
 // Created by navent on 10/10/17.
 //
 
-#ifndef RESTO_PARTIDOPROCESS_H
-#define RESTO_PARTIDOPROCESS_H
+#ifndef CONCU_PARTIDOPROCESS_H
+#define CONCU_PARTIDOPROCESS_H
 
 
 #include "../model/Pareja.h"
@@ -84,4 +84,4 @@ public:
 };
 
 
-#endif //RESTO_PARTIDOPROCESS_H
+#endif //CONCU_PARTIDOPROCESS_H

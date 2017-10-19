@@ -2,8 +2,8 @@
 // Created by navent on 10/10/17.
 //
 
-#ifndef RESTO_CLAVEJUGADOR_H
-#define RESTO_CLAVEJUGADOR_H
+#ifndef CONCU_CLAVEJUGADOR_H
+#define CONCU_CLAVEJUGADOR_H
 
 #include <time.h>
 
@@ -31,4 +31,4 @@ public:
 };
 
 
-#endif //RESTO_CLAVEJUGADOR_H
+#endif //CONCU_CLAVEJUGADOR_H

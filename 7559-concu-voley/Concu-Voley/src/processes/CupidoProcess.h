@@ -13,8 +13,8 @@
 #include "../utils/ipc/signal/SIGUSR1_Handler.h"
 #include "../utils/ipc/signal/SIGUSR2_Handler.h"
 
-#ifndef RESTO_CUPIDO_H
-#define RESTO_CUPIDO_H
+#ifndef CONCU_CUPIDO_H
+#define CONCU_CUPIDO_H
 
 const string cupidoProcessLogId = "Cupido";
 
@@ -50,7 +50,7 @@ private:
 
 
     int cantNJugadores;
-
+    int cantPartidosJugador;
     int cantJugadoresMinimosParaElTorneo;
 
     Pareja *parejaEnEspera;
@@ -82,7 +82,7 @@ private:
 public:
 
     CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanchasLibres,
-                  vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres, int cantNJugadores, Semaforo *semCupido,
+                  vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres, int cantNJugadores,int cantPartidosJugador, Semaforo *semCupido,
                   vector<Semaforo> *semsTerminoDeJugar, Semaforo *semCantCanchasLibres, Pipe *pipeResultados,
                   Pipe *pipeFixture, int cantJugadoresMinimosParaElTorneo,
                   vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja, MemoriaCompartida<int> *shmNivelDeMarea,
@@ -99,7 +99,8 @@ public:
     void logTables(ClaveJugador claveJugador,int* pids,int* indices,int* datos);
 
     void handleBajada();
+    void logCanchas();
 };
 
 
-#endif //RESTO_CUPIDO_H
+#endif //CONCU_CUPIDO_H

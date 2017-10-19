@@ -114,7 +114,7 @@ void JugadorProcess::jugar() {
 
         Logger::log(jugadorLogId, "Jugador se va del predio", DEBUG);
         this->semCantGenteEnElPredio->p();
-        Logger::log(jugadorLogId, "No habia encontrado pareja " + noConsiguioPareja, INFO);
+        Logger::log(jugadorLogId, "No habia encontrado pareja ", INFO);
         this->semJugadoresPredio->v();
 
         int cant = this->shmCantGenteEnElPredio->leer();

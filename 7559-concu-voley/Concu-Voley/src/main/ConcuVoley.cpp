@@ -3,14 +3,14 @@
 #include <iostream>
 
 #include "MainProcess.h"
+#include <csignal>
 
 
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
-
-	int nivelDeLog = atoi(argv[1]);
+    int nivelDeLog = atoi(argv[1]);
 	int cantPartidosJugador = atoi(argv[2]);
 	int predioF = atoi(argv[3]);
 	int predioC = atoi(argv[4]);
@@ -48,7 +48,8 @@ int main(int argc, char *argv[]) {
 	int jugadoresPendientes = cantNJugadores;
 	mainProcessReturnData mainProcessReturnData;
 	Logger::log(mainLogId, "IntentoCrearMainProcess", INFO);
-	MainProcess mainProcess(cantPartidosJugador, predioC, predioF, cantMJugadores, cantNJugadores, cantJugadoresMinimo);
+    MainProcess mainProcess(cantPartidosJugador, predioC, predioF, cantMJugadores, cantNJugadores, cantJugadoresMinimo);
+
 	Logger::log(mainLogId, "MainProcessCreadoCorrecto", INFO);
 	mainProcessReturnData = mainProcess.run();
 

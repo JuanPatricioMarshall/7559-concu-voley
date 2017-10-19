@@ -34,6 +34,9 @@ namespace std {
     const string SHM_NIVEL_MAREA_INIT_FILE = "/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/shm_nivel_marea.txt";
     const string SEM_NIVEL_DE_MAREA_INIT_FILE = "/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/sem_nivel_marea.txt";
 
+    const string SHM_LISTA_PID_FILE = "/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/shm_lista_pid.txt";
+    const string SEM_LISTA_PID_FILE = "/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/sem_lista_pid.txt";
+
     const string SEM_GENTE_EN_EL_PREDIO = "/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/sem_gente_en_el_predio.txt";
     const string SHM_GENTE_EN_EL_PREDIO = "/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/shm_gente_en_el_predio.txt";
 
@@ -50,7 +53,7 @@ namespace std {
 
     class MainProcess {
 
-    private:
+    public:
 
         int cantPartidosJugador;
         int predioC;
@@ -84,14 +87,65 @@ namespace std {
         MemoriaCompartida<int> shmNivelDeMarea;
         MemoriaCompartida<int> shmCantGenteEnElPredio;
 
+        vector<MemoriaCompartida<pid_t>> shmIdProcesos;
+        vector<Semaforo> semIdProcesos;
 
         Pipe pipeJugadores;
         Pipe pipeResultados;
         Pipe pipeFixture;
 
         SIGINT_Handler sigintHandler;
-        SIGUSR1_Handler sigusr1Handler;
         SIGUSR2_Handler sigusr2Handler;
+
+        void reloco(){
+
+
+
+
+
+
+
+            semJugadoresSinPareja.at(0).p();
+            shmJugadoresSinPareja.push_back(MemoriaCompartida<bool>());
+
+
+            vector<Semaforo> semIdProcesosX;
+            semIdProcesosX.push_back(Semaforo(SEM_LISTA_PID_FILE, 1, 0));
+
+            vector<MemoriaCompartida<pid_t>> shmIdProcesosX;
+            shmIdProcesosX.crear(SHM_NIVEL_MAREA_INIT_FILE, 0);
+            int idCupido = shmIdProcesosX.at(0).leer();
+
+
+
+
+            Logger::log(mainLogId, "CRECE 1 NIVEL LA OLA", INFO);
+            Semaforo semNivelDeMareaX(SEM_NIVEL_DE_MAREA_INIT_FILE, 1, 0);
+            MemoriaCompartida<int>  shmNivelDeMareaX;
+            shmNivelDeMareaX.crear(SHM_NIVEL_MAREA_INIT_FILE, 0);
+            semNivelDeMareaX.p();
+            Logger::log(mainLogId, "Semaforeado", INFO);
+            int nivelMarea = shmNivelDeMareaX.leer();
+
+            if (nivelMarea < predioC - 1) {
+                nivelMarea++;
+            }
+            Logger::log(mainLogId, "Nivel actual de marea: " + Logger::intToString(nivelMarea), INFO);
+
+            shmNivelDeMareaX.escribir(nivelMarea);
+            semNivelDeMareaX.v();
+            Logger::log(mainLogId, "Id Cupido?: " + Logger::intToString(idCupido), INFO);
+
+        }
+         void yarrgh()
+        {
+            signal( SIGUSR1, terminate );
+        }
+        static void terminate(int param){
+            MainProcess myClass(0,0,0,0,0,0);
+            myClass.reloco();
+
+        }
 
         void inicializarIPCs();
 
@@ -133,14 +187,14 @@ namespace std {
 
         void eliminarPipesFifos();
 
-        void handleCrecimientoOla();
+
 
         void handleBajaOla();
 
         void avisarAPartidos(int sig);
 
 
-    public:
+
 
         MainProcess(int cantPartidosJugador, int predioC, int predioF, int cantMJugadores, int cantNJugadores,
                     int cantJugadoresMinimo);

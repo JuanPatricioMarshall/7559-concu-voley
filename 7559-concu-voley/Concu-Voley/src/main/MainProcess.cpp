@@ -203,30 +203,12 @@ namespace std {
     }
 
     void MainProcess::inicializarSigusrHandler() {
-        SignalHandler::getInstance()->registrarHandler(SIGUSR1, &sigusr1Handler);
-        SignalHandler::getInstance()->registrarHandler(SIGUSR2, &sigusr2Handler);
-
-
+        //SignalHandler::getInstance()->registrarHandler(SIGUSR1, &sigusr1Handler);
+        //SignalHandler::getInstance()->registrarHandler(SIGUSR2, &sigusr2Handler);
+        yarrgh();
     }
 
-    void MainProcess::handleCrecimientoOla() {
-        Logger::log(mainLogId, "CRECE 1 NIVEL LA OLA", INFO);
 
-        semNivelDeMarea.p();
-
-        int nivelMarea = shmNivelDeMarea.leer();
-
-        if (nivelMarea < predioC - 1) {
-            nivelMarea++;
-        }
-        Logger::log(mainLogId, "Nivel actual de marea: " + Logger::intToString(nivelMarea), INFO);
-
-        shmNivelDeMarea.escribir(nivelMarea);
-        semNivelDeMarea.v();
-
-        avisarAPartidos(SIGUSR1);
-
-    }
 
     void MainProcess::handleBajaOla() {
         Logger::log(mainLogId, "BAJA 1 NIVEL LA OLA", INFO);
@@ -243,15 +225,10 @@ namespace std {
         shmNivelDeMarea.escribir(nivelMarea);
         semNivelDeMarea.v();
 
-        avisarAPartidos(SIGUSR2);
+        kill(idCupido, SIGUSR2);
 
     }
 
-    void MainProcess::avisarAPartidos(int sig) {
-
-        kill(idCupido, sig);
-
-    }
 
 
     void MainProcess::iniciarSimulacion() {
@@ -315,8 +292,9 @@ namespace std {
 
         if (idCupido == 0) {
 
+
             CupidoProcess cupidoProcess(&pipeJugadores, &semCanchasLibres,
-                                        &shmCanchasLibres, cantNJugadores, &semCupido, &semsTerminoDeJugar,
+                                        &shmCanchasLibres, cantNJugadores,cantPartidosJugador, &semCupido, &semsTerminoDeJugar,
                                         &semCantCanchasLibres, &pipeResultados, &pipeFixture, cantJugadoresMinimo,
                                         &shmJugadoresSinPareja, &shmNivelDeMarea, &semNivelDeMarea,
                                         &semJugadoresSinPareja,&semCantGenteEnElPredio,&shmCantGenteEnElPredio);
@@ -325,6 +303,7 @@ namespace std {
         } else {
 
             this->idCupido = idCupido;
+
         }
 
 
