@@ -45,6 +45,7 @@ void JugadorProcess::inicializarMemoriasCompartidas() {
     semCantGenteEnElPredio->p();
     shmCantGenteEnElPredio->crear(SHM_GENTE_EN_EL_PREDIO, 0);
     semCantGenteEnElPredio->v();
+
 }
 
 
@@ -64,7 +65,10 @@ void JugadorProcess::llegar() {
 
     this->semCantGenteEnElPredio->p();
     int cant = this->shmCantGenteEnElPredio->leer();
-    this->shmCantGenteEnElPredio->escribir(cant++);
+    cant++;
+    Logger::log(jugadorLogId, "Gente en el predio " + Logger::intToString(cant) , INFO);
+    this->shmCantGenteEnElPredio->escribir(cant);
+
     this->semCantGenteEnElPredio->v();
 
 
@@ -77,18 +81,17 @@ void JugadorProcess::llegar() {
 
 void JugadorProcess::jugar() {
 
+    while(true){
 
     ClaveJugador claveJugador(getpid(), indice);
 
     string claveJugadorStr = ClaveJugadorSerializer::serializar(&claveJugador);
 
-
     Logger::log(jugadorLogId, "Jugador escribiendo en pipeJugadores: " + claveJugadorStr, DEBUG);
 
     this->pipeJugadores->escribir(static_cast<const void *>(claveJugadorStr.c_str()), claveJugadorStr.size());
 
-    Logger::log(jugadorLogId, "Jugador escribio en pipeJugadores: " + claveJugadorStr, DEBUG);
-
+    Logger::log(jugadorLogId, "Jugador escribio en pipeJugadores: " + claveJugadorStr, INFO);
 
     Logger::log(jugadorLogId, "Jugador esperando que termine el partido: ", DEBUG);
 
@@ -102,89 +105,75 @@ void JugadorProcess::jugar() {
     Logger::log(jugadorLogId, "Me fijo si habia encontrado pareja ", DEBUG);
 
 
-    bool consiguioPareja = this->shmJugadoresSinPareja->at(indice).leer();
+    bool noConsiguioPareja = this->shmJugadoresSinPareja->at(indice).leer();
 
     this->semJugadoresSinPareja->at(indice).v();
 
 
-    if (consiguioPareja) {
-        Logger::log(jugadorLogId, "No habia encontrado pareja " + consiguioPareja, DEBUG);
-        this->semJugadoresPredio->v();
+    if (noConsiguioPareja) {
+
         Logger::log(jugadorLogId, "Jugador se va del predio", DEBUG);
         this->semCantGenteEnElPredio->p();
+        Logger::log(jugadorLogId, "No habia encontrado pareja " + noConsiguioPareja, INFO);
+        this->semJugadoresPredio->v();
+
         int cant = this->shmCantGenteEnElPredio->leer();
-        this->shmCantGenteEnElPredio->escribir(cant--);
+        cant--;
+        Logger::log(jugadorLogId, "Cantidad De Gente en el predio "+Logger::intToString(cant), INFO);
+        this->shmCantGenteEnElPredio->escribir(cant);
+        this->semCantGenteEnElPredio->v();
+        terminar();
+        exit(0);
+
+    }
+        this->cantidadDePartidosPendientes -= 1;
+        Logger::log(jugadorLogId, "Cantidad De Partidos Pendientes "+Logger::intToString(cantidadDePartidosPendientes), INFO);
+    if(cantidadDePartidosPendientes == 0){
+
+        this->semCantGenteEnElPredio->p();
+        Logger::log(jugadorLogId, "No tengo que jugar mas", INFO);
+        this->semJugadoresPredio->v();
+        Logger::log(jugadorLogId, "Jugador se va del predio", DEBUG);
+
+        int cant = this->shmCantGenteEnElPredio->leer();
+        cant--;
+        Logger::log(jugadorLogId, "Cantidad De Gente en el predio "+Logger::intToString(cant), INFO);
+        this->shmCantGenteEnElPredio->escribir(cant);
         this->semCantGenteEnElPredio->v();
         terminar();
         exit(0);
     }
 
-    Logger::log(jugadorLogId, "Habia encontrado pareja: " + consiguioPareja, DEBUG);
+    if (RandomUtil::randomCeroUno() >= TiemposEspera::PROBABILIDAD_IRSE) {
+        Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " decide volver a jugar", INFO);
 
 
-    Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " termino de jugar", DEBUG);
-
-    this->cantidadDePartidosPendientes -= 1;
-
-    Logger::log(jugadorLogId,
-                "Tengo " + Logger::intToString(cantidadDePartidosPendientes) + " cantidad de partidos pendientes",
-                DEBUG);
-
-
-    decidirQueHacer();
-
-
-}
-
-void JugadorProcess::decidirQueHacer() {
-
-    Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " decide que hacer", DEBUG);
-
-
-    if (cantidadDePartidosPendientes == 0) {
-        Logger::log(jugadorLogId,
-                    "Jugador " + Logger::intToString(indice) + " se va porque no tiene partidos pendientes", DEBUG);
+    } else {
+        Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " decide irse a tomar aire", INFO );
 
         this->semJugadoresPredio->v();
 
         this->semCantGenteEnElPredio->p();
         int cant = this->shmCantGenteEnElPredio->leer();
-        this->shmCantGenteEnElPredio->escribir(cant--);
+        cant--;
+        this->shmCantGenteEnElPredio->escribir(cant);
         this->semCantGenteEnElPredio->v();
-        terminar();
-        exit(0);
+        //boludea afuear un ratito
+        sleep(TiemposEspera::TIEMPO_AFUERA);
 
-    } else {
-        if (RandomUtil::randomCeroUno() < TiemposEspera::PROBABILIDAD_IRSE) {
-            Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " decide volver a jugar", DEBUG);
+        Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " reincorpora al torneo", INFO);
 
-            jugar();
-        } else {
-            Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " decide irse", DEBUG);
-
-            this->semJugadoresPredio->v();
-
-            this->semCantGenteEnElPredio->p();
-            int cant = this->shmCantGenteEnElPredio->leer();
-            this->shmCantGenteEnElPredio->escribir(cant--);
-            this->semCantGenteEnElPredio->v();
-
-            sleep(TiemposEspera::TIEMPO_AFUERA);
-            Logger::log(jugadorLogId, "Jugador " + Logger::intToString(indice) + " vuelve a entrar", DEBUG);
-
-            reentrar();
-        }
+        this->semJugadoresPredio->p();
+        this->semCantGenteEnElPredio->p();
+        cant = this->shmCantGenteEnElPredio->leer();
+        cant++;
+        Logger::log(jugadorLogId, "Gente en el predio " + Logger::intToString(cant) , INFO);
+        this->shmCantGenteEnElPredio->escribir(cant);
+        this->semCantGenteEnElPredio->v();
+    }
     }
 
 }
-
-void JugadorProcess::reentrar() {
-
-    llegar();
-    jugar();
-
-}
-
 
 void JugadorProcess::terminar() {
 

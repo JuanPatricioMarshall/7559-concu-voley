@@ -142,30 +142,29 @@ namespace std {
         inicializarSemaforos();
         Logger::log(mainLogId, "InicializoSHM", DEBUG);
         inicializarMemoriasCompartidas();
-
     }
 
     void MainProcess::finalizarProcesosPredio() {
 
 
-        Logger::log(mainLogId, "Finalizando procesos", DEBUG);
+        Logger::log(mainLogId, "Finalizando procesos", INFO);
 
         Logger::log(mainLogId,
                     "Finalizando recepcionista "
-                    + Logger::intToString(idRecepcionista), DEBUG);
+                    + Logger::intToString(idRecepcionista), INFO);
         kill(idRecepcionista, SIGINT);
         waitpid(idRecepcionista, NULL, 0);
 
         Logger::log(mainLogId,
                     "Finalizando Cupido "
-                    + Logger::intToString(idCupido), DEBUG);
+                    + Logger::intToString(idCupido), INFO);
         kill(idCupido, SIGINT);
         waitpid(idCupido, NULL, 0);
 
 
         Logger::log(mainLogId,
                     "Finalizando Fixture "
-                    + Logger::intToString(idFixture), DEBUG);
+                    + Logger::intToString(idFixture), INFO);
         kill(idFixture, SIGINT);
         waitpid(idFixture, NULL, 0);
 
@@ -320,7 +319,7 @@ namespace std {
                                         &shmCanchasLibres, cantNJugadores, &semCupido, &semsTerminoDeJugar,
                                         &semCantCanchasLibres, &pipeResultados, &pipeFixture, cantJugadoresMinimo,
                                         &shmJugadoresSinPareja, &shmNivelDeMarea, &semNivelDeMarea,
-                                        &semJugadoresSinPareja);
+                                        &semJugadoresSinPareja,&semCantGenteEnElPredio,&shmCantGenteEnElPredio);
             cupidoProcess.run();
             exit(0);
         } else {
@@ -341,8 +340,9 @@ namespace std {
 
         int response;
         waitpid(idAdminJugadores, &response, 0);
-        Logger::log(mainLogId, "Termino el AdminJugadores", DEBUG);
+        Logger::log(mainLogId, "Termino el AdminJugadores", INFO);
         bool terminoTorneoDePronto = (sigintHandler.getGracefulQuit() == 1);
+       /*
         bool subidaMarea = (sigusr1Handler.getGracefulQuit() == 1);
         bool bajadaMarea = (sigusr2Handler.getGracefulQuit() == 1);
 
@@ -356,9 +356,9 @@ namespace std {
 
             handleCrecimientoOla();
         }
-
+       */
         if (terminoTorneoDePronto) {
-            Logger::log(mainLogId, "Termino de pronto ", DEBUG);
+            Logger::log(mainLogId, "Termino de pronto ", INFO);
             handleTerminar();
         } else {
 
@@ -368,7 +368,7 @@ namespace std {
             Logger::log(mainLogId,
                         "Cantidad de jugadores finalizados: "
                         + Logger::intToString(jugadoresTerminados),
-                        DEBUG);
+                        INFO);
 
             finalizarProcesosPredio();
             eliminarIPCs();
@@ -441,7 +441,7 @@ namespace std {
     }
 
     void MainProcess::eliminarIPCs() {
-        Logger::log(mainLogId, "Eliminando IPCs", DEBUG);
+        Logger::log(mainLogId, "Eliminando IPCs", INFO);
         eliminarPipesFifos();
         eliminarMemoriasCompartidas();
         eliminarSemaforos();

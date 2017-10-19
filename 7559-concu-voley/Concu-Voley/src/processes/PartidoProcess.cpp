@@ -59,7 +59,7 @@ void PartidoProcess::run() {
 
 
     Logger::log(partidoProcessLogId, "Las parejas buscan cancha ", DEBUG);
-    Logger::log(partidoProcessLogId, "Tamaño " + Logger::intToString(semCanchasLibres->size()), INFO);
+    Logger::log(partidoProcessLogId, "Tamaño " + Logger::intToString(semCanchasLibres->size()), DEBUG);
 
 
     encontrarCancha();
@@ -70,12 +70,12 @@ void PartidoProcess::run() {
 
     if(sigusr1Handler.getGracefulQuit() == 0){
 
-        Logger::log(partidoProcessLogId, "COMENTE ESTO DE ACA ABAJO PERO TENDRIA Q NUNCA ENTRAR", INFO);
+        Logger::log(partidoProcessLogId, "COMENTE ESTO DE ACA ABAJO PERO TENDRIA Q NUNCA ENTRAR", DEBUG);
         //handleSubida();
     }
 
     Logger::log(partidoProcessLogId, "El partido termino " + Logger::intToString(resultado.getSetsPareja1()) + " a " +
-                                     Logger::intToString(resultado.getSetsPareja2()), INFO);
+                                     Logger::intToString(resultado.getSetsPareja2()), DEBUG);
 
 
     string resultadoStr = ResultadoSerializer::serializar(&resultado);
@@ -86,7 +86,6 @@ void PartidoProcess::run() {
 
 
 
-//    this->pipeResultados->escribir(static_cast<const void *>(resultadoStr.c_str()), resultadoStr.size());
     this->pipeFixture->escribir(static_cast<const void *>(resultadoStr.c_str()), resultadoStr.size());
 
 
@@ -120,10 +119,10 @@ void PartidoProcess::encontrarCancha() {
     int canchaF = -1;
 
     bool canchaLibre = false;
-    Logger::log(partidoProcessLogId, "Tamaño" + Logger::intToString(semCanchasLibres->size()), INFO);
+    Logger::log(partidoProcessLogId, "Tamaño " + Logger::intToString(semCanchasLibres->size()), DEBUG);
 
 
-    Logger::log(partidoProcessLogId, "Partido buscando cancha. ", INFO);
+    Logger::log(partidoProcessLogId, "Partido buscando cancha. ", DEBUG);
 
 
 
@@ -131,17 +130,6 @@ void PartidoProcess::encontrarCancha() {
     for (unsigned int i = 0; i < semCanchasLibres->size(); i++) {
 
         for (unsigned int j = 0; j < semCanchasLibres[0].size(); j++) {
-            /*
-            semNivelDeMarea->p();
-            Logger::log(partidoProcessLogId, "Spam2", INFO);
-            int nivelMarea = shmNivelDeMarea->leer();
-
-            semNivelDeMarea->v();
-
-            if(j == nivelMarea){
-                continue;
-            }
-            */
 
             Logger::log(partidoProcessLogId,
                         "Partido esperando semsCanchasLibre: " + Logger::intToString(i) + ", " + Logger::intToString(j),
@@ -164,11 +152,11 @@ void PartidoProcess::encontrarCancha() {
 
                 Logger::log(partidoProcessLogId,
                             "Cancha libre encontrada. En fila: " + Logger::intToString(canchaF) + " y columna: " +
-                            Logger::intToString(canchaC), INFO);
+                            Logger::intToString(canchaC), DEBUG);
 
                 Logger::log(partidoProcessLogId,
                             "Cancha ocupada. En fila: " + Logger::intToString(canchaF) + " y columna: " +
-                            Logger::intToString(canchaC), INFO);
+                            Logger::intToString(canchaC), DEBUG);
 
 
                 shmCanchasLibres->at(i).at(j).escribir(false);
@@ -208,12 +196,12 @@ void PartidoProcess::liberarCancha() {
     this->semCanchasLibres->at(fila).at(columna).p();
     this->shmCanchasLibres->at(fila).at(columna).escribir(true);
     Logger::log(partidoProcessLogId, "Cancha Liberada. En fila: " + Logger::intToString(fila) + " y columna: " +
-                                     Logger::intToString(columna), INFO);
+                                     Logger::intToString(columna), DEBUG);
 
     this->semCanchasLibres->at(fila).at(columna).v();
 
     this->semCantCanchasLibres->v();
-    Logger::log(partidoProcessLogId, "Aumento la cantidad de canchas libres", INFO);
+    Logger::log(partidoProcessLogId, "Aumento la cantidad de canchas libres", DEBUG);
 
 
 }
@@ -226,12 +214,12 @@ void PartidoProcess::avisarJugadores() {
     ClaveJugador *jugador3 = this->pareja2->getClaveJugador1();
     ClaveJugador *jugador4 = this->pareja2->getClaveJugador2();
 
-    Logger::log(partidoProcessLogId, "Empiezo a avisarle a los jugadores que termino su partido", INFO);
+    Logger::log(partidoProcessLogId, "Empiezo a avisarle a los jugadores que termino su partido", DEBUG);
     this->semTerminoDeJugar->at(jugador1->getIndice()).v();
     this->semTerminoDeJugar->at(jugador2->getIndice()).v();
     this->semTerminoDeJugar->at(jugador3->getIndice()).v();
     this->semTerminoDeJugar->at(jugador4->getIndice()).v();
-    Logger::log(partidoProcessLogId, "Termino de avisarle a los jugadores", INFO);
+    Logger::log(partidoProcessLogId, "Termino de avisarle a los jugadores", DEBUG);
 
 
 }

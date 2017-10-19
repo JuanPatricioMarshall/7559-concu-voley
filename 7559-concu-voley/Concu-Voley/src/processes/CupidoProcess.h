@@ -57,6 +57,8 @@ private:
 
     vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja;
     vector<Semaforo> *semJugadoresSinPareja;
+    Semaforo *semCantGenteEnElPredio;
+    MemoriaCompartida<int> *shmCantGenteEnElPredio;
 
 
     SIGINT_Handler sigintHandler;
@@ -84,7 +86,8 @@ public:
                   vector<Semaforo> *semsTerminoDeJugar, Semaforo *semCantCanchasLibres, Pipe *pipeResultados,
                   Pipe *pipeFixture, int cantJugadoresMinimosParaElTorneo,
                   vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja, MemoriaCompartida<int> *shmNivelDeMarea,
-                  Semaforo *semNivelDeMarea, vector<Semaforo> *semJugadoresSinPareja);
+                  Semaforo *semNivelDeMarea, vector<Semaforo> *semJugadoresSinPareja, Semaforo *semCantGenteEnElPredio,
+                  MemoriaCompartida<int> *shmCantGenteEnElPredio);
 
     void run();
 
@@ -93,6 +96,7 @@ public:
     virtual ~CupidoProcess();
 
     void handleSubida();
+    void logTables(ClaveJugador claveJugador,int* pids,int* indices,int* datos);
 
     void handleBajada();
 };

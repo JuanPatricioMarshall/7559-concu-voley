@@ -47,9 +47,9 @@ int main(int argc, char *argv[]) {
 	//TODO
 	int jugadoresPendientes = cantNJugadores;
 	mainProcessReturnData mainProcessReturnData;
-	Logger::log(mainLogId, "IntentoCrearMainProcess", DEBUG);
+	Logger::log(mainLogId, "IntentoCrearMainProcess", INFO);
 	MainProcess mainProcess(cantPartidosJugador, predioC, predioF, cantMJugadores, cantNJugadores, cantJugadoresMinimo);
-	Logger::log(mainLogId, "MainProcessCreadoCorrecto", DEBUG);
+	Logger::log(mainLogId, "MainProcessCreadoCorrecto", INFO);
 	mainProcessReturnData = mainProcess.run();
 
 	Logger::log(mainLogId, "Simulacion finalizada", INFO);
