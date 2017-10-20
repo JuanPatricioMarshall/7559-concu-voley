@@ -3,6 +3,7 @@
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/main/ConcuVoley.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/main/MainProcess.h
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/processes/Process.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/processes/TiemposEspera.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/ipc/pipe/Pipe.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o: ../Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
@@ -85,6 +86,7 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: .
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/EventHandler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Partidos.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SignalHandler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h
@@ -132,6 +134,7 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/EventHandler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Partidos.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SignalHandler.h
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o: ../Concu-Voley/src/utils/logger/Logger.h

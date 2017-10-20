@@ -42,7 +42,7 @@ namespace std {
         SIGINT_Handler
                 sigintHandler;
 
-        SIGUSR1_Handler sigusr1Handler;
+       // SIGUSR1_Handler sigusr1Handler;
         SIGUSR2_Handler sigusr2Handler;
 
         void inicializarHandler();

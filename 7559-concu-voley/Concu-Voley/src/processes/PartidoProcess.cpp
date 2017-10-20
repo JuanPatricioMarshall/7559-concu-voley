@@ -27,6 +27,7 @@ PartidoProcess::PartidoProcess(Pareja *pareja1, Pareja *pareja2, vector<vector<S
     this->semNivelDeMarea = semNivelDeMarea;
     this->shmNivelDeMarea = shmNivelDeMarea;
 
+    this->sigusr1Handler = new SIGUSR1_Handler_Partidos(semCanchasLibres,shmCanchasLibres,cancha);
     this->cancha = new Cancha(-1, -1);
 
     inicializarHandler();

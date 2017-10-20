@@ -20,7 +20,7 @@
 #include "../model/Resultado.h"
 #include "../utils/ipc/signal/SIGINT_Handler.h"
 #include "../utils/ipc/signal/SIGUSR2_Handler.h"
-#include "../utils/ipc/signal/SIGUSR1_Handler.h"
+#include "../utils/ipc/signal/SIGUSR1_Handler_Partidos.h"
 
 const string partidoProcessLogId = "Partido";
 
@@ -45,7 +45,7 @@ private:
     Cancha *cancha;
 
     SIGINT_Handler sigintHandler;
-    SIGUSR1_Handler sigusr1Handler;
+    SIGUSR1_Handler_Partidos *sigusr1Handler;
 
 
     void encontrarCancha();

@@ -229,8 +229,8 @@ Process.h
 /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
 ../utils/ipc/signal/SIGUSR2_Handler.h
 /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h
-../utils/ipc/signal/SIGUSR1_Handler.h
-/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
+../utils/ipc/signal/SIGUSR1_Handler_Partidos.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Partidos.h
 
 /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.cpp
 Process.h
@@ -393,6 +393,22 @@ assert.h
 -
 EventHandler.h
 /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
+../../../processes/Process.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.h
+iostream
+-
+
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Partidos.h
+signal.h
+-
+assert.h
+-
+EventHandler.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
+../../../processes/Process.h
+/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.h
+iostream
+-
 
 /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h
 signal.h

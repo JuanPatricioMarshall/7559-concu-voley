@@ -15,7 +15,6 @@
 #include "../processes/TiemposEspera.h"
 #include "../utils/ipc/signal/SIGUSR2_Handler.h"
 
-
 namespace std {
 
     const string mainLogId = "Main";
@@ -95,19 +94,14 @@ namespace std {
         Pipe pipeFixture;
 
         SIGINT_Handler sigintHandler;
+        SIGUSR2_Handler sigusr1Handler;
         SIGUSR2_Handler sigusr2Handler;
-
+/*
         void reloco(){
-
-
-
-
-
 
 
             semJugadoresSinPareja.at(0).p();
             shmJugadoresSinPareja.push_back(MemoriaCompartida<bool>());
-
 
             vector<Semaforo> semIdProcesosX;
             semIdProcesosX.push_back(Semaforo(SEM_LISTA_PID_FILE, 1, 0));
@@ -115,9 +109,6 @@ namespace std {
             vector<MemoriaCompartida<pid_t>> shmIdProcesosX;
             shmIdProcesosX.crear(SHM_NIVEL_MAREA_INIT_FILE, 0);
             int idCupido = shmIdProcesosX.at(0).leer();
-
-
-
 
             Logger::log(mainLogId, "CRECE 1 NIVEL LA OLA", INFO);
             Semaforo semNivelDeMareaX(SEM_NIVEL_DE_MAREA_INIT_FILE, 1, 0);
@@ -136,16 +127,8 @@ namespace std {
             semNivelDeMareaX.v();
             Logger::log(mainLogId, "Id Cupido?: " + Logger::intToString(idCupido), INFO);
 
-        }
-         void yarrgh()
-        {
-            signal( SIGUSR1, terminate );
-        }
-        static void terminate(int param){
-            MainProcess myClass(0,0,0,0,0,0);
-            myClass.reloco();
+        }*/
 
-        }
 
         void inicializarIPCs();
 

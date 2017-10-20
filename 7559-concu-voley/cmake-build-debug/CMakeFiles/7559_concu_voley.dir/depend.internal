@@ -4,6 +4,7 @@
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/main/ConcuVoley.cpp.o
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/ConcuVoley.cpp
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/MainProcess.h
+ /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/Process.h
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/processes/TiemposEspera.h
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/pipe/Pipe.h
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
@@ -86,6 +87,7 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/CupidoProcess.cpp.o
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
+ /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Partidos.h
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h
@@ -133,6 +135,7 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/PartidoProcess.cpp.o
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
+ /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Partidos.h
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.h
  /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.h

@@ -63,6 +63,8 @@ CupidoProcess::CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanch
     inicializarHandler();
     inicializarMemoriasCompartidas();
 
+
+    this->sigusr1Handler = new SIGUSR1_Handler(partidos);
 }
 
 void CupidoProcess::inicializarMemoriasCompartidas() {
@@ -358,7 +360,7 @@ void CupidoProcess::liberarMemoriasCompartidas() {
 }
 
 CupidoProcess::~CupidoProcess() {
-
+    delete(this->sigusr1Handler);
 }
 
 int CupidoProcess::leerTamanioClaveJugador() {

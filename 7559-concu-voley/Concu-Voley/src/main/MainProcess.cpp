@@ -138,6 +138,7 @@ namespace std {
 
 
     void MainProcess::inicializarIPCs() {
+
         Logger::log(mainLogId, "InicializoSem", DEBUG);
         inicializarSemaforos();
         Logger::log(mainLogId, "InicializoSHM", DEBUG);
@@ -203,9 +204,12 @@ namespace std {
     }
 
     void MainProcess::inicializarSigusrHandler() {
+
+
+
         //SignalHandler::getInstance()->registrarHandler(SIGUSR1, &sigusr1Handler);
         //SignalHandler::getInstance()->registrarHandler(SIGUSR2, &sigusr2Handler);
-        yarrgh();
+        //yarrgh();
     }
 
 
@@ -303,7 +307,7 @@ namespace std {
         } else {
 
             this->idCupido = idCupido;
-
+            std::cout<<"Este es cupido "<<idCupido<<std::endl;
         }
 
 
