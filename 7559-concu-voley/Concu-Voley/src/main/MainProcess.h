@@ -10,16 +10,14 @@
 #include "../utils/ipc/pipe/Pipe.h"
 #include "../utils/ipc/semaphore/Semaforo.h"
 #include "../utils/ipc/shared-memory/MemoriaCompartida.h"
-#include "../utils/ipc/signal/SIGINT_Handler.h"
-#include "../utils/ipc/signal/SIGUSR1_Handler.h"
 #include "../processes/TiemposEspera.h"
-#include "../utils/ipc/signal/SIGUSR2_Handler.h"
+
 
 namespace std {
 
     const string mainLogId = "Main";
 
-
+    const string SHM_RESULTADOS_FINALES = "/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/shm_resultados_finales.txt";
     const string SEMS_CANCHA_OCUPADA_INIT_FILE = "/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/sems_cancha_ocupada.txt";
     const string SEM_JUGADORES_PREDIO_INIT_FILE = "/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/sems_jugadores_predio.txt";
     const string SEM_ESPERAR_RECEPCIONISTA_INIT_FILE = "/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/sems_esperar_recepcionista.txt";
@@ -80,7 +78,13 @@ namespace std {
         vector<vector<Semaforo>> semCanchasLibres;
         vector<Semaforo> semJugadoresSinPareja;
 
-
+        vector<vector<MemoriaCompartida<int>>> resultadosFinales;
+        //3-0
+        //3-1
+        //3-2
+        //2-3
+        //1-3
+        //0-3
         vector<vector<MemoriaCompartida<bool>>> shmCanchasLibres;
         vector<MemoriaCompartida<bool>> shmJugadoresSinPareja;
         MemoriaCompartida<int> shmNivelDeMarea;
@@ -93,43 +97,7 @@ namespace std {
         Pipe pipeResultados;
         Pipe pipeFixture;
 
-        SIGINT_Handler sigintHandler;
-        SIGUSR2_Handler sigusr1Handler;
-        SIGUSR2_Handler sigusr2Handler;
-/*
-        void reloco(){
-
-
-            semJugadoresSinPareja.at(0).p();
-            shmJugadoresSinPareja.push_back(MemoriaCompartida<bool>());
-
-            vector<Semaforo> semIdProcesosX;
-            semIdProcesosX.push_back(Semaforo(SEM_LISTA_PID_FILE, 1, 0));
-
-            vector<MemoriaCompartida<pid_t>> shmIdProcesosX;
-            shmIdProcesosX.crear(SHM_NIVEL_MAREA_INIT_FILE, 0);
-            int idCupido = shmIdProcesosX.at(0).leer();
-
-            Logger::log(mainLogId, "CRECE 1 NIVEL LA OLA", INFO);
-            Semaforo semNivelDeMareaX(SEM_NIVEL_DE_MAREA_INIT_FILE, 1, 0);
-            MemoriaCompartida<int>  shmNivelDeMareaX;
-            shmNivelDeMareaX.crear(SHM_NIVEL_MAREA_INIT_FILE, 0);
-            semNivelDeMareaX.p();
-            Logger::log(mainLogId, "Semaforeado", INFO);
-            int nivelMarea = shmNivelDeMareaX.leer();
-
-            if (nivelMarea < predioC - 1) {
-                nivelMarea++;
-            }
-            Logger::log(mainLogId, "Nivel actual de marea: " + Logger::intToString(nivelMarea), INFO);
-
-            shmNivelDeMareaX.escribir(nivelMarea);
-            semNivelDeMareaX.v();
-            Logger::log(mainLogId, "Id Cupido?: " + Logger::intToString(idCupido), INFO);
-
-        }*/
-
-
+        void inicializarRanking();
         void inicializarIPCs();
 
         void handleTerminar();
@@ -140,23 +108,13 @@ namespace std {
 
         void crearMemoriasCompartidas();
 
-        void inicializarProcesoFixture();
-
-        void inicializarSigintHandler();
-
-        void inicializarSigusrHandler();
-
-
         void inicializarRecepcionista();
 
         void inicializarCupido();
 
-
         void inicializarProcesosJugadores();
 
-
         void iniciarSimulacion();
-
 
         void finalizarProcesosPredio();
 
@@ -169,14 +127,6 @@ namespace std {
         void eliminarMemoriasCompartidas();
 
         void eliminarPipesFifos();
-
-
-
-        void handleBajaOla();
-
-        void avisarAPartidos(int sig);
-
-
 
 
         MainProcess(int cantPartidosJugador, int predioC, int predioF, int cantMJugadores, int cantNJugadores,

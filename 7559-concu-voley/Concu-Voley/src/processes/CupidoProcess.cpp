@@ -2,14 +2,19 @@
 // Created by navent on 10/10/17.
 //
 
+#include <sys/stat.h>
 #include "CupidoProcess.h"
 #include "../utils/serializer/ClaveJugadorSerializer.h"
 #include "PartidoProcess.h"
 #include "../main/MainProcess.h"
+#include "../utils/ipc/signal/SIGUSR1_Handler.h"
 #include "../utils/ipc/signal/SignalHandler.h"
+#include "../utils/ipc/signal/SIGUSR2_Handler.h"
+#include "../utils/ipc/fifo/FifoEscritura.h"
 
-CupidoProcess::CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanchasLibres,
-                             vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres, int cantNJugadores,int cantPartidosJugador,
+CupidoProcess::CupidoProcess(int predioF,int predioC,Pipe *jugadores, vector<vector<Semaforo>> *semCanchasLibres,
+                             vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres,
+                             vector<vector<MemoriaCompartida<int>>> *resultadosFinales,int cantNJugadores,int cantPartidosJugador,
                              Semaforo *semCupido, vector<Semaforo> *semsTerminoDeJugar, Semaforo *semCantCanchasLibres,
                              Pipe *pipeResultados, Pipe *pipeFixture, int cantJugadoresMinimosParaElTorneo,
                              vector<MemoriaCompartida<bool>> *shmJugadoresSinPareja,
@@ -18,6 +23,7 @@ CupidoProcess::CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanch
                              Semaforo *semCantGenteEnElPredio,
                              MemoriaCompartida<int> *shmCantGenteEnElPredio) {
 
+    this->resultadosFinales=resultadosFinales;
     this->jugadores = jugadores;
     this->cantNJugadores = cantNJugadores;
     this->cantPartidosJugador = cantPartidosJugador;
@@ -25,6 +31,8 @@ CupidoProcess::CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanch
     this->semCupido = semCupido;
     this->pipeFixture = pipeFixture;
     this->pipeResultados = pipeResultados;
+    this->predioF = predioF;
+    this->predioC = predioC;
 
     this->semCantGenteEnElPredio = semCantGenteEnElPredio;
     this->shmCantGenteEnElPredio = shmCantGenteEnElPredio;
@@ -60,11 +68,8 @@ CupidoProcess::CupidoProcess(Pipe *jugadores, vector<vector<Semaforo>> *semCanch
         this->matrizDeMatcheo.push_back(filaDeMatcheo);
     }
 
-    inicializarHandler();
     inicializarMemoriasCompartidas();
 
-
-    this->sigusr1Handler = new SIGUSR1_Handler(partidos);
 }
 
 void CupidoProcess::inicializarMemoriasCompartidas() {
@@ -86,15 +91,8 @@ void CupidoProcess::inicializarMemoriasCompartidas() {
 
 }
 
-void CupidoProcess::inicializarHandler() {
-
-    SignalHandler::getInstance()->registrarHandler(SIGINT, &sigintHandler);
-    SignalHandler::getInstance()->registrarHandler(SIGUSR1, &sigusr1Handler);
-    SignalHandler::getInstance()->registrarHandler(SIGUSR2, &sigusr2Handler);
-
-}
-
 void CupidoProcess::run() {
+
 
     Logger::log(cupidoProcessLogId, "Iniciando Cupido ", DEBUG);
 
@@ -129,8 +127,33 @@ void CupidoProcess::run() {
         mesas[i]=-1;
         pids[i]=-1;
     }
+    // Subo marea con (-10)
+    // Bajo marea con (-12)
+    int alto = predioF;
+    int ancho= predioC;
+    int n = alto*ancho;
+    SIGUSR1_Handler sigusr1_handler;
+    sigusr1_handler.col = predioC;
+    sigusr1_handler.semCanchasLibres = semCanchasLibres;
+    sigusr1_handler.shmCanchasLibres = shmCanchasLibres;
+    sigusr1_handler.partidosFil=&partidosFil;
+    sigusr1_handler.partidosCol=&partidosCol;
+    sigusr1_handler.partidos = &partidos;
+    sigusr1_handler.n=0;
+    SignalHandler :: getInstance()->registrarHandler ( SIGUSR1,&sigusr1_handler );
 
+
+    SIGUSR2_Handler sigusr2_handler;
+    sigusr2_handler.sig = &sigusr1_handler.nivelMarea;
+    sigusr2_handler.col = predioC;
+    sigusr2_handler.semCanchasLibres = semCanchasLibres;
+    sigusr2_handler.shmCanchasLibres = shmCanchasLibres;
+
+    // se registra el event handler declarado antes
+    SignalHandler :: getInstance()->registrarHandler ( SIGUSR2,&sigusr2_handler );
     while (isAlive) {
+        logCanchas();
+        Logger::log(cupidoProcessLogId, "Nivel Marea " + Logger::intToString(sigusr1_handler.getGracefulQuit()), INFO);
         this->semCantGenteEnElPredio->p();
         cant = this->shmCantGenteEnElPredio->leer();
         this->semCantGenteEnElPredio->v();
@@ -139,10 +162,10 @@ void CupidoProcess::run() {
         ciclos++;
 
         Logger::log(cupidoProcessLogId, "Cantidad De Personas En El Predio " + Logger::intToString(cant), INFO);
-        int tamanioClaveJugador = leerTamanioClaveJugador();
+         int tamanioClaveJugador = leerTamanioClaveJugador();
 
         char buffer[tamanioClaveJugador];
-        string claveJugadorStr;
+         string claveJugadorStr;
 
 
         Logger::log(cupidoProcessLogId, "Cupido espera leer del pipe de jugadores",INFO);
@@ -157,13 +180,12 @@ void CupidoProcess::run() {
 
 
 
-        ClaveJugador claveJugador = ClaveJugadorSerializer::deserializarClaveJugador(claveJugadorStr);
-        Logger::log(cupidoProcessLogId, "Matias: Cupido leyo del pipe de jugadores: " + Logger::intToString(claveJugador.getPid()), INFO);
+       ClaveJugador claveJugador = ClaveJugadorSerializer::deserializarClaveJugador(claveJugadorStr);
+       Logger::log(cupidoProcessLogId, "Matias: Cupido leyo del pipe de jugadores: " + Logger::intToString(claveJugador.getPid()), INFO);
 
-        Logger::log(cupidoProcessLogId,
-                    "Cupido buscando pareja para " + Logger::intToString(claveJugador.getPid()) + " indice: " +
-                    Logger::intToString(claveJugador.getIndice()), mode);
-
+       Logger::log(cupidoProcessLogId,
+                   "Cupido buscando pareja para " + Logger::intToString(claveJugador.getPid()) + " indice: " +
+                   Logger::intToString(claveJugador.getIndice()), mode);
 
 
 
@@ -237,10 +259,14 @@ void CupidoProcess::run() {
                         datos[5]=claveJugador.getIndice();
                         datos[6]=claveJugadorSinPareja.getPid();
                         datos[7]=claveJugadorSinPareja.getIndice();
+                        int colu = 0;
+                        int filu= 0;
+                        buscarCancha(&filu,&colu);
                         inicializarPartido(new Pareja(new ClaveJugador(datos[0], datos[1]),
                                                       new ClaveJugador(datos[2], datos[3])),
                                            new Pareja(new ClaveJugador(datos[4], datos[5]),
-                                                      new ClaveJugador(datos[6], datos[7])));
+                                                      new ClaveJugador(datos[6], datos[7])),
+                                           filu,colu);
 
                         for(int au =0;au<8;au++){
                             datos[au]=-1;
@@ -281,7 +307,7 @@ void CupidoProcess::run() {
         }
 
 
-
+    sleep(2);
 
     }
 
@@ -326,24 +352,7 @@ void CupidoProcess::logTables(ClaveJugador claveJugador,int* pids,int* indices,i
             Logger::intToString(datos[3])
                                     +" ]", INFO);
 }
-void CupidoProcess::handleSubida() {
 
-    for(int i = 0; i < partidos.size(); i++){
-
-       kill(partidos.at(i), SIGUSR1);
-    }
-
-
-}
-
-void CupidoProcess::handleBajada() {
-
-    for(int i = 0; i < partidos.size(); i++){
-
-        kill(partidos.at(i), SIGUSR2);
-    }
-
-}
 
 void CupidoProcess::limpiarRecursos() {
 
@@ -360,7 +369,6 @@ void CupidoProcess::liberarMemoriasCompartidas() {
 }
 
 CupidoProcess::~CupidoProcess() {
-    delete(this->sigusr1Handler);
 }
 
 int CupidoProcess::leerTamanioClaveJugador() {
@@ -383,12 +391,21 @@ int CupidoProcess::leerTamanioClaveJugador() {
         }
 
     } while (!finLectura);
+    int n = 0;
+    try {
+        n=stoi(tamanioClaveJugadorStr);
 
-    return stoi(tamanioClaveJugadorStr);
+    }catch (int e)
+    {
+        cout << "An exception occurred. Exception Nr. " << e << '\n';
+    }
+
+
+    return n;
 }
 
-void CupidoProcess::inicializarPartido(Pareja *pareja1, Pareja *pareja2) {
-    logCanchas();
+void CupidoProcess::inicializarPartido(Pareja *pareja1, Pareja *pareja2,int filu,int colu) {
+
     Logger::log(cupidoProcessLogId,
                 "Matias: Inicio un partido entre " + Logger::intToString(pareja1->getClaveJugador1()->getIndice()) + ", " +
                 Logger::intToString(pareja1->getClaveJugador2()->getIndice()) + " y " +
@@ -400,18 +417,17 @@ void CupidoProcess::inicializarPartido(Pareja *pareja1, Pareja *pareja2) {
 
     if (idPartido == 0) {
 
-        PartidoProcess partidoProcess(pareja1, pareja2, semCanchasLibres, shmCanchasLibres, semsTerminoDeJugar,
+        PartidoProcess partidoProcess(cantNJugadores,cantPartidosJugador,resultadosFinales,filu,colu,pareja1, pareja2, semCanchasLibres, shmCanchasLibres, semsTerminoDeJugar,
                                       semCantCanchasLibres, pipeResultados, pipeFixture, shmNivelDeMarea,
                                       semNivelDeMarea);
 
-
         partidoProcess.run();
-
 
         exit(0);
     } else {
-
         partidos.push_back(idPartido);
+        partidosFil.push_back(filu);
+        partidosCol.push_back(colu);
 
     }
 
@@ -450,5 +466,44 @@ void CupidoProcess::logCanchas(){
     }
 
 
+
+}
+
+
+
+void CupidoProcess::buscarCancha(int *filu,int *colu) {
+    bool canchaLibre = false;
+    bool salir = false;
+    while(!salir){
+        for (unsigned int i = 0; i < semCanchasLibres->size(); i++) {
+            for (unsigned int j = 0; j < semCanchasLibres[0].size(); j++) {
+
+
+                semCanchasLibres->at(i).at(j).p();
+
+
+                canchaLibre = shmCanchasLibres->at(i).at(j).leer();
+
+                if (canchaLibre) {
+                    *filu=i;
+                    *colu=j;
+                    Logger::log(cupidoProcessLogId,"Cancha libre: " +Logger::intToString(*filu)+" "+Logger::intToString(*colu), INFO);
+                    semCanchasLibres->at(i).at(j).v();
+                    salir=true;
+                 break;
+                }
+
+
+                semCanchasLibres->at(i).at(j).v();
+
+            }
+            if(salir){
+                break;
+            }
+
+
+
+        }
+    }
 
 }

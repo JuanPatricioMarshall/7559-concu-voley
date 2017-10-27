@@ -18,7 +18,7 @@ public:
 	static constexpr double PROBABILIDAD_3_A_0 = 0.3;
 	static constexpr double PROBABILIDAD_3_A_1 = 0.6;
 
-	static const int TIEMPO_JUGAR = 10;
+	static const int TIEMPO_JUGAR = 4;
 	static const int TIEMPO_AFUERA = 1;
 
 };

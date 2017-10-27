@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/sem_gente_en_el_predio.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/sem_lista_pid.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
 		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/sem_nivel_marea.txt">
 			<Option target="7559_concu_voley"/>
 		</Unit>
@@ -117,10 +123,19 @@
 		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/shm_canchas_libres.txt">
 			<Option target="7559_concu_voley"/>
 		</Unit>
+		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/shm_gente_en_el_predio.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
 		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/shm_jugadores_sin_pareja.txt">
 			<Option target="7559_concu_voley"/>
 		</Unit>
+		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/shm_lista_pid.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
 		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/shm_nivel_marea.txt">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/ipc-init-files/shm_resultados_finales.txt">
 			<Option target="7559_concu_voley"/>
 		</Unit>
 		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/main/ConcuVoley.cpp">
@@ -243,13 +258,16 @@
 		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/EventHandler.h">
 			<Option target="7559_concu_voley"/>
 		</Unit>
-		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h">
-			<Option target="7559_concu_voley"/>
-		</Unit>
-		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_ProcessHandler.h">
+		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler_Partidos.h">
 			<Option target="7559_concu_voley"/>
 		</Unit>
 		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Ranking.h">
+			<Option target="7559_concu_voley"/>
+		</Unit>
+		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h">
 			<Option target="7559_concu_voley"/>
 		</Unit>
 		<Unit filename="/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp">

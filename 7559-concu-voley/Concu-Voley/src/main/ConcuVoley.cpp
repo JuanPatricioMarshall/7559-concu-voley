@@ -3,7 +3,6 @@
 #include <iostream>
 
 #include "MainProcess.h"
-#include <csignal>
 
 
 
@@ -44,8 +43,6 @@ int main(int argc, char *argv[]) {
 
     Logger::log(mainLogId, "nivelDeLog: " + Logger::intToString(nivelDeLog), INFO);
 
-	//TODO
-	int jugadoresPendientes = cantNJugadores;
 	mainProcessReturnData mainProcessReturnData;
 	Logger::log(mainLogId, "IntentoCrearMainProcess", INFO);
     MainProcess mainProcess(cantPartidosJugador, predioC, predioF, cantMJugadores, cantNJugadores, cantJugadoresMinimo);

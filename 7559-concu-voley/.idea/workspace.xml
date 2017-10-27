@@ -11,9 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0526c022-db31-4a83-9e57-be9b8c980b87" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Concu-Voley/src/processes/PartidoProcess.cpp" afterPath="$PROJECT_DIR$/Concu-Voley/src/processes/PartidoProcess.cpp" />
-    </list>
+    <list default="true" id="0526c022-db31-4a83-9e57-be9b8c980b87" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,28 +25,8 @@
       <file leaf-file-name="ConcuVoley.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Concu-Voley/src/main/ConcuVoley.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PartidoProcess.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/PartidoProcess.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="41" column="70" lean-forward="true" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignalHandler.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+            <state relative-caret-position="216">
+              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -57,43 +35,33 @@
       <file leaf-file-name="PartidoProcess.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/PartidoProcess.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="47" column="24" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
-              <folding>
-                <element signature="e#105#133#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SIGUSR1_Handler_Partidos.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Partidos.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="50" />
-              <folding>
-                <element signature="e#110#129#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SIGUSR1_Handler.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-37">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="19" />
+            <state relative-caret-position="1026">
+              <caret line="57" column="65" lean-forward="false" selection-start-line="57" selection-start-column="65" selection-end-line="57" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminJugadoresProcess.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/AdminJugadoresProcess.cpp">
+      <file leaf-file-name="CupidoProcess.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/CupidoProcess.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="314">
+              <caret line="154" column="8" lean-forward="true" selection-start-line="154" selection-start-column="8" selection-end-line="154" selection-end-column="8" />
+              <folding>
+                <element signature="e#41#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainProcess.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/main/MainProcess.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5634">
+              <caret line="313" column="19" lean-forward="false" selection-start-line="313" selection-start-column="19" selection-end-line="313" selection-end-column="19" />
+              <folding>
+                <element signature="e#1#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,29 +69,61 @@
       <file leaf-file-name="AdminJugadoresProcess.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/AdminJugadoresProcess.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+            <state relative-caret-position="144">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CupidoProcess.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/CupidoProcess.cpp">
+      <file leaf-file-name="SIGUSR1_Handler.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="62" column="25" lean-forward="true" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
+            <state relative-caret-position="18">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CupidoProcess.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/CupidoProcess.h">
+      <file leaf-file-name="SignalHandler.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="64" column="21" lean-forward="false" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+            <state relative-caret-position="440">
+              <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SIGUSR2_Handler.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="422">
+              <caret line="48" column="6" lean-forward="true" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SIGINT_Handler_Partidos.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler_Partidos.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PartidoProcess.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/PartidoProcess.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2106">
+              <caret line="117" column="11" lean-forward="false" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
+              <folding>
+                <element signature="e#41#62#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,36 +132,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>contPartidos</find>
-      <find>Termino el a</find>
-      <find>personas en el</find>
-      <find>gente en el</find>
-      <find>sigin</find>
-      <find>o habia</find>
-      <find>shmCanchasLibres</find>
+      <find>catch</find>
+      <find>buscar</find>
+      <find>partidos</find>
       <find>inicializarPartido</find>
-      <find>Resto</find>
-      <find>RE</find>
-      <find>tiempo</find>
-      <find>RESTO</find>
-      <find>sig</find>
-      <find>fork</find>
-      <find>SIGUSR2</find>
-      <find>inicializarSigintHandler</find>
-      <find>inicializarSigusrHandler</find>
-      <find>handleSignal</find>
-      <find>sigusr1Handler</find>
-      <find>predioc</find>
-      <find>mare</find>
-      <find>semNivelDeMarea</find>
-      <find>shmNivelDeMarea</find>
-      <find>idCupido</find>
-      <find>semJugadoresSinPareja</find>
-      <find>shmJugadoresSinPareja</find>
-      <find>pro</find>
-      <find>getGracefulQuit</find>
-      <find>dispache</find>
-      <find>inic</find>
+      <find>sem</find>
+      <find>sema</find>
+      <find>semCanchasLibres</find>
+      <find>memorias</find>
+      <find>Tiempo</find>
+      <find>navent on 10\/10\/17\.\n\/\/</find>
+      <find>cupi</find>
+      <find>marea</find>
+      <find>parti</find>
+      <find>partido</find>
+      <find>logCanchas</find>
+      <find>iniciali</find>
+      <find>Cu</find>
+      <find>Pi</find>
+      <find>leer</find>
+      <find>jugadores-</find>
+      <find>Cupido</find>
+      <find>inicializarRanking</find>
+      <find>pipe</find>
+      <find>pipeResultados</find>
+      <find>Res</find>
+      <find>int</find>
+      <find>resulta</find>
+      <find>resultadosFinales</find>
+      <find>shmCanchasLibres</find>
+      <find>run</find>
     </findStrings>
     <replaceStrings>
       <replace>CONCU</replace>
@@ -184,18 +184,10 @@
         <option value="$PROJECT_DIR$/Concu-Voley/src/model/Pareja.cpp" />
         <option value="$PROJECT_DIR$/Concu-Voley/src/model/Resultado.cpp" />
         <option value="$PROJECT_DIR$/Concu-Voley/src/processes/FixtureProcess.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/Process.cpp" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/RecepcionistaProcess.cpp" />
         <option value="$PROJECT_DIR$/Concu-Voley/src/utils/logger/Logger.cpp" />
         <option value="$PROJECT_DIR$/Concu-Voley/src/utils/random/RandomUtil.cpp" />
         <option value="$PROJECT_DIR$/Concu-Voley/src/utils/random/RandomUtil.h" />
         <option value="$PROJECT_DIR$/Concu-Voley/src/processes/JugadorProcess.h" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGINT_ProcessHandler.h" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/FixtureProcess.cpp" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/JugadorProcess.cpp" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Concu-Voley/src/model/Resultado.h" />
         <option value="$PROJECT_DIR$/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.h" />
@@ -203,20 +195,35 @@
         <option value="$PROJECT_DIR$/Concu-Voley/src/model/Pareja.h" />
         <option value="$PROJECT_DIR$/Concu-Voley/src/model/Cancha.h" />
         <option value="$PROJECT_DIR$/Concu-Voley/src/model/ClaveJugador.h" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/main/ConcuVoley.cpp" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp" />
         <option value="$PROJECT_DIR$/Concu-Voley/src/processes/Process.h" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/TiemposEspera.h" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/main/MainProcess.h" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/main/MainProcess.cpp" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/CupidoProcess.h" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/CupidoProcess.cpp" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/PartidoProcess.cpp" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/PartidoProcess.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Partidos.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/FixtureProcess.cpp" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGINT_ProcessHandler.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SignalHandler.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/EventHandler.h" />
         <option value="$PROJECT_DIR$/Concu-Voley/src/processes/AdminJugadoresProcess.h" />
         <option value="$PROJECT_DIR$/Concu-Voley/src/processes/AdminJugadoresProcess.cpp" />
-        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Partidos.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/Process.cpp" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/JugadorProcess.cpp" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/RecepcionistaProcess.cpp" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/main/ConcuVoley.cpp" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/Partido.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Ranking.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/TiemposEspera.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/lock/LockFile.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/main/MainProcess.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/CupidoProcess.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/PartidoProcess.h" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/PartidoProcess.cpp" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/main/MainProcess.cpp" />
+        <option value="$PROJECT_DIR$/Concu-Voley/src/processes/CupidoProcess.cpp" />
       </list>
     </option>
   </component>
@@ -228,10 +235,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1301" />
-    <option name="height" value="736" />
+    <option name="x" value="147" />
+    <option name="y" value="252" />
+    <option name="width" value="1297" />
+    <option name="height" value="636" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -259,6 +266,12 @@
               <item name="7559_concu_voley" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="7559-concu-voley" type="462c0819:PsiDirectoryNode" />
               <item name="Concu-Voley" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="7559_concu_voley" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="7559-concu-voley" type="462c0819:PsiDirectoryNode" />
+              <item name="Concu-Voley" type="462c0819:PsiDirectoryNode" />
+              <item name="ipc-init-files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="7559_concu_voley" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
@@ -309,6 +322,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
               <item name="ipc" type="462c0819:PsiDirectoryNode" />
+              <item name="fifo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="7559_concu_voley" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="7559-concu-voley" type="462c0819:PsiDirectoryNode" />
+              <item name="Concu-Voley" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="ipc" type="462c0819:PsiDirectoryNode" />
               <item name="signal" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -319,11 +341,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/CLionProjects/JustSignals" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal" />
       <recent name="$PROJECT_DIR$/Concu-Voley/ipc-init-files" />
+      <recent name="$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -339,7 +362,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.7559_concu_voley">
-    <configuration name="7559_concu_voley" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="2 3 5 5 10 20" PASS_PARENT_ENVS_2="true" PROJECT_NAME="7559_concu_voley" TARGET_NAME="7559_concu_voley" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="7559_concu_voley" RUN_TARGET_NAME="7559_concu_voley">
+    <configuration name="7559_concu_voley" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="2 3 8 8  10 20" PASS_PARENT_ENVS_2="true" PROJECT_NAME="7559_concu_voley" TARGET_NAME="7559_concu_voley" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="7559_concu_voley" RUN_TARGET_NAME="7559_concu_voley">
       <envs />
     </configuration>
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
@@ -380,12 +403,20 @@
       <workItem from="1508303054823" duration="976000" />
       <workItem from="1508380391268" duration="14313000" />
       <workItem from="1508416245060" duration="17012000" />
-      <workItem from="1508453055944" duration="6654000" />
+      <workItem from="1508453055944" duration="7417000" />
+      <workItem from="1508616803666" duration="4809000" />
+      <workItem from="1508711102891" duration="6667000" />
+      <workItem from="1508893728586" duration="5796000" />
+      <workItem from="1508938875229" duration="11037000" />
+      <workItem from="1508976610743" duration="2174000" />
+      <workItem from="1508982264356" duration="4031000" />
+      <workItem from="1509017661293" duration="12911000" />
+      <workItem from="1509056920929" duration="742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97516000" />
+    <option name="totallyTimeSpent" value="146446000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -397,21 +428,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1303" height="780" extended-state="6" />
+    <frame x="147" y="252" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26979247" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3123123" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3108108" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21445042" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3227848" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3093093" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24024025" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39767933" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3963964" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -419,30 +449,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3227848" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3138138" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1876877" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20138355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3228228" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3978979" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -457,156 +466,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="28" column="38" lean-forward="false" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/model/Resultado.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/logger/Logger.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="22" column="20" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/random/RandomUtil.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/random/RandomUtil.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/serializer/ResultadoSerializer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/ipc-init-files/sem_gente_en_el_predio.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/x86_64-linux-gnu/bits/signum.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1422">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/logger/Logger.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/ipc-init-files/shm_gente_en_el_predio.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/semaphore/Semaforo.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/Process.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/RecepcionistaProcess.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/FixtureProcess.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-325">
-          <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/JugadorProcess.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="54" column="8" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Concu-Voley/src/model/ClaveJugador.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/JugadorProcess.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1093">
-          <caret line="127" column="5" lean-forward="true" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -614,7 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -622,7 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,9 +491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="e#121#138#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -640,17 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#117#149#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/model/Cancha.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -658,30 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
           <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/model/Pareja.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/model/ClaveJugador.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SignalHandler.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,51 +522,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/EventHandler.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/TiemposEspera.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGINT_ProcessHandler.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="29" column="15" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/Process.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,110 +533,277 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="60" column="17" lean-forward="false" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/main/MainProcess.cpp">
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/FixtureProcess.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+        <state relative-caret-position="141">
+          <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1818">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="58" column="31" lean-forward="false" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGINT_ProcessHandler.h" />
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h" />
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Partidos.h" />
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/AdminJugadoresProcess.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
           <folding>
-            <element signature="e#1#25#0" expanded="true" />
+            <element signature="e#2#36#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/main/ConcuVoley.cpp">
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/RecepcionistaProcess.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="304">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/Process.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/main/SetUp.xml" />
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/EventHandler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SignalHandler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/Partido.cpp" />
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/Partido.h" />
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/model/Cancha.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Ranking.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="24" column="38" lean-forward="false" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/JugadorProcess.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-570">
+          <caret line="56" column="1" lean-forward="false" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/CupidoProcess.h">
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/TiemposEspera.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="64" column="21" lean-forward="false" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/lock/LockFile.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/lock/LockFile.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/fifo/FifoLectura.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/fifo/FifoEscritura.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/fifo/Fifo.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/FixtureProcess.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Concu-Voley/src/main/MainProcess.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="151" column="26" lean-forward="false" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
-          <folding>
-            <element signature="e#68#86#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="47">
+          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/CupidoProcess.cpp">
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/ipc-init-files/shm_resultados_finales.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="62" column="25" lean-forward="true" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp">
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        <state relative-caret-position="356">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/CupidoProcess.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="77" column="134" lean-forward="false" selection-start-line="77" selection-start-column="134" selection-end-line="77" selection-end-column="134" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/PartidoProcess.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="41" column="70" lean-forward="true" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
+        <state relative-caret-position="2106">
+          <caret line="117" column="11" lean-forward="false" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
+          <folding>
+            <element signature="e#41#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/main/ConcuVoley.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/PartidoProcess.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="47" column="24" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+        <state relative-caret-position="1026">
+          <caret line="57" column="65" lean-forward="false" selection-start-line="57" selection-start-column="65" selection-end-line="57" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/model/Pareja.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/model/ClaveJugador.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/main/MainProcess.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5634">
+          <caret line="313" column="19" lean-forward="false" selection-start-line="313" selection-start-column="19" selection-end-line="313" selection-end-column="19" />
           <folding>
-            <element signature="e#105#133#0" expanded="true" />
+            <element signature="e#1#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/AdminJugadoresProcess.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="44" column="9" lean-forward="false" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        <state relative-caret-position="144">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/AdminJugadoresProcess.cpp">
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGINT_Handler_Partidos.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        <state relative-caret-position="90">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="48" column="6" lean-forward="true" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="19" />
+        <state relative-caret-position="18">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Partidos.h">
+    <entry file="file://$PROJECT_DIR$/Concu-Voley/src/processes/CupidoProcess.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="50" />
+        <state relative-caret-position="314">
+          <caret line="154" column="8" lean-forward="true" selection-start-line="154" selection-start-column="8" selection-end-line="154" selection-end-column="8" />
           <folding>
-            <element signature="e#110#129#0" expanded="true" />
+            <element signature="e#41#62#0" expanded="true" />
           </folding>
         </state>
       </provider>

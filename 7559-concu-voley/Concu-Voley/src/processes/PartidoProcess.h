@@ -18,9 +18,6 @@
 #include "../utils/ipc/semaphore/Semaforo.h"
 #include "../model/Cancha.h"
 #include "../model/Resultado.h"
-#include "../utils/ipc/signal/SIGINT_Handler.h"
-#include "../utils/ipc/signal/SIGUSR2_Handler.h"
-#include "../utils/ipc/signal/SIGUSR1_Handler_Partidos.h"
 
 const string partidoProcessLogId = "Partido";
 
@@ -33,28 +30,23 @@ private:
     Pareja *pareja2;
     vector<vector<Semaforo>> *semCanchasLibres;
     vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres;
+    vector<vector<MemoriaCompartida<int>>> *resultadosFinales;
     vector<Semaforo> *semTerminoDeJugar;
     Semaforo *semCantCanchasLibres;
     Pipe *pipeResultados;
     Pipe *pipeFixture;
-
+    int cantidadJugadores;
+    int cantPartidosJugador;
     MemoriaCompartida<int> *shmNivelDeMarea;
     Semaforo *semNivelDeMarea;
 
 
     Cancha *cancha;
 
-    SIGINT_Handler sigintHandler;
-    SIGUSR1_Handler_Partidos *sigusr1Handler;
-
-
-    void encontrarCancha();
 
     void liberarCancha();
 
     void avisarJugadores();
-
-    Resultado simularPartido();
 
     void inicializarMemoriasCompartidas();
 
@@ -63,7 +55,7 @@ private:
 public:
 
 
-    PartidoProcess(Pareja *pareja1, Pareja *pareja2, vector<vector<Semaforo>> *semCanchasLibres,
+    PartidoProcess(int cantidadJugadores,int cantPartidosJugador, vector<vector<MemoriaCompartida<int>>> *resultadosFinales,int fila,int columna,Pareja *pareja1, Pareja *pareja2, vector<vector<Semaforo>> *semCanchasLibres,
                    vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres, vector<Semaforo> *semTerminoDeJugar,
                    Semaforo *semCantCanchasLibres, Pipe *pipeResultados, Pipe *pipeFixture,
                    MemoriaCompartida<int> *shmNivelDeMarea, Semaforo *semNivelDeMarea);

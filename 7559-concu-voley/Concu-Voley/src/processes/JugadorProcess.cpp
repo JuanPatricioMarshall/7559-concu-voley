@@ -30,7 +30,6 @@ JugadorProcess::JugadorProcess(int cantidadDePartidosPendientes,
     this->shmCantGenteEnElPredio = shmCantGenteEnElPredio;
     this->semCantGenteEnElPredio = semCantGenteEnElPredio;
 
-    inicializarHandler();
     inicializarMemoriasCompartidas();
 }
 

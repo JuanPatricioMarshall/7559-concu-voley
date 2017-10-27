@@ -4,7 +4,6 @@
 
 #include <sys/wait.h>
 
-#include "../utils/ipc/signal/SignalHandler.h"
 #include "JugadorProcess.h"
 
 namespace std {
