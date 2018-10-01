@@ -43,8 +43,20 @@ namespace std {
         getline(ss, pid, SEPARADOR); //Tipo de dato
         getline(ss, n, SEPARADOR);
 
+        int a = -1;
+        int b = -1;
 
-        ClaveJugador clave(stoi(pid), stoi(n));
+        try {
+            a=stoi(pid);
+            b=stoi(n);
+
+
+        }catch (int e)
+        {
+            cout << "stoi en clave jugador serializer" << e << '\n';
+        }
+
+        ClaveJugador clave(a, b);
 
 
         return clave;

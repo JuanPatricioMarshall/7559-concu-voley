@@ -1,43 +1,49 @@
-
-
-#ifndef UTILS_IPC_SIGNAL_SIGUSR2_HANDLER_H_
-#define UTILS_IPC_SIGNAL_SIGUSR2_HANDLER_H_
-
+#ifndef SIGUSR2_HANDLER_H_
+#define SIGUSR2_HANDLER_H_
 
 #include <signal.h>
 #include <assert.h>
+#include <iostream>
 
 #include "EventHandler.h"
+#include "../semaphore/Semaforo.h"
 
 class SIGUSR2_Handler : public EventHandler {
 
-	private:
-		sig_atomic_t gracefulQuit;
+private:
+public:
+    int col;
+    sig_atomic_t *sig;
+    vector<vector<Semaforo>> *semCanchasLibres;
+    vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres;
+    SIGUSR2_Handler ()  {
+    }
 
-	public:
+    ~SIGUSR2_Handler () {
+    }
 
-		SIGUSR2_Handler () : gracefulQuit(0) {
-		}
+    virtual int handleSignal ( int signum ) {
+        assert ( signum == SIGUSR2 );
+        if(*sig == 0){
+            return 0;
+        }
+        *sig = *sig-1;
+        if(*sig<0){
+            *sig=0;
+        }
+        for(int i = 0;i<col;i++){
+            semCanchasLibres->at(*sig).at(i).p();
 
-		~SIGUSR2_Handler () {
-		}
 
-		virtual int handleSignal ( int signum ) {
-			assert ( signum == SIGUSR2 );
-			this->gracefulQuit = 1;
-			return 0;
-		}
+            shmCanchasLibres->at(*sig).at(i).escribir(true);
 
-		sig_atomic_t getGracefulQuit () const {
-			return this->gracefulQuit;
-		}
 
-		void setGracefulQuit(sig_atomic_t gracefulQuit){
-			this->gracefulQuit = gracefulQuit;
-		}
+
+            semCanchasLibres->at(*sig).at(i).v();
+        }
+        return 0;
+    }
+
 };
 
-
-
-
-#endif /* UTILS_IPC_SIGNAL_SIGUSR2_HANDLER_H_ */
+#endif /* SIGUSR2_HANDLER_H_ */

@@ -4,11 +4,13 @@
 #include <sys/wait.h>
 
 
-#include "../utils/ipc/signal/SignalHandler.h"
 #include "../processes/RecepcionistaProcess.h"
 #include "../processes/CupidoProcess.h"
 #include "../processes/AdminJugadoresProcess.h"
 #include "../processes/FixtureProcess.h"
+#include "../utils/ipc/signal/SIGUSR1_Handler_Ranking.h"
+#include "../utils/ipc/signal/SignalHandler.h"
+#include "../utils/ipc/fifo/FifoLectura.h"
 
 namespace std {
 
@@ -79,6 +81,14 @@ namespace std {
 
         }
 
+        for (int i = 0; i < cantNJugadores; i++) {
+            vector<MemoriaCompartida<int>> filaPartidosResultado;
+            for (int j = 0; j < cantPartidosJugador+20; j++) {
+                filaPartidosResultado.push_back(MemoriaCompartida<int>());
+            }
+            resultadosFinales.push_back(filaPartidosResultado);
+        }
+
         for (int i = 0; i < predioF; i++) {
 
 
@@ -95,7 +105,18 @@ namespace std {
     }
 
     void MainProcess::crearMemoriasCompartidas() {
+        int cont = 0;
 
+        for (int i = 0; i < cantNJugadores; i++) {
+            for (int j = 0; j < cantPartidosJugador+20; j++) {
+
+
+                resultadosFinales.at(i).at(j).crear(SHM_RESULTADOS_FINALES, cont);
+                resultadosFinales.at(i).at(j).escribir(0);
+
+                cont++;
+            }
+        }
         Logger::log(mainLogId, "Comenzando creacion de memorias compartidas ",
                     DEBUG);
 
@@ -108,7 +129,8 @@ namespace std {
 
         }
 
-        int cont = 0;
+
+        cont = 0;
 
         for (int i = 0; i < predioF; i++) {
             for (int j = 0; j < predioC; j++) {
@@ -138,34 +160,34 @@ namespace std {
 
 
     void MainProcess::inicializarIPCs() {
+
         Logger::log(mainLogId, "InicializoSem", DEBUG);
         inicializarSemaforos();
         Logger::log(mainLogId, "InicializoSHM", DEBUG);
         inicializarMemoriasCompartidas();
-
     }
 
     void MainProcess::finalizarProcesosPredio() {
 
 
-        Logger::log(mainLogId, "Finalizando procesos", DEBUG);
+        Logger::log(mainLogId, "Finalizando procesos", INFO);
 
         Logger::log(mainLogId,
                     "Finalizando recepcionista "
-                    + Logger::intToString(idRecepcionista), DEBUG);
+                    + Logger::intToString(idRecepcionista), INFO);
         kill(idRecepcionista, SIGINT);
         waitpid(idRecepcionista, NULL, 0);
 
         Logger::log(mainLogId,
                     "Finalizando Cupido "
-                    + Logger::intToString(idCupido), DEBUG);
+                    + Logger::intToString(idCupido), INFO);
         kill(idCupido, SIGINT);
         waitpid(idCupido, NULL, 0);
 
-
+        inicializarRanking();
         Logger::log(mainLogId,
                     "Finalizando Fixture "
-                    + Logger::intToString(idFixture), DEBUG);
+                    + Logger::intToString(idFixture), INFO);
         kill(idFixture, SIGINT);
         waitpid(idFixture, NULL, 0);
 
@@ -199,81 +221,15 @@ namespace std {
         }
     }
 
-    void MainProcess::inicializarSigintHandler() {
-        SignalHandler::getInstance()->registrarHandler(SIGINT, &sigintHandler);
-    }
-
-    void MainProcess::inicializarSigusrHandler() {
-        SignalHandler::getInstance()->registrarHandler(SIGUSR1, &sigusr1Handler);
-        SignalHandler::getInstance()->registrarHandler(SIGUSR2, &sigusr2Handler);
-
-
-    }
-
-    void MainProcess::handleCrecimientoOla() {
-        Logger::log(mainLogId, "CRECE 1 NIVEL LA OLA", INFO);
-
-        semNivelDeMarea.p();
-
-        int nivelMarea = shmNivelDeMarea.leer();
-
-        if (nivelMarea < predioC - 1) {
-            nivelMarea++;
-        }
-        Logger::log(mainLogId, "Nivel actual de marea: " + Logger::intToString(nivelMarea), INFO);
-
-        shmNivelDeMarea.escribir(nivelMarea);
-        semNivelDeMarea.v();
-
-        avisarAPartidos(SIGUSR1);
-
-    }
-
-    void MainProcess::handleBajaOla() {
-        Logger::log(mainLogId, "BAJA 1 NIVEL LA OLA", INFO);
-
-        semNivelDeMarea.p();
-
-        int nivelMarea = shmNivelDeMarea.leer();
-
-        if (nivelMarea != 0) {
-            nivelMarea--;
-        }
-        Logger::log(mainLogId, "Nivel actual de marea: " + Logger::intToString(nivelMarea), INFO);
-
-        shmNivelDeMarea.escribir(nivelMarea);
-        semNivelDeMarea.v();
-
-        avisarAPartidos(SIGUSR2);
-
-    }
-
-    void MainProcess::avisarAPartidos(int sig) {
-
-        kill(idCupido, sig);
-
-    }
 
 
     void MainProcess::iniciarSimulacion() {
-
         inicializarRecepcionista();
-        Logger::log(mainLogId, "inicializarRecepcionista iniciada", DEBUG);
 
         inicializarCupido();
-        Logger::log(mainLogId, "inicializarCupido iniciada", DEBUG);
-        inicializarProcesoFixture();
-        Logger::log(mainLogId, "inicializarProcesoFixture iniciada", DEBUG);
-//   inicializarProcesoResultado();
-
         inicializarProcesosJugadores();
-        Logger::log(mainLogId, "inicializarProcesosJugadores iniciada", DEBUG);
+
         crearMemoriasCompartidas();
-        Logger::log(mainLogId, "crearMemoriasCompartidas iniciada", DEBUG);
-        inicializarSigintHandler();
-        Logger::log(mainLogId, "inicializarSigintHandler iniciada", DEBUG);
-        inicializarSigusrHandler();
-        Logger::log(mainLogId, "inicializarSigusrHandler iniciada", DEBUG);
     }
 
     void MainProcess::inicializarRecepcionista() {
@@ -293,21 +249,6 @@ namespace std {
 
     }
 
-    void MainProcess::inicializarProcesoFixture() {
-
-        pid_t idFixture = fork();
-
-        if (idFixture == 0) {
-
-            FixtureProcess fixtureProcess(&pipeFixture);
-            fixtureProcess.run();
-            exit(0);
-        } else {
-
-            this->idFixture = idFixture;
-        }
-
-    }
 
 
     void MainProcess::inicializarCupido() {
@@ -316,21 +257,66 @@ namespace std {
 
         if (idCupido == 0) {
 
-            CupidoProcess cupidoProcess(&pipeJugadores, &semCanchasLibres,
-                                        &shmCanchasLibres, cantNJugadores, &semCupido, &semsTerminoDeJugar,
+
+            CupidoProcess cupidoProcess(predioF,predioC,&pipeJugadores, &semCanchasLibres,
+                                        &shmCanchasLibres, &resultadosFinales,cantNJugadores,cantPartidosJugador, &semCupido, &semsTerminoDeJugar,
                                         &semCantCanchasLibres, &pipeResultados, &pipeFixture, cantJugadoresMinimo,
                                         &shmJugadoresSinPareja, &shmNivelDeMarea, &semNivelDeMarea,
-                                        &semJugadoresSinPareja);
+                                        &semJugadoresSinPareja,&semCantGenteEnElPredio,&shmCantGenteEnElPredio);
             cupidoProcess.run();
             exit(0);
         } else {
 
             this->idCupido = idCupido;
+            std::cout<<"Este es cupido "<<idCupido<<std::endl;
         }
 
 
     }
 
+    void burbujeo( int puntos[], int ids[],int cantNJugadores){
+        bool igual = true;
+        while(igual){
+            igual = false;
+            for (int i = 0; i < cantNJugadores-1; i++) {
+                if(puntos[i]<puntos[i+1]){
+                    int aux = puntos[i];
+                    puntos[i] = puntos[i+1];
+                    puntos[i+1] = aux;
+                    aux = ids[i];
+                    ids[i] = ids[i+1];
+                    ids[i+1] = aux;
+                    igual=true;
+                }
+            }
+        }
+        for (int i = 0; i < cantNJugadores-1; i++) {
+            Logger::log("Ranking",
+                        "Jugador id:"+  Logger::intToString(ids[i])+ "con "+Logger::intToString(puntos[i])+" puntos.",
+                        INFO);
+        }
+    }
+    void MainProcess::inicializarRanking() {
+
+        int pts[cantNJugadores];
+        int ids[cantNJugadores];
+        for (int i = 0; i < cantNJugadores; i++) {
+            int puntos = 0;
+            int hasta = resultadosFinales.at(i).at(0).leer();
+            for (int j = 1; j <hasta+1; j++) {
+                if(resultadosFinales.at(i).at(j).leer()<=2){
+                    puntos+=3;
+                }
+
+            }
+            pts[i]=puntos;
+            ids[i]=i;
+            //Logger::log("Ranking","Jugador id:"+  Logger::intToString(i)+ "con "+Logger::intToString(puntos)+" puntos.",INFO);
+        }
+
+        burbujeo(pts,ids,cantNJugadores);
+
+    }
 
     mainProcessReturnData MainProcess::run() {
         Logger::log(mainLogId, "Running...", DEBUG);
@@ -341,26 +327,9 @@ namespace std {
 
         int response;
         waitpid(idAdminJugadores, &response, 0);
-        Logger::log(mainLogId, "Termino el AdminJugadores", DEBUG);
-        bool terminoTorneoDePronto = (sigintHandler.getGracefulQuit() == 1);
-        bool subidaMarea = (sigusr1Handler.getGracefulQuit() == 1);
-        bool bajadaMarea = (sigusr2Handler.getGracefulQuit() == 1);
+        Logger::log(mainLogId, "Termino el AdminJugadores", INFO);
 
-        if (subidaMarea){
 
-            handleBajaOla();
-
-        }
-
-        if (bajadaMarea){
-
-            handleCrecimientoOla();
-        }
-
-        if (terminoTorneoDePronto) {
-            Logger::log(mainLogId, "Termino de pronto ", DEBUG);
-            handleTerminar();
-        } else {
 
             if (WIFEXITED(response)) {
                 jugadoresTerminados = WEXITSTATUS(response);
@@ -368,12 +337,11 @@ namespace std {
             Logger::log(mainLogId,
                         "Cantidad de jugadores finalizados: "
                         + Logger::intToString(jugadoresTerminados),
-                        DEBUG);
+                        INFO);
 
             finalizarProcesosPredio();
             eliminarIPCs();
 
-        }
 
         mainProcessReturnData returnData;
 
@@ -393,15 +361,11 @@ namespace std {
     }
 
     void MainProcess::finalizarJugadores() {
-
-
         kill(idAdminJugadores, SIGINT);
         waitpid(idAdminJugadores, 0, 0);
     }
 
     void MainProcess::eliminarSemaforos() {
-
-
         semCupido.eliminar();
         semEsperarRecepcionista.eliminar();
         semJugadoresPredio.eliminar();
@@ -425,6 +389,11 @@ namespace std {
     void MainProcess::eliminarMemoriasCompartidas() {
 
 
+        for (int i = 0; i < cantNJugadores; i++) {
+            for (int j = 0; j < cantPartidosJugador+20; j++) {
+                resultadosFinales.at(i).at(j).liberar();
+            }
+        }
         for (int i = 0; i < predioF; i++) {
             for (int j = 0; j < predioC; j++) {
                 shmCanchasLibres.at(i).at(j).liberar();
@@ -441,7 +410,7 @@ namespace std {
     }
 
     void MainProcess::eliminarIPCs() {
-        Logger::log(mainLogId, "Eliminando IPCs", DEBUG);
+        Logger::log(mainLogId, "Eliminando IPCs", INFO);
         eliminarPipesFifos();
         eliminarMemoriasCompartidas();
         eliminarSemaforos();

@@ -2,8 +2,8 @@
 // Created by navent on 10/10/17.
 //
 
-#ifndef RESTO_PAREJA_H
-#define RESTO_PAREJA_H
+#ifndef CONCU_PAREJA_H
+#define CONCU_PAREJA_H
 
 
 #include "ClaveJugador.h"
@@ -33,4 +33,4 @@ public:
 };
 
 
-#endif //RESTO_PAREJA_H
+#endif //CONCU_PAREJA_H

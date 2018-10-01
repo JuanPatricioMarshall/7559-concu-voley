@@ -9,8 +9,7 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-
-	int nivelDeLog = atoi(argv[1]);
+    int nivelDeLog = atoi(argv[1]);
 	int cantPartidosJugador = atoi(argv[2]);
 	int predioF = atoi(argv[3]);
 	int predioC = atoi(argv[4]);
@@ -44,12 +43,11 @@ int main(int argc, char *argv[]) {
 
     Logger::log(mainLogId, "nivelDeLog: " + Logger::intToString(nivelDeLog), INFO);
 
-	//TODO
-	int jugadoresPendientes = cantNJugadores;
 	mainProcessReturnData mainProcessReturnData;
-	Logger::log(mainLogId, "IntentoCrearMainProcess", DEBUG);
-	MainProcess mainProcess(cantPartidosJugador, predioC, predioF, cantMJugadores, cantNJugadores, cantJugadoresMinimo);
-	Logger::log(mainLogId, "MainProcessCreadoCorrecto", DEBUG);
+	Logger::log(mainLogId, "IntentoCrearMainProcess", INFO);
+    MainProcess mainProcess(cantPartidosJugador, predioC, predioF, cantMJugadores, cantNJugadores, cantJugadoresMinimo);
+
+	Logger::log(mainLogId, "MainProcessCreadoCorrecto", INFO);
 	mainProcessReturnData = mainProcess.run();
 
 	Logger::log(mainLogId, "Simulacion finalizada", INFO);

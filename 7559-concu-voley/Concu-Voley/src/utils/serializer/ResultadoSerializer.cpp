@@ -99,9 +99,23 @@ Resultado ResultadoSerializer::deserializar(string resultadoStr) {
 
     Resultado resultado(&pareja1, &pareja2, false);
 
+    int a = -1;
+    int b = -1;
 
-    resultado.setSetsPareja1(stoi(setsPareja1));
-    resultado.setSetsPareja2(stoi(setsPareja2));
+    try {
+        a=stoi(setsPareja1);
+        b=stoi(setsPareja2);
+
+
+    }catch (int e)
+    {
+        cout << "stoi en resul serializer" << e << '\n';
+    }
+
+
+
+    resultado.setSetsPareja1(a);
+    resultado.setSetsPareja2(b);
 
 
     return resultado;

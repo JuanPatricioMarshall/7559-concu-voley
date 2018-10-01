@@ -2,8 +2,8 @@
 // Created by navent on 10/10/17.
 //
 
-#ifndef RESTO_PARTIDOPROCESS_H
-#define RESTO_PARTIDOPROCESS_H
+#ifndef CONCU_PARTIDOPROCESS_H
+#define CONCU_PARTIDOPROCESS_H
 
 
 #include "../model/Pareja.h"
@@ -18,9 +18,6 @@
 #include "../utils/ipc/semaphore/Semaforo.h"
 #include "../model/Cancha.h"
 #include "../model/Resultado.h"
-#include "../utils/ipc/signal/SIGINT_Handler.h"
-#include "../utils/ipc/signal/SIGUSR2_Handler.h"
-#include "../utils/ipc/signal/SIGUSR1_Handler.h"
 
 const string partidoProcessLogId = "Partido";
 
@@ -33,28 +30,23 @@ private:
     Pareja *pareja2;
     vector<vector<Semaforo>> *semCanchasLibres;
     vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres;
+    vector<vector<MemoriaCompartida<int>>> *resultadosFinales;
     vector<Semaforo> *semTerminoDeJugar;
     Semaforo *semCantCanchasLibres;
     Pipe *pipeResultados;
     Pipe *pipeFixture;
-
+    int cantidadJugadores;
+    int cantPartidosJugador;
     MemoriaCompartida<int> *shmNivelDeMarea;
     Semaforo *semNivelDeMarea;
 
 
     Cancha *cancha;
 
-    SIGINT_Handler sigintHandler;
-    SIGUSR1_Handler sigusr1Handler;
-
-
-    void encontrarCancha();
 
     void liberarCancha();
 
     void avisarJugadores();
-
-    Resultado simularPartido();
 
     void inicializarMemoriasCompartidas();
 
@@ -63,7 +55,7 @@ private:
 public:
 
 
-    PartidoProcess(Pareja *pareja1, Pareja *pareja2, vector<vector<Semaforo>> *semCanchasLibres,
+    PartidoProcess(int cantidadJugadores,int cantPartidosJugador, vector<vector<MemoriaCompartida<int>>> *resultadosFinales,int fila,int columna,Pareja *pareja1, Pareja *pareja2, vector<vector<Semaforo>> *semCanchasLibres,
                    vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres, vector<Semaforo> *semTerminoDeJugar,
                    Semaforo *semCantCanchasLibres, Pipe *pipeResultados, Pipe *pipeFixture,
                    MemoriaCompartida<int> *shmNivelDeMarea, Semaforo *semNivelDeMarea);
@@ -84,4 +76,4 @@ public:
 };
 
 
-#endif //RESTO_PARTIDOPROCESS_H
+#endif //CONCU_PARTIDOPROCESS_H

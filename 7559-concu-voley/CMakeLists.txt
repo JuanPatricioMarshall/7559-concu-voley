@@ -4,7 +4,12 @@ project(7559_concu_voley)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
+        Concu-Voley/ipc-init-files/shm_resultados_finales.txt
         Concu-Voley/ipc-init-files/sems_cancha_ocupada.txt
+        Concu-Voley/ipc-init-files/shm_gente_en_el_predio.txt
+        Concu-Voley/ipc-init-files/sem_lista_pid.txt
+        Concu-Voley/ipc-init-files/sem_gente_en_el_predio.txt
+        Concu-Voley/ipc-init-files/shm_lista_pid.txt
         Concu-Voley/ipc-init-files/sems_cant_canchas_libres.txt
         Concu-Voley/ipc-init-files/sems_cupido.txt
         Concu-Voley/ipc-init-files/sems_esperar_recepcionista.txt
@@ -55,14 +60,15 @@ set(SOURCE_FILES
         Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp
         Concu-Voley/src/utils/ipc/semaphore/Semaforo.h
         Concu-Voley/src/utils/ipc/shared-memory/MemoriaCompartida.h
-        Concu-Voley/src/utils/ipc/signal/EventHandler.h
-        Concu-Voley/src/utils/ipc/signal/SIGINT_Handler.h
-        Concu-Voley/src/utils/ipc/signal/SIGINT_ProcessHandler.h
-        Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp
-        Concu-Voley/src/utils/ipc/signal/SignalHandler.h
-        Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
         Concu-Voley/src/utils/logger/Logger.cpp
         Concu-Voley/src/utils/logger/Logger.h
+        Concu-Voley/src/utils/ipc/signal/EventHandler.h
+        Concu-Voley/src/utils/ipc/signal/SIGINT_Handler_Partidos.h
+        Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler.h
+        Concu-Voley/src/utils/ipc/signal/SIGUSR1_Handler_Ranking.h
+        Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp
+        Concu-Voley/src/utils/ipc/signal/SignalHandler.h
+        Concu-Voley/src/utils/ipc/signal/SIGUSR2_Handler.h
         Concu-Voley/src/utils/random/RandomUtil.cpp
         Concu-Voley/src/utils/random/RandomUtil.h
         Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp

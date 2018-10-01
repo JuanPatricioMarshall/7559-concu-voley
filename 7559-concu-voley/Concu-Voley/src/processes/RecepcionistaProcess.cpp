@@ -15,8 +15,6 @@ RecepcionistaProcess::RecepcionistaProcess(Semaforo *semEsperarRecepcionista, Se
 
     this->cantJugadoresMinimo = cantJugadoresMinimo;
 
-    inicializarHandler();
-
 }
 
 

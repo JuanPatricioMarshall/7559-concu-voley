@@ -4,7 +4,6 @@
 
 #include <sys/wait.h>
 
-#include "../utils/ipc/signal/SignalHandler.h"
 #include "JugadorProcess.h"
 
 namespace std {
@@ -29,14 +28,14 @@ namespace std {
         this->shmCantGenteEnElPredio = shmCantGenteEnElPredio;
         this->semCantGenteEnElPredio = semCantGenteEnElPredio;
 
-        inicializarHandler();
+        //inicializarHandler();
 
     }
 
     void AdminJugadoresProcess::inicializarHandler() {
-        SignalHandler::getInstance()->registrarHandler(SIGINT, &sigintHandler);
-        SignalHandler::getInstance()->registrarHandler(SIGUSR1, &sigusr1Handler);
-        SignalHandler::getInstance()->registrarHandler(SIGUSR2, &sigusr2Handler);
+       // SignalHandler::getInstance()->registrarHandler(SIGINT, &sigintHandler);
+       // SignalHandler::getInstance()->registrarHandler(SIGUSR1, &sigusr1Handler);
+        //SignalHandler::getInstance()->registrarHandler(SIGUSR2, &sigusr2Handler);
 
     }
 

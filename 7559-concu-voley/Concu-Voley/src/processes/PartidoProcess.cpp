@@ -2,20 +2,23 @@
 // Created by navent on 10/10/17.
 //
 
+#include <sys/stat.h>
 #include "PartidoProcess.h"
 
 #include "TiemposEspera.h"
 #include "../utils/serializer/ResultadoSerializer.h"
 #include "../main/MainProcess.h"
+#include "../utils/ipc/signal/SIGINT_Handler_Partidos.h"
 #include "../utils/ipc/signal/SignalHandler.h"
 
-PartidoProcess::PartidoProcess(Pareja *pareja1, Pareja *pareja2, vector<vector<Semaforo>> *semCanchasLibres,
+PartidoProcess::PartidoProcess( int cantidadJugadores,int cantPartidosJugador,vector<vector<MemoriaCompartida<int>>> *resultadosFinales,int fila,int columna,Pareja *pareja1, Pareja *pareja2, vector<vector<Semaforo>> *semCanchasLibres,
                                vector<vector<MemoriaCompartida<bool>>> *shmCanchasLibres,
                                vector<Semaforo> *semTerminoDeJugar, Semaforo *semCantCanchasLibres,
                                Pipe *pipeResultados, Pipe *pipeFixture, MemoriaCompartida<int> *shmNivelDeMarea,
                                Semaforo *semNivelDeMarea) {
-
-
+    this->cantidadJugadores=cantidadJugadores;
+    this->resultadosFinales=resultadosFinales;
+    this->cantPartidosJugador=cantPartidosJugador;
     this->pareja1 = pareja1;
     this->pareja2 = pareja2;
     this->semCanchasLibres = semCanchasLibres;
@@ -27,24 +30,25 @@ PartidoProcess::PartidoProcess(Pareja *pareja1, Pareja *pareja2, vector<vector<S
     this->semNivelDeMarea = semNivelDeMarea;
     this->shmNivelDeMarea = shmNivelDeMarea;
 
-    this->cancha = new Cancha(-1, -1);
 
-    inicializarHandler();
+    this->cancha = new Cancha(fila,columna);
+
     inicializarMemoriasCompartidas();
 
 
 }
 
-void PartidoProcess::inicializarHandler() {
-
-    SignalHandler::getInstance()->registrarHandler(SIGINT, &sigintHandler);
-    SignalHandler::getInstance()->registrarHandler(SIGUSR1, &sigusr1Handler);
-}
-
 void PartidoProcess::inicializarMemoriasCompartidas() {
 
-
     int cont = 0;
+    for (unsigned int i = 0; i < cantidadJugadores; i++) {
+        for (unsigned int j = 0; j < cantPartidosJugador+20; j++) {
+            resultadosFinales->at(i).at(j).crear(SHM_RESULTADOS_FINALES, cont);
+            cont ++;
+        }
+    }
+
+    cont = 0;
     for (unsigned int i = 0; i < shmCanchasLibres->size(); i++) {
         for (unsigned int j = 0; j < shmCanchasLibres->at(0).size(); j++) {
             shmCanchasLibres->at(i).at(j).crear(SHM_CANCHAS_LIBRES, cont);
@@ -57,145 +61,68 @@ void PartidoProcess::inicializarMemoriasCompartidas() {
 
 void PartidoProcess::run() {
 
+    int fu = this->cancha->getFila();
+    int cu = this->cancha->getColumna();
 
-    Logger::log(partidoProcessLogId, "Las parejas buscan cancha ", DEBUG);
-    Logger::log(partidoProcessLogId, "Tamaño " + Logger::intToString(semCanchasLibres->size()), INFO);
-
-
-    encontrarCancha();
-    Logger::log(partidoProcessLogId, "Las parejas encontraron cancha ", DEBUG);
-
-    Resultado resultado = simularPartido();
+    semCanchasLibres->at(fu).at(cu).p();
 
 
-    if(sigusr1Handler.getGracefulQuit() == 0){
+    shmCanchasLibres->at(fu).at(cu).escribir(false);
 
-        Logger::log(partidoProcessLogId, "COMENTE ESTO DE ACA ABAJO PERO TENDRIA Q NUNCA ENTRAR", INFO);
-        //handleSubida();
-    }
+    semCanchasLibres->at(fu).at(cu).v();
 
+    SIGINT_Handler_Partidos sigint_handler;
+    SignalHandler :: getInstance()->registrarHandler ( SIGINT,&sigint_handler );
+
+    sleep(TiemposEspera::TIEMPO_JUGAR);
+
+
+
+    Resultado resultado = Resultado(this->pareja1, this->pareja2, true);
     Logger::log(partidoProcessLogId, "El partido termino " + Logger::intToString(resultado.getSetsPareja1()) + " a " +
-                                     Logger::intToString(resultado.getSetsPareja2()), INFO);
-
+                                     Logger::intToString(resultado.getSetsPareja2()), DEBUG);
 
     string resultadoStr = ResultadoSerializer::serializar(&resultado);
 
     Logger::log(partidoProcessLogId, "Voy a pushearle a fixture " + resultadoStr, DEBUG);
 
-
-
-
-
-//    this->pipeResultados->escribir(static_cast<const void *>(resultadoStr.c_str()), resultadoStr.size());
     this->pipeFixture->escribir(static_cast<const void *>(resultadoStr.c_str()), resultadoStr.size());
 
 
-    //Este orden estara bien?
+    if ( sigint_handler.getGracefulQuit() == 0 ){
+        liberarCancha();
+    }else{
+        Logger::log(partidoProcessLogId, "Me mojo la shuta loco!", INFO);
+    }
 
-    liberarCancha();
+
     avisarJugadores();
 
 
+    int  ind = resultadosFinales->at(this->pareja1->getClaveJugador1()->getIndice()).at(0).leer();
+    ind+=1;
+    resultadosFinales->at(this->pareja1->getClaveJugador1()->getIndice()).at(0).escribir(ind);
+    resultadosFinales->at(this->pareja1->getClaveJugador1()->getIndice()).at(ind).escribir(3);
+
+    ind = resultadosFinales->at(this->pareja1->getClaveJugador2()->getIndice()).at(0).leer();
+    ind+=1;
+    resultadosFinales->at(this->pareja1->getClaveJugador2()->getIndice()).at(0).escribir(ind);
+    resultadosFinales->at(this->pareja1->getClaveJugador2()->getIndice()).at(ind).escribir(3);
+
+    ind = resultadosFinales->at(this->pareja2->getClaveJugador1()->getIndice()).at(0).leer();
+    ind+=1;
+    resultadosFinales->at(this->pareja2->getClaveJugador1()->getIndice()).at(0).escribir(ind);
+    resultadosFinales->at(this->pareja2->getClaveJugador1()->getIndice()).at(ind).escribir(0);
+
+    ind = resultadosFinales->at(this->pareja2->getClaveJugador2()->getIndice()).at(0).leer();
+    ind+=1;
+    resultadosFinales->at(this->pareja2->getClaveJugador2()->getIndice()).at(0).escribir(ind);
+    resultadosFinales->at(this->pareja2->getClaveJugador2()->getIndice()).at(ind).escribir(0);
+
+
+
     limpiarRecursos();
-    //TODO
     finalizar();
-
-
-}
-
-Resultado PartidoProcess::simularPartido() {
-
-    sleep(TiemposEspera::TIEMPO_JUGAR);
-
-    return Resultado(this->pareja1, this->pareja2, true);
-
-}
-
-void PartidoProcess::encontrarCancha() {
-    //TODO
-    //ACORDARSE DE CUANDO TERMINA DE HACE V
-    semCantCanchasLibres->p();
-
-    int canchaC = -1;
-    int canchaF = -1;
-
-    bool canchaLibre = false;
-    Logger::log(partidoProcessLogId, "Tamaño" + Logger::intToString(semCanchasLibres->size()), INFO);
-
-
-    Logger::log(partidoProcessLogId, "Partido buscando cancha. ", INFO);
-
-
-
-
-    for (unsigned int i = 0; i < semCanchasLibres->size(); i++) {
-
-        for (unsigned int j = 0; j < semCanchasLibres[0].size(); j++) {
-            /*
-            semNivelDeMarea->p();
-            Logger::log(partidoProcessLogId, "Spam2", INFO);
-            int nivelMarea = shmNivelDeMarea->leer();
-
-            semNivelDeMarea->v();
-
-            if(j == nivelMarea){
-                continue;
-            }
-            */
-
-            Logger::log(partidoProcessLogId,
-                        "Partido esperando semsCanchasLibre: " + Logger::intToString(i) + ", " + Logger::intToString(j),
-                        DEBUG);
-
-            semCanchasLibres->at(i).at(j).p();
-
-            Logger::log(partidoProcessLogId,
-                        "Partido obtuvo semsCanchasLibre: " + Logger::intToString(i) + ", " + Logger::intToString(j),
-                        DEBUG);
-
-
-
-            //TODO VER CAPAZ HAY QUE HACER * A *
-            canchaLibre = shmCanchasLibres->at(i).at(j).leer();
-
-            if (canchaLibre) {
-                canchaF = i;
-                canchaC = j;
-
-                Logger::log(partidoProcessLogId,
-                            "Cancha libre encontrada. En fila: " + Logger::intToString(canchaF) + " y columna: " +
-                            Logger::intToString(canchaC), INFO);
-
-                Logger::log(partidoProcessLogId,
-                            "Cancha ocupada. En fila: " + Logger::intToString(canchaF) + " y columna: " +
-                            Logger::intToString(canchaC), INFO);
-
-
-                shmCanchasLibres->at(i).at(j).escribir(false);
-
-                cancha->setColumna(canchaC);
-                cancha->setFila(canchaF);
-
-
-            }
-
-            Logger::log(partidoProcessLogId,
-                        "Partido liberando semaforo en En fila: " + Logger::intToString(i) + " y columna: " +
-                        Logger::intToString(j), DEBUG);
-
-            semCanchasLibres->at(i).at(j).v();
-
-            if (canchaLibre) {
-                break;
-            }
-
-        }
-
-        if (canchaLibre) {
-            break;
-        }
-
-    }
 
 
 }
@@ -208,12 +135,12 @@ void PartidoProcess::liberarCancha() {
     this->semCanchasLibres->at(fila).at(columna).p();
     this->shmCanchasLibres->at(fila).at(columna).escribir(true);
     Logger::log(partidoProcessLogId, "Cancha Liberada. En fila: " + Logger::intToString(fila) + " y columna: " +
-                                     Logger::intToString(columna), INFO);
+                                     Logger::intToString(columna), DEBUG);
 
     this->semCanchasLibres->at(fila).at(columna).v();
 
     this->semCantCanchasLibres->v();
-    Logger::log(partidoProcessLogId, "Aumento la cantidad de canchas libres", INFO);
+    Logger::log(partidoProcessLogId, "Aumento la cantidad de canchas libres", DEBUG);
 
 
 }
@@ -226,29 +153,31 @@ void PartidoProcess::avisarJugadores() {
     ClaveJugador *jugador3 = this->pareja2->getClaveJugador1();
     ClaveJugador *jugador4 = this->pareja2->getClaveJugador2();
 
-    Logger::log(partidoProcessLogId, "Empiezo a avisarle a los jugadores que termino su partido", INFO);
+    Logger::log(partidoProcessLogId, "Empiezo a avisarle a los jugadores que termino su partido", DEBUG);
     this->semTerminoDeJugar->at(jugador1->getIndice()).v();
     this->semTerminoDeJugar->at(jugador2->getIndice()).v();
     this->semTerminoDeJugar->at(jugador3->getIndice()).v();
     this->semTerminoDeJugar->at(jugador4->getIndice()).v();
-    Logger::log(partidoProcessLogId, "Termino de avisarle a los jugadores", INFO);
+    Logger::log(partidoProcessLogId, "Termino de avisarle a los jugadores", DEBUG);
 
 
 }
 
 
 void PartidoProcess::limpiarRecursos() {
-
     Logger::log(partidoProcessLogId, "Limpiando recursos", DEBUG);
     liberarMemoriasCompartidas();
     Logger::log(partidoProcessLogId, "Termino de limpiar recursos", DEBUG);
-
-
 
 }
 
 void PartidoProcess::liberarMemoriasCompartidas() {
 
+    for (unsigned int i = 0; i < cantidadJugadores; i++) {
+        for (unsigned int j = 0; j < cantPartidosJugador+20; j++) {
+            resultadosFinales->at(i).at(j).liberar();
+        }
+    }
     for (unsigned int i = 0; i < shmCanchasLibres->size(); i++) {
         for (unsigned int j = 0; j < shmCanchasLibres->at(0).size(); j++) {
             shmCanchasLibres->at(i).at(j).liberar();
@@ -266,38 +195,3 @@ PartidoProcess::~PartidoProcess() {
 
 }
 
-
-//TODO ARMAR UN SET DE SEMAFOROS ASOCIADOS A SHM PARA SABER SI EL PARTIDO TERMINO POR OLA ASI EL JUGADOR NO SE RESTA 1
-//TODO O MANDARLE SEÑAL A JUGADOR? DECIDIR --> TENGO PID EN CLAVE JUGADOR ASI QUE SI PODRIA MANDARLE SEÑAL
-void PartidoProcess::handleSubida() {
-
-
-    semNivelDeMarea->p();
-
-    int nivelMarea = shmNivelDeMarea->leer();
-
-    semNivelDeMarea->v();
-
-    if(cancha->getColumna() <= nivelMarea){
-
-
-
-
-        Logger::log(partidoProcessLogId, "El partido termino repentinamente por subida de marea", INFO);
-
-
-        liberarCancha();
-
-
-        // aviso a jugadores?! Asociado al TODO DE ARRIBA
-        avisarJugadores();
-
-        limpiarRecursos();
-        //TODO
-        finalizar();
-
-    }
-
-
-
-}

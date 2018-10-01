@@ -2,8 +2,8 @@
 // Created by navent on 10/10/17.
 //
 
-#ifndef RESTO_CLAVEJUGADORSERIALIZER_H
-#define RESTO_CLAVEJUGADORSERIALIZER_H
+#ifndef CONCU_CLAVEJUGADORSERIALIZER_H
+#define CONCU_CLAVEJUGADORSERIALIZER_H
 
 
 #include <string>
@@ -34,4 +34,4 @@ namespace std {
 
 } /* namespace std */
 
-#endif //RESTO_CLAVEJUGADORSERIALIZER_H
+#endif //CONCU_CLAVEJUGADORSERIALIZER_H

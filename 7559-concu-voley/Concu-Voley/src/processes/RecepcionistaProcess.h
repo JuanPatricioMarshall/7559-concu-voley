@@ -3,8 +3,8 @@
 // Created by navent on 10/10/17.
 //
 
-#ifndef RESTO_RECEPCIONISTAPROCESS_H
-#define RESTO_RECEPCIONISTAPROCESS_H
+#ifndef CONCU_RECEPCIONISTAPROCESS_H
+#define CONCU_RECEPCIONISTAPROCESS_H
 
 #include "../main/MainProcess.h"
 #include "Process.h"
@@ -34,4 +34,4 @@ public:
 };
 
 
-#endif //RESTO_RECEPCIONISTAPROCESS_H
+#endif //CONCU_RECEPCIONISTAPROCESS_H

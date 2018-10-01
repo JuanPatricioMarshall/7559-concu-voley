@@ -2,8 +2,8 @@
 // Created by navent on 10/10/17.
 //
 
-#ifndef RESTO_RESULTADO_H
-#define RESTO_RESULTADO_H
+#ifndef CONCU_RESULTADO_H
+#define CONCU_RESULTADO_H
 
 
 #include "Pareja.h"
@@ -39,4 +39,4 @@ public:
 };
 
 
-#endif //RESTO_RESULTADO_H
+#endif //CONCU_RESULTADO_H

@@ -1,7 +1,3 @@
-//
-// Created by navent on 12/10/17.
-//
-
 #include "FixtureProcess.h"
 #include "../utils/serializer/ResultadoSerializer.h"
 
@@ -31,8 +27,19 @@ int FixtureProcess::leerTamanioResultado() {
         }
 
     } while (!finLectura);
+    int n = -1;
+    try {
+        n=stoi(tamanioResultadoStr);
 
-    return stoi(tamanioResultadoStr);
+    }catch (int e)
+    {
+        Logger::log(fixtureProcessId,
+                    "EXPLOTE EN FIXTURE",
+                    ERROR);
+    }
+
+
+    return n;
 }
 
 void FixtureProcess::run() {

@@ -489,33 +489,9 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o.provides.build: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o
 
 
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.i
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.s
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.requires:
-
-.PHONY : CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.requires
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.provides: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.requires
-	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.provides.build
-.PHONY : CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.provides
-
-CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.provides.build: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o
-
-
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o: ../Concu-Voley/src/utils/logger/Logger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/logger/Logger.cpp
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.i: cmake_force
@@ -535,6 +511,30 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o.provid
 .PHONY : CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o.provides
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o.provides.build: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o
+
+
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o: ../Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o -c /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp
+
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp > CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.i
+
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matiascarballo/Escritorio/tp/7559-concu-voley/7559-concu-voley/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp -o CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.s
+
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.requires:
+
+.PHONY : CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.requires
+
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.provides: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.requires
+	$(MAKE) -f CMakeFiles/7559_concu_voley.dir/build.make CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.provides.build
+.PHONY : CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.provides
+
+CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.provides.build: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o
 
 
 CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o: CMakeFiles/7559_concu_voley.dir/flags.make
@@ -653,8 +653,8 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.o.p
 "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.o" \
 "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.o" \
 "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o" \
-"CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o" \
 "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o" \
+"CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o" \
 "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o" \
 "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o" \
 "CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o" \
@@ -681,8 +681,8 @@ CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/processes/FixtureProcess.cpp.o.p
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.o
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.o
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o
-7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o
+7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o
 7559_concu_voley: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o
@@ -715,8 +715,8 @@ CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-
 CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/lock/LockFile.cpp.o.requires
 CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/pipe/Pipe.cpp.o.requires
 CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/semaphore/Semaforo.cpp.o.requires
-CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.requires
 CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/logger/Logger.cpp.o.requires
+CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/ipc/signal/SignalHandler.cpp.o.requires
 CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/random/RandomUtil.cpp.o.requires
 CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ClaveJugadorSerializer.cpp.o.requires
 CMakeFiles/7559_concu_voley.dir/requires: CMakeFiles/7559_concu_voley.dir/Concu-Voley/src/utils/serializer/ResultadoSerializer.cpp.o.requires

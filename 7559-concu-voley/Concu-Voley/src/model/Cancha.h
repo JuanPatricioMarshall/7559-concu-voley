@@ -2,8 +2,8 @@
 // Created by navent on 10/10/17.
 //
 
-#ifndef RESTO_CANCHA_H
-#define RESTO_CANCHA_H
+#ifndef CONCU_CANCHA_H
+#define CONCU_CANCHA_H
 
 
 class Cancha {
@@ -30,4 +30,4 @@ public:
 };
 
 
-#endif //RESTO_CANCHA_H
+#endif //CONCU_CANCHA_H
